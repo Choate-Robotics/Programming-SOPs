@@ -45,19 +45,23 @@ Mac
 3. Install Python by opening a terminal and typing 
 
     .. code-block:: bash
+
         brew install python
 
 4. Verify Python is installed by closing and opening the terminal and typing 
     
     .. code-block:: bash
+
         python
 
 5. Install Poetry by opening a terminal and typing 
         
     .. code-block:: bash
+
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
     
     .. important::
+
         **Important**: if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
 Linux
@@ -66,21 +70,25 @@ Linux
 1. Install Python by opening a terminal and typing 
 
     .. code-block:: bash
+
         sudo apt-get install python3.9
 
 2. Verify Python is installed by closing and opening the terminal and typing 
 
     .. code-block:: bash
+
         python
 
 3. Install Poetry by opening a terminal and typing 
 
     .. code-block:: bash
+
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
 4. Verify Poetry is installed by closing and opening the terminal and typing 
 
     .. code-block:: bash
+
         poetry
 
 
@@ -132,6 +140,7 @@ Github
 3. Verify Git is installed by opening a command prompt and typing 
     
     .. code-block:: bash
+        
         git
 
 .. tip::
