@@ -14,6 +14,9 @@ Git is a version control system. It allows you to keep track of changes to a pro
         * You have to manually sync your changes with the server. **This is called a push.**
         * You can't see other people's changes until they sync them with the server. **This is called a pull.**
 
+    .. note::
+        Why is git more limiting than google docs? In simple terms, security. If changes save and sync automatically, potentially breaking code would be released to the repository. Thats why you have to manually commit and push your changes. This allows you to make sure that your code is working before you release it to the repository. It also allows you to make sure that you don't overwrite other people's changes.
+
     * Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. **This is the Git commit history.**
 
     * Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people's copies of the document into your copy. **This is branching and merging.**
@@ -53,22 +56,57 @@ There are two ways to use Git. You can use it from the command line or you can u
         .. note:: 
             If you are using a Mac, you can open the terminal by pressing command + space and typing terminal. If you are using Windows, you can open the command prompt by pressing the windows key and typing cmd.
 
+        .. dropdown:: Basic Commands for Navigation and File Management
+
+            * ``cd`` - change directory
+
+            * ``dir`` - list files in current directory
+
+            * ``mkdir`` - make directory
+
+            * ``rmdir`` - remove directory
+
+            * ``del`` - delete file
+        
         Here are some basic commands to get you started:
 
-        .. tab-set::
+        .. code-block:: bash
 
-            .. tab-item:: Windows
-                :sync: Win
+            # clone a repository to the current directory
+            git clone #repository_url
 
-                * ``cd`` - change directory
+            # check the status of your repository
+            git status
 
-                * ``dir`` - list files in current directory
+            # add a file to the staging area
+            git add #file_name
 
-                * ``mkdir`` - make directory
+            # commit your changes
+            git commit
 
-                * ``rmdir`` - remove directory
+            # push your changes to the server
+            git push
 
-                * ``del`` - delete file
+            # pull changes from the server
+            git pull
+
+            # create a new branch
+            git branch
+
+            # switch to a different branch
+            git checkout #branch_name
+
+            # merge a branch into the current branch
+            git merge #branch_name
+
+            # delete a branch
+            git branch -d #branch_name
+
+        .. note::
+            If you are interested in learning more, check out the `Git Book <https://git-scm.com/book/en/v2>`_.
+
+
+
 
 
  
