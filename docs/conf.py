@@ -32,3 +32,4 @@ html_theme_options = {
     'logo_only': True,
     'display_version': False,
 }
+html_favicon = "7407logo.jfif"
