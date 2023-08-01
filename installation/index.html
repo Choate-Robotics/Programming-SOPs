@@ -82,7 +82,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#github">Github</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-install-git"><strong>How to Install Git</strong></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#recommended-github-desktop"><strong>Recommended: Github Desktop</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -126,7 +125,7 @@
 <h2><a class="toc-backref" href="#id1">Software</a><a class="headerlink" href="#software" title="Permalink to this headline"><span>#</span></a></h2>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"><span>#</span></a></h3>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><dl class="simple">
 <dt>Install Python (<a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a>)</dt><dd><ol class="loweralpha simple">
 <li><p>Make sure to check the box to add Python to your PATH</p></li>
@@ -134,37 +133,79 @@
 </dd>
 </dl>
 </li>
-<li><p>Verify Python is installed by opening a command prompt and typing <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
-<li><p>Install Poetry by opening a powershell prompt and typing <code class="docutils literal notranslate"><span class="pre">(Invoke-WebRequest</span> <span class="pre">-Uri</span> <span class="pre">https://install.python-poetry.org</span> <span class="pre">-UseBasicParsing).Content</span> <span class="pre">|</span> <span class="pre">py</span> <span class="pre">-</span></code></p></li>
+<li><dl>
+<dt>Verify Python is installed by opening a command prompt and typing</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Install Poetry by opening a powershell prompt and typing</p>
+<blockquote>
+<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+</pre></div>
+</div>
+</div></blockquote>
+</li>
 </ol>
 </div>
 <div class="section" id="mac">
 <h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline"><span>#</span></a></h3>
 <ol class="arabic">
-<li><p>Install Rosetta 2 by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">softwareupdate</span> <span class="pre">--install-rosetta</span></code></p></li>
-<li><p>Install Homebrew by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">/bin/bash</span> <span class="pre">-c</span> <span class="pre">&quot;$(curl</span> <span class="pre">-fsSL</span> <span class="pre">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span></code></p></li>
-<li><p>Install Python by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">python</span></code></p></li>
-<li><p>Verify Python is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
-<li><p>Install Poetry by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sSL</span> <span class="pre">https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py</span> <span class="pre">|</span> <span class="pre">python</span> <span class="pre">-</span></code></p>
+<li><dl>
+<dt>Install Rosetta 2 by opening a terminal and typing</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>softwareupdate --install-rosetta
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p>Install Homebrew by opening a terminal and typing</p>
 <blockquote>
-<div><ol class="loweralpha simple">
-<li><p><strong>Important</strong>: if you get an error concerning <code class="docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span></code>, run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p></li>
-</ol>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Install Python by opening a terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p>Verify Python is installed by closing and opening the terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p>Install Poetry by opening a terminal and typing</p>
+<blockquote>
+<div><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Important</strong>: if you get an error concerning <code class="docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span></code>, run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p>
+</div>
 </div></blockquote>
 </li>
 </ol>
 </div>
 <div class="section" id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"><span>#</span></a></h3>
-<ol class="arabic simple">
-<li><p>Install Python by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3.9</span></code></p></li>
-<li><p>Verify Python is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
-<li><p>Install Poetry by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sSL</span> <span class="pre">https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py</span> <span class="pre">|</span> <span class="pre">python</span> <span class="pre">-</span></code></p></li>
-<li><p>Verify Poetry is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">poetry</span></code></p></li>
+<ol class="arabic">
+<li><p>Install Python by opening a terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p>Verify Python is installed by closing and opening the terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p>Install Poetry by opening a terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
+<li><p>Verify Poetry is installed by closing and opening the terminal and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
 </ol>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="ide">
 <h2><a class="toc-backref" href="#id2">IDE</a><a class="headerlink" href="#ide" title="Permalink to this headline"><span>#</span></a></h2>
 <p>There are many IDEs that can be used to develop Python code.  The following are recommended:</p>
@@ -197,26 +238,33 @@
 </ul>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="github">
 <h2><a class="toc-backref" href="#id3">Github</a><a class="headerlink" href="#github" title="Permalink to this headline"><span>#</span></a></h2>
 <ul class="simple">
 <li><p>Github is a website that hosts git repositories.</p></li>
 <li><p>We use Github to host our code and to collaborate with other developers.</p></li>
 <li><p>Github can be accessed at (github.com/Choate-Robotics)</p></li>
-<li><p><strong>Important</strong>: Github is not the same as git.  Git is a version control system that is used to manage code.  Github is a website that hosts git repositories.</p></li>
-<li><p><strong>Note</strong>: You will need to create a Github account to access our repositories. Let the current team leader know your Github username so you can be added to the organization.</p></li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Important</strong>: Github is not the same as git.  Git is a version control system that is used to manage code.  Github is a website that hosts git repositories.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Note</strong>: You will need to create a Github account to access our repositories. Let the current team leader know your Github username so you can be added to the organization.</p>
+</div>
 <div class="section" id="how-to-install-git">
 <h3><strong>How to Install Git</strong><a class="headerlink" href="#how-to-install-git" title="Permalink to this headline"><span>#</span></a></h3>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Download Git from (<a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>)</p></li>
 <li><p>Run the installer</p></li>
-<li><p>Verify Git is installed by opening a command prompt and typing <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Verify Git is installed by opening a command prompt and typing</p>
+<blockquote>
+<div></div></blockquote>
+</li>
 </ol>
-</div>
-<div class="section" id="recommended-github-desktop">
-<h3><strong>Recommended: Github Desktop</strong><a class="headerlink" href="#recommended-github-desktop" title="Permalink to this headline"><span>#</span></a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <ul class="simple">
 <li><p>Github Desktop is a GUI for git that makes it easier to use.</p></li>
 </ul>
@@ -225,6 +273,7 @@
 <li><p>Run the installer</p></li>
 <li><p>Open Github Desktop and sign in with your Github account</p></li>
 </ol>
+</div>
 </div>
 </div>
 </div>
