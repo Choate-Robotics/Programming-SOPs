@@ -15,12 +15,13 @@ it is a living document and will be updated as needed.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    introduction/index
 
+   :caption: Installation:
+
    installation/index
-   
+
    initial setup/index
 
 
