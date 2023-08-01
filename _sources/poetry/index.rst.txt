@@ -31,7 +31,7 @@ How to use it?
 
 .. note:: 
     You will need to install Poetry on your machine first.
-    If you have not done so, refer to the :ref: 'installation/index' page.
+    If you have not done so, refer to the ::doc:`/installation/index` page for instructions on how to install Poetry.
 
 Setup:
 ~~~~~~
@@ -51,8 +51,8 @@ Adding dependencies:
 Running your project:
 ~~~~~~~~~~~~~~~~~~~~~
 
-4. to run your project, use ``poetry run <command>``. For example, ``poetry run python main.py`` will run the ``main.py`` file in your project. this will run the file inside the virtual environment, so you don't need to worry about installing the dependencies on your machine.
-5. to open a shell inside the virtual environment, use ``poetry shell``. This will open a shell inside the virtual environment, so you can run commands without using ``poetry run``. To exit the shell, use ``exit``.
+1. to run your project, use ``poetry run <command>``. For example, ``poetry run python main.py`` will run the ``main.py`` file in your project. this will run the file inside the virtual environment, so you don't need to worry about installing the dependencies with pip (though its recommended since autocompletion will not work on IDEs).
+2. to open a shell inside the virtual environment, use ``poetry shell``. This will open a shell inside the virtual environment, so you can run commands without using ``poetry run``. To exit the shell, use ``exit``.
 
 .. note:: 
     a shell is a command line interface that allows you to run commands on your computer. For example, the terminal is a shell. by opening a shell inside the virtual environment, you can run commands without using ``poetry run``.

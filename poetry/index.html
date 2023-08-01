@@ -13,7 +13,7 @@
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="&lt;no title&gt;" href="../hardware/index.html" />
+  <link rel="next" title="Hardware and Electronics" href="../hardware/index.html" />
   <link rel="prev" title="Git and Github" href="../git/index.html" />
 </head>
 
@@ -92,7 +92,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../installation/index.html#vim">Vim</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#github">Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#git-and-github">Git and Github</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../installation/index.html#how-to-install-git"><strong>How to Install Git</strong></a></li>
 </ul>
 </li>
@@ -120,6 +120,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#setup">Setup:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adding-dependencies">Adding dependencies:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-your-project">Running your project:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#core-components">Core Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#roborio">RoboRIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#pdh">PDH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#can-wires">CAN Wires:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#radio">Radio:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#networktables">Networktables:</a></li>
 </ul>
 </li>
 </ul>
@@ -182,7 +193,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You will need to install Poetry on your machine first.
-If you have not done so, refer to the :ref: ‘installation/index’ page.</p>
+If you have not done so, refer to the :<a class="reference internal" href="../installation/index.html"><span class="doc">Installation</span></a> page for instructions on how to install Poetry.</p>
 </div>
 <div class="section" id="setup">
 <h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline"><span>#</span></a></h3>
@@ -203,8 +214,8 @@ If you have not done so, refer to the :ref: ‘installation/index’ page.</p>
 </div>
 <div class="section" id="running-your-project">
 <h3>Running your project:<a class="headerlink" href="#running-your-project" title="Permalink to this headline"><span>#</span></a></h3>
-<ol class="arabic simple" start="4">
-<li><p>to run your project, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">main.py</span></code> will run the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file in your project. this will run the file inside the virtual environment, so you don’t need to worry about installing the dependencies on your machine.</p></li>
+<ol class="arabic simple">
+<li><p>to run your project, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">main.py</span></code> will run the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file in your project. this will run the file inside the virtual environment, so you don’t need to worry about installing the dependencies with pip (though its recommended since autocompletion will not work on IDEs).</p></li>
 <li><p>to open a shell inside the virtual environment, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>. This will open a shell inside the virtual environment, so you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>. To exit the shell, use <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
 </ol>
 <div class="admonition note">
