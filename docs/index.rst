@@ -36,7 +36,9 @@ it is a living document and will be updated as needed.
 
    Poetry <poetry/index>
 
-   
+   Hardware and Electronics <hardware/index>
+
+
 
 
 
