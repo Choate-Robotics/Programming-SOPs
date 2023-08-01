@@ -6,9 +6,12 @@
 Choate Robotics Programming Standard Operating Procedure's
 ==========================================================
 
-this is the standard operating procedure for programming at choate robotics. 
+this is the standard operating procedures for programming at choate robotics. 
 it is a living document and will be updated as needed.
 
+.. hint::
+
+   No idea where to go from here? Check out :doc:`installation/index`.
 
 .. toctree::
    :maxdepth: 2
@@ -23,3 +26,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
