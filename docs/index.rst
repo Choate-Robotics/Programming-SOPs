@@ -9,6 +9,7 @@ Choate Robotics Programming Standard Operating Procedure's
 this is the standard operating procedure for programming at choate robotics. 
 it is a living document and will be updated as needed.
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
