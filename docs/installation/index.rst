@@ -40,6 +40,18 @@ Follow these steps to install necessary software to run code from this organizat
 
                 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
+        4. Verify Poetry is installed by opening a powershell prompt and typing
+
+            ..  code-block:: powershell
+
+                poetry
+
+        5. Install our library (robotpy-toolkit-7407) by opening a powershell prompt and typing
+
+            ..  code-block:: powershell
+
+                pip install robotpy-toolkit-7407
+
 
 
     .. tab-item:: Mac
@@ -89,6 +101,18 @@ Follow these steps to install necessary software to run code from this organizat
 
                 if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
+        6. Verify Poetry is installed by closing and opening the terminal and typing
+
+            .. code-block:: bash
+
+                poetry
+
+        7. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
+
+            ..  code-block:: bash
+
+                pip install robotpy-toolkit-7407
+
     .. tab-item:: Linux
         :sync: Linux
 
@@ -119,6 +143,12 @@ Follow these steps to install necessary software to run code from this organizat
             .. code-block:: bash
 
                 poetry
+
+        5. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
+
+            ..  code-block:: bash
+
+                pip install robotpy-toolkit-7407
 
 IDE
 ===
