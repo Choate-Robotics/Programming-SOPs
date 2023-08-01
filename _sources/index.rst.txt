@@ -16,25 +16,27 @@ it is a living document and will be updated as needed.
 .. toctree::
    :maxdepth: 2
 
-   introduction/index
+   Introduction <introduction/index>
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Installation:
+   :caption: Getting Started:
 
-   installation/index#software
+   Install <installation/index>
 
-   installation/index#ide
-
-   installation/index#github
-
-   initial setup/index
+   Setup <initial setup/index>
 
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: How to use:
+.. toctree::
+   :maxdepth: 2
+   :caption: Getting to Know:
+
+   Git and Github <git/index>
+
+   Poetry <poetry/index>
+
+   
 
 
 

@@ -11,8 +11,10 @@ This document describes the necessary installations to effectively run code in t
 Software
 ========
 
-Windows
--------
+::::{tabset}
+
+:::{tabitem} Windows
+:sync: Win
 
 1. Install Python (http://www.python.org/download/)
     .. caution::
@@ -30,33 +32,35 @@ Windows
 
         (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
-Mac
----
+:::
 
-1. Install Rosetta 2 by opening a terminal and typing
+:::{tabitem} Mac
+:sync: Mac
+
+4. Install Rosetta 2 by opening a terminal and typing
     .. code-block:: bash
 
         softwareupdate --install-rosetta
 
-2. Install Homebrew by opening a terminal and typing 
+5. Install Homebrew by opening a terminal and typing 
 
     .. code-block:: bash
 
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-3. Install Python by opening a terminal and typing 
+6. Install Python by opening a terminal and typing 
 
     .. code-block:: bash
 
         brew install python
 
-4. Verify Python is installed by closing and opening the terminal and typing 
+7. Verify Python is installed by closing and opening the terminal and typing 
     
     .. code-block:: bash
 
         python
 
-5. Install Poetry by opening a terminal and typing 
+8. Install Poetry by opening a terminal and typing 
         
     .. code-block:: bash
 
@@ -66,8 +70,10 @@ Mac
 
         if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
-Linux
------
+:::
+
+:::{tabitem} Linux
+:sync: Linux
 
 1. Install Python by opening a terminal and typing 
 
@@ -92,8 +98,9 @@ Linux
     .. code-block:: bash
 
         poetry
+:::
 
-
+::::
 IDE
 ===
 
