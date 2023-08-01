@@ -11,96 +11,92 @@ This document describes the necessary installations to effectively run code in t
 Software
 ========
 
-::::{tabset}
+.. tabset::
 
-:::{tabitem} Windows
-:sync: Win
+    .. tabitem:: Windows
+    :sync: Win
 
-1. Install Python (http://www.python.org/download/)
-    .. caution::
+        1. Install Python (http://www.python.org/download/)
+            .. caution::
 
-        Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
+                Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
 
-2. Verify Python is installed by opening a command prompt and typing 
-    ..  code-block:: python
+        2. Verify Python is installed by opening a command prompt and typing 
+            ..  code-block:: python
 
-        python
+                python
 
-3. Install Poetry by opening a powershell prompt and typing 
+        3. Install Poetry by opening a powershell prompt and typing 
 
-    ..  code-block:: powershell
+            ..  code-block:: powershell
 
-        (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+                (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
-:::
 
-:::{tabitem} Mac
-:sync: Mac
 
-4. Install Rosetta 2 by opening a terminal and typing
-    .. code-block:: bash
+    .. tabitem:: Mac
+    :sync: Mac
 
-        softwareupdate --install-rosetta
+        1. Install Rosetta 2 by opening a terminal and typing
+            .. code-block:: bash
 
-5. Install Homebrew by opening a terminal and typing 
+                softwareupdate --install-rosetta
 
-    .. code-block:: bash
+        2. Install Homebrew by opening a terminal and typing 
 
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            .. code-block:: bash
 
-6. Install Python by opening a terminal and typing 
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    .. code-block:: bash
+        3. Install Python by opening a terminal and typing 
 
-        brew install python
+            .. code-block:: bash
 
-7. Verify Python is installed by closing and opening the terminal and typing 
-    
-    .. code-block:: bash
+                brew install python
 
-        python
+        4. Verify Python is installed by closing and opening the terminal and typing 
+            
+            .. code-block:: bash
 
-8. Install Poetry by opening a terminal and typing 
-        
-    .. code-block:: bash
+                python
 
-        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-    
-    .. important::
+        5. Install Poetry by opening a terminal and typing 
+                
+            .. code-block:: bash
 
-        if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
+                curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+            
+            .. important::
 
-:::
+                if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
-:::{tabitem} Linux
-:sync: Linux
+    .. tabitem:: Linux
+    :sync: Linux
 
-1. Install Python by opening a terminal and typing 
+        1. Install Python by opening a terminal and typing 
 
-    .. code-block:: bash
+            .. code-block:: bash
 
-        sudo apt-get install python3.9
+                sudo apt-get install python3.9
 
-2. Verify Python is installed by closing and opening the terminal and typing 
+        2. Verify Python is installed by closing and opening the terminal and typing 
 
-    .. code-block:: bash
+            .. code-block:: bash
 
-        python
+                python
 
-3. Install Poetry by opening a terminal and typing 
+        3. Install Poetry by opening a terminal and typing 
 
-    .. code-block:: bash
+            .. code-block:: bash
 
-        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+                curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-4. Verify Poetry is installed by closing and opening the terminal and typing 
+        4. Verify Poetry is installed by closing and opening the terminal and typing 
 
-    .. code-block:: bash
+            .. code-block:: bash
 
-        poetry
-:::
+                poetry
 
-::::
 IDE
 ===
 
