@@ -154,8 +154,8 @@ Vim
 * how do i exit vim? Please help me.
 
 
-Github
-======
+Git and Github
+==============
 * Github is a website that hosts git repositories.
 * We use Github to host our code and to collaborate with other developers.
 * Github can be accessed at (github.com/Choate-Robotics)
