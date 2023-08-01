@@ -1,6 +1,6 @@
-===
-initial setup:
-===
+==============
+Initial Setup:
+==============
 
 We've got the software... now what?
 -----------------------------------
