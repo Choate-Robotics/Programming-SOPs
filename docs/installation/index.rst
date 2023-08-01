@@ -4,7 +4,7 @@ Installation
 
 .. contents:: Table of Contents
    :local:
-   :depth: 1
+   :depth: 2
 
 This document describes the necessary installations to effectively run code in this organization.
 
