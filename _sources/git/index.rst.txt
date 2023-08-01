@@ -39,6 +39,7 @@ What code do we run during competitions?
 * We make branches for each competition, which are based off of the Main branch. This is so we can edit based on the competition deviances without affecting the main code. We then merge files we like from the competition branch into the main branch after the competition.
 
 Other branches:
+
 * **Hotfix/#hotfix_name#:** this is for fixing bugs in the main branch. It is based off of the main branch and is merged back into the main branch after the bug is fixed.
 
 
