@@ -17,7 +17,7 @@ Mac:
 
 1. Install Rosetta 2 by opening a terminal and typing ``softwareupdate --install-rosetta``
 
-2. Install Homebrew by opening a terminal and typing ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2. Install Homebrew by opening a terminal and typing ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"``
 
 3. Install Python by opening a terminal and typing ``brew install python``
 
