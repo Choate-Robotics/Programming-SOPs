@@ -14,7 +14,7 @@ it is a living document and will be updated as needed.
    No idea where to go from here? Check out :doc:`installation/index`.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    Home <index>
 
@@ -22,7 +22,7 @@ it is a living document and will be updated as needed.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Getting Started:
 
    Install <installation/index>
