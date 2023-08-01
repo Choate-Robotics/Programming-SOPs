@@ -1,5 +1,8 @@
 ========================================================
-Welcome to the Choate Robotics Programming Documentation!
+introduction
+========================================================
+
+Welcome to the Choate Robotics Programming Documentation
 ========================================================
 
 "Choate Robotics Wired boars" Is a First Robotics Competition team based in Wallingford, CT. This is the documentation for Standard Operating Procedures neccesary to efficiently program the robot.
