@@ -16,6 +16,8 @@ it is a living document and will be updated as needed.
 .. toctree::
    :maxdepth: 2
 
+   Home <index>
+
    Introduction <introduction/index>
 
 
