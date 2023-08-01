@@ -27,3 +27,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_permalinks_icon = '<span>#</span>'
 html_theme = 'sphinxawesome_theme'
 html_static_path = ['_static']
+html_logo = "7407logo.jfif"
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+}
