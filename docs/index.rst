@@ -18,14 +18,16 @@ it is a living document and will be updated as needed.
    :caption: Contents:
 
    introduction/index
+
    installation/index
+   
    initial setup/index
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
