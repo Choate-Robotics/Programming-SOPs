@@ -14,7 +14,7 @@ Software
 .. tab-set::
 
     .. tab-item:: Windows
-    :sync: Win
+        :sync: Win
 
         1. Install Python (http://www.python.org/download/)
             .. caution::
@@ -35,7 +35,7 @@ Software
 
 
     .. tab-item:: Mac
-    :sync: Mac
+        :sync: Mac
 
         1. Install Rosetta 2 by opening a terminal and typing
             .. code-block:: bash
@@ -71,7 +71,7 @@ Software
                 if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
     .. tab-item:: Linux
-    :sync: Linux
+        :sync: Linux
 
         1. Install Python by opening a terminal and typing 
 
