@@ -18,11 +18,21 @@ it is a living document and will be updated as needed.
 
    introduction/index
 
+
+.. toctree::
+   :maxdepth: 2
    :caption: Installation:
 
    installation/index
 
    initial setup/index
+
+
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: How to use:
+
+
 
 
 .. Indices and tables
