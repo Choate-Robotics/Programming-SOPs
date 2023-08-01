@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   
-  <title>Git and Github | Programming Standard Operating Procedure  documentation</title>
+  <title>Poetry | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="Poetry" href="../poetry/index.html" />
-  <link rel="prev" title="Initial Setup" href="../initial%20setup/index.html" />
+  <link rel="next" title="&lt;no title&gt;" href="../hardware/index.html" />
+  <link rel="prev" title="Git and Github" href="../git/index.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -22,7 +22,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#git-and-github" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#poetry" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -108,18 +108,18 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Git and Github</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-it">How do I use it?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html#how-do-i-use-it">How do I use it?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../poetry/index.html">Poetry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#what-is-it">What is it?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#why-use-it">Why use it?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#how-to-use-it">How to use it?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#setup">Setup:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#adding-dependencies">Adding dependencies:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#running-your-project">Running your project:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Poetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-it">How to use it?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-dependencies">Adding dependencies:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-your-project">Running your project:</a></li>
 </ul>
 </li>
 </ul>
@@ -143,52 +143,73 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">Git and Github</span>
+  <span class="mr-1">/</span><span aria-current="page">Poetry</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <div class="section" id="git-and-github">
-<h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this headline"><span>#</span></a></h1>
+  <div class="section" id="poetry">
+<h1>Poetry<a class="headerlink" href="#poetry" title="Permalink to this headline"><span>#</span></a></h1>
 <div class="section" id="what-is-it">
 <h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline"><span>#</span></a></h2>
-<p>Git is a version control system. It allows you to keep track of changes to a project over time. It also allows you to collaborate with others on a project.</p>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>Think of it as a google doc for code with a few exceptions:</dt><dd><ul>
-<li><p>You have to manually save your changes. <strong>This is called a commit.</strong></p></li>
-<li><p>You have to manually sync your changes with the server. <strong>This is called a push.</strong></p></li>
-<li><p>You can’t see other people’s changes until they sync them with the server. <strong>This is called a pull.</strong></p></li>
+<li><p>Poetry is a tool for dependency management and packaging in Python with a virtual environment.</p></li>
 </ul>
-</dd>
-</dl>
-</li>
-<li><p>Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. <strong>This is the Git commit history.</strong></p></li>
-<li><p>Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people’s copies of the document into your copy. <strong>This is branching and merging.</strong></p></li>
-<li><p>If you are interested in learning more, check out the <a class="reference external" href="https://git-scm.com/book/en/v2">Git Book</a>.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="how-do-i-use-it">
-<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this headline"><span>#</span></a></h2>
-<p>There are two ways to use Git. You can use it from the command line or you can use a GUI. The GUI is easier to use, but the command line is more powerful.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>both methods utilize the same commands, meaning switching from one to another is not too challenging. The GUI just makes it easier to visualize what is happening.</p>
+<ul class="simple">
+<li><p>dependencies are libraries that your project depends on. For example, if you are using the requests library, then requests is a dependency of your project.</p></li>
+<li><p>a virtual environment is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages. Different virtual environments can have different versions of Python, and can have different sets of installed packages. Think of it as a standalone machine in simple terms.</p></li>
+</ul>
 </div>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="GUI" for="sd-tab-item-0">
-GUI</label><div class="sd-tab-content docutils">
-<p>GUI</p>
-<p>Github Desktop is a GUI for Git. It makes it easy to see what changes you have made and to sync them with the server. It also makes it easy to create branches and merge them back into the main branch.</p>
+<ul class="simple">
+<li><p>It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.</p></li>
+<li><p>Runs inside a virtual environment, so you don’t need to manage your own virtual environment.</p></li>
+</ul>
+</div>
+<div class="section" id="why-use-it">
+<h2>Why use it?<a class="headerlink" href="#why-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+<ul class="simple">
+<li><p>“I don’t know why its not working, it runs on my machine!”</p></li>
+<li><p>It allows us to share code with others without worrying about library versions, since poetry will handle that for us.</p></li>
+<li><p>It allows us to easily install our dependencies on a new machine.</p></li>
+<li><p>Since it runs inside a virtual environment, it doesn’t pollute our global python environment.</p></li>
+<li><p>It will work on every ones computer, since we are all using the same virtual environment.</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-use-it">
+<h2>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline"><span>#</span></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can download Github Desktop <a class="reference external" href="https://desktop.github.com/">here</a>.</p>
+<p>You will need to install Poetry on your machine first.
+If you have not done so, refer to the :ref: ‘installation/index’ page.</p>
 </div>
-<p>You can Clone repositories at the top right…</p>
+<div class="section" id="setup">
+<h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>Create a new project folder, or navigate to an existing project folder.</p></li>
+<li><p>In the terminal, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">init</span></code>. This will create a new poetry project.</p></li>
+<li><p>The terminal will ask you a series of questions about your project configuration. You can skip most of them by pressing enter.</p></li>
+<li><p>Once you have finished, you should see a new file called <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. This is the configuration file for your project.</p></li>
+</ol>
+</div>
+<div class="section" id="adding-dependencies">
+<h3>Adding dependencies:<a class="headerlink" href="#adding-dependencies" title="Permalink to this headline"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>to add dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">&lt;dependency&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">numpy</span></code> will add the numpy library to your project.</p></li>
+<li><p>to install all dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all dependencies in your project. This will also create a virtual environment for your project.</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">lock</span></code> to update the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This file contains the exact versions of the dependencies that you are using. This is useful for sharing your project with others.</p></li>
+</ol>
+</div>
+<div class="section" id="running-your-project">
+<h3>Running your project:<a class="headerlink" href="#running-your-project" title="Permalink to this headline"><span>#</span></a></h3>
+<ol class="arabic simple" start="4">
+<li><p>to run your project, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">main.py</span></code> will run the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file in your project. this will run the file inside the virtual environment, so you don’t need to worry about installing the dependencies on your machine.</p></li>
+<li><p>to open a shell inside the virtual environment, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>. This will open a shell inside the virtual environment, so you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>. To exit the shell, use <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>a shell is a command line interface that allows you to run commands on your computer. For example, the terminal is a shell. by opening a shell inside the virtual environment, you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>.</p>
 </div>
 </div>
 </div>

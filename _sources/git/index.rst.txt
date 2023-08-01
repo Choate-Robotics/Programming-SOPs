@@ -10,13 +10,13 @@ Git is a version control system. It allows you to keep track of changes to a pro
 .. hint:: 
 
     * Think of it as a google doc for code with a few exceptions:
-        * You have to manually save your changes. This is called a commit.
-        * You have to manually sync your changes with the server. This is called a push.
-        * You can't see other people's changes until they sync them with the server. This is called a pull.
+        * You have to manually save your changes. **This is called a commit.**
+        * You have to manually sync your changes with the server. **This is called a push.**
+        * You can't see other people's changes until they sync them with the server. **This is called a pull.**
 
-    * Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. This is the Git commit history.
+    * Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. **This is the Git commit history.**
 
-    * Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people's copies of the document into your copy. This is branching and merging.
+    * Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people's copies of the document into your copy. **This is branching and merging.**
 
     * If you are interested in learning more, check out the `Git Book <https://git-scm.com/book/en/v2>`_.
 
