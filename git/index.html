@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   
-  <title>Initial Setup | Programming Standard Operating Procedure  documentation</title>
+  <title>Git and Github | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="Git and Github" href="../git/index.html" />
-  <link rel="prev" title="Installation" href="../installation/index.html" />
+  <link rel="prev" title="Initial Setup" href="../initial%20setup/index.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -21,7 +20,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#initial-setup" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#git-and-github" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -80,7 +79,7 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Install</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html#ide">IDE</a><ul>
@@ -96,19 +95,19 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#setting-up-your-environment">Setting up your environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#setting-up-your-environment">Setting up your environment</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../git/index.html#what-is-it">What is it?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../git/index.html#how-do-i-use-it">How do I use it?</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git and Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-it">How do I use it?</a></li>
 </ul>
 </li>
 </ul>
@@ -130,26 +129,52 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">Initial Setup</span>
+  <span class="mr-1">/</span><span aria-current="page">Git and Github</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <div class="section" id="initial-setup">
-<h1>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline"><span>#</span></a></h1>
-<div class="section" id="we-ve-got-the-software-now-what">
-<h2>We’ve got the software… now what?<a class="headerlink" href="#we-ve-got-the-software-now-what" title="Permalink to this headline"><span>#</span></a></h2>
-<p>Now that you’ve got the software installed, you’ll need to set up your environment. This is a one-time process that will allow you to use the software from the command line.</p>
+  <div class="section" id="git-and-github">
+<h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this headline"><span>#</span></a></h1>
+<div class="section" id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline"><span>#</span></a></h2>
+<p>Git is a version control system. It allows you to keep track of changes to a project over time. It also allows you to collaborate with others on a project.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Think of it as a google doc for code with a few exceptions:</dt><dd><ul>
+<li><p>You have to manually save your changes. This is called a commit.</p></li>
+<li><p>You have to manually sync your changes with the server. This is called a push.</p></li>
+<li><p>You can’t see other people’s changes until they sync them with the server. This is called a pull.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. This is the Git commit history.</p></li>
+<li><p>Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people’s copies of the document into your copy. This is branching and merging.</p></li>
+<li><p>If you are interested in learning more, check out the <a class="reference external" href="https://git-scm.com/book/en/v2">Git Book</a>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="how-do-i-use-it">
+<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+<p>There are two ways to use Git. You can use it from the command line or you can use a GUI. The GUI is easier to use, but the command line is more powerful.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This information requires the installation of necessary software. See <span class="xref std std-ref">installation</span> for more information.</p>
+<p>both methods utilize the same commands, meaning switching from one to another is not too challenging. The GUI just makes it easier to visualize what is happening.</p>
 </div>
-<div class="section" id="setting-up-your-environment">
-<h3>Setting up your environment<a class="headerlink" href="#setting-up-your-environment" title="Permalink to this headline"><span>#</span></a></h3>
-<p>The first thing you’ll need to do is set up your environment. This is a one-time process that will allow you to use the software from the command line.</p>
-<ol class="arabic simple">
-<li><p>Open a terminal window. On Windows, this is the “Command Prompt” program. On Mac OS X, this is the “Terminal” program. On Linux, this is the “Terminal” program or similar.</p></li>
-</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="GUI" for="sd-tab-item-0">
+GUI</label><div class="sd-tab-content docutils">
+<p>GUI</p>
+<p>Github Desktop is a GUI for Git. It makes it easy to see what changes you have made and to sync them with the server. It also makes it easy to create branches and merge them back into the main branch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can download Github Desktop <a class="reference external" href="https://desktop.github.com/">here</a>.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
