@@ -68,9 +68,23 @@
   <div class="nav-toc flex-1 pl-6"><p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#windows">Windows:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mac">Mac:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux">Linux:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac">Mac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ide">IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vscode">VsCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pycharm">PyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vim">Vim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#github">Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-install-git"><strong>How to Install Git</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recommended-github-desktop"><strong>Recommended: Github Desktop</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -99,8 +113,19 @@
     
   <div class="section" id="installation">
 <h1>installation<a class="headerlink" href="#installation" title="Permalink to this headline"><span>#</span></a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#software" id="id1">Software</a></p></li>
+<li><p><a class="reference internal" href="#ide" id="id2">IDE</a></p></li>
+<li><p><a class="reference internal" href="#github" id="id3">Github</a></p></li>
+</ul>
+</div>
+<p>This document describes the necessary installations to effectively run code in this organization.</p>
+<div class="section" id="software">
+<h2><a class="toc-backref" href="#id1">Software</a><a class="headerlink" href="#software" title="Permalink to this headline"><span>#</span></a></h2>
 <div class="section" id="windows">
-<h2>Windows:<a class="headerlink" href="#windows" title="Permalink to this headline"><span>#</span></a></h2>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><dl class="simple">
 <dt>Install Python (<a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a>)</dt><dd><ol class="loweralpha simple">
@@ -114,30 +139,93 @@
 </ol>
 </div>
 <div class="section" id="mac">
-<h2>Mac:<a class="headerlink" href="#mac" title="Permalink to this headline"><span>#</span></a></h2>
-<ol class="arabic simple">
+<h3>Mac<a class="headerlink" href="#mac" title="Permalink to this headline"><span>#</span></a></h3>
+<ol class="arabic">
 <li><p>Install Rosetta 2 by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">softwareupdate</span> <span class="pre">--install-rosetta</span></code></p></li>
 <li><p>Install Homebrew by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">/bin/bash</span> <span class="pre">-c</span> <span class="pre">&quot;$(curl</span> <span class="pre">-fsSL</span> <span class="pre">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span></code></p></li>
 <li><p>Install Python by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">python</span></code></p></li>
 <li><p>Verify Python is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
-<li><dl class="simple">
-<dt>Install Poetry by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sSL</span> <span class="pre">https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py</span> <span class="pre">|</span> <span class="pre">python</span> <span class="pre">-</span></code></dt><dd><ol class="loweralpha simple">
-<li><p><strong>Important</strong>: if you get an error concerning [SSL: CERTIFICATE_VERIFY_FAILED], run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p></li>
+<li><p>Install Poetry by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sSL</span> <span class="pre">https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py</span> <span class="pre">|</span> <span class="pre">python</span> <span class="pre">-</span></code></p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p><strong>Important</strong>: if you get an error concerning <code class="docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span></code>, run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 </ol>
 </div>
 <div class="section" id="linux">
-<h2>Linux:<a class="headerlink" href="#linux" title="Permalink to this headline"><span>#</span></a></h2>
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><p>Install Python by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3.9</span></code></p></li>
 <li><p>Verify Python is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">python</span></code></p></li>
 <li><p>Install Poetry by opening a terminal and typing <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-sSL</span> <span class="pre">https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py</span> <span class="pre">|</span> <span class="pre">python</span> <span class="pre">-</span></code></p></li>
 <li><p>Verify Poetry is installed by closing and opening the terminal and typing <code class="docutils literal notranslate"><span class="pre">poetry</span></code></p></li>
 </ol>
+</div>
+</div>
 <hr class="docutils" />
+<div class="section" id="ide">
+<h2><a class="toc-backref" href="#id2">IDE</a><a class="headerlink" href="#ide" title="Permalink to this headline"><span>#</span></a></h2>
+<p>There are many IDEs that can be used to develop Python code.  The following are recommended:</p>
+<div class="section" id="vscode">
+<h3>VsCode<a class="headerlink" href="#vscode" title="Permalink to this headline"><span>#</span></a></h3>
+<ul class="simple">
+<li><p>The most popular IDE for our team.</p></li>
+<li><p>free and open source, and has a large community of developers.</p></li>
+<li><p>general purpose IDE that can be used for many different languages.</p></li>
+<li><p>very customizable and has a large number of extensions that can be used to add functionality.</p></li>
+<li><p>can be downloaded from (<a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="pycharm">
+<h3>PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline"><span>#</span></a></h3>
+<ul class="simple">
+<li><p>A very popular IDE for Python development.</p></li>
+<li><p>free and open source, and has a large community of developers.</p></li>
+<li><p>has a free community edition and a paid professional edition.</p></li>
+<li><p>More focused on Python development than VsCode.</p></li>
+<li><p>can be downloaded from (<a class="reference external" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="vim">
+<h3>Vim<a class="headerlink" href="#vim" title="Permalink to this headline"><span>#</span></a></h3>
+<ul class="simple">
+<li><p>Try if you dare.</p></li>
+<li><p>can be downloaded from (<a class="reference external" href="https://www.vim.org/download.php">https://www.vim.org/download.php</a>)</p></li>
+<li><p>how do i exit vim? Please help me.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="github">
+<h2><a class="toc-backref" href="#id3">Github</a><a class="headerlink" href="#github" title="Permalink to this headline"><span>#</span></a></h2>
+<ul class="simple">
+<li><p>Github is a website that hosts git repositories.</p></li>
+<li><p>We use Github to host our code and to collaborate with other developers.</p></li>
+<li><p>Github can be accessed at (github.com/Choate-Robotics)</p></li>
+<li><p><strong>Important</strong>: Github is not the same as git.  Git is a version control system that is used to manage code.  Github is a website that hosts git repositories.</p></li>
+<li><p><strong>Note</strong>: You will need to create a Github account to access our repositories. Let the current team leader know your Github username so you can be added to the organization.</p></li>
+</ul>
+<div class="section" id="how-to-install-git">
+<h3><strong>How to Install Git</strong><a class="headerlink" href="#how-to-install-git" title="Permalink to this headline"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>Download Git from (<a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>)</p></li>
+<li><p>Run the installer</p></li>
+<li><p>Verify Git is installed by opening a command prompt and typing <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="recommended-github-desktop">
+<h3><strong>Recommended: Github Desktop</strong><a class="headerlink" href="#recommended-github-desktop" title="Permalink to this headline"><span>#</span></a></h3>
+<ul class="simple">
+<li><p>Github Desktop is a GUI for git that makes it easier to use.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Download Github Desktop from (<a class="reference external" href="https://desktop.github.com/">https://desktop.github.com/</a>)</p></li>
+<li><p>Run the installer</p></li>
+<li><p>Open Github Desktop and sign in with your Github account</p></li>
+</ol>
+</div>
 </div>
 </div>
 
