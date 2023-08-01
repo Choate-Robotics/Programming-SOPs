@@ -126,9 +126,11 @@ Github
 * We use Github to host our code and to collaborate with other developers.
 * Github can be accessed at (github.com/Choate-Robotics)
 .. important::
-    **Important**: Github is not the same as git.  Git is a version control system that is used to manage code.  Github is a website that hosts git repositories.
+
+    Github is not the same as git.  Git is a version control system that is used to manage code.  Github is a website that hosts git repositories.
 .. note::
-    **Note**: You will need to create a Github account to access our repositories. Let the current team leader know your Github username so you can be added to the organization.
+
+    You will need to create a Github account to access our repositories. Let the current team leader know your Github username so you can be added to the organization.
 
 **How to Install Git**
 ----------------------
@@ -140,10 +142,11 @@ Github
 3. Verify Git is installed by opening a command prompt and typing 
     
     .. code-block:: bash
-        
+
         git
 
 .. tip::
+
     **Recommended: Github Desktop**
     --------------------------------
     * Github Desktop is a GUI for git that makes it easier to use.
