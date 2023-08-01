@@ -5,7 +5,7 @@ introduction
 Welcome to the Choate Robotics Programming Documentation
 ========================================================
 
-"Choate Robotics Wired boars" Is a First Robotics Competition team based in Wallingford, CT. This is the documentation for Standard Operating Procedures neccesary to efficiently program the robot.
+Choate Robotics Team 7407 Wired Boars is a FIRST Robotics Competition team based in Wallingford, CT. We are a student-run team that designs, builds, and programs a robot to compete in the FIRST Robotics Competition. We joined in 2019. This documentation is our current Standard Operating Procedure for programming the robot. It is a work in progress, and we are always looking for ways to improve it. If you have any suggestions, please submit a pull request.
 
 What to expect in this documentation:
 -------------------------------------
@@ -20,6 +20,7 @@ What to expect in this documentation:
 
 What you need to know before you start:
 ---------------------------------------
+- Know what the Command Line is
 - Basic understanding of Python
 - Basic understanding of Object-Oriented Programming
 
