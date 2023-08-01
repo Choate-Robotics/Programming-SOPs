@@ -17,7 +17,9 @@ it is a living document and will be updated as needed.
    :maxdepth: 2
    :caption: Contents:
 
+   introduction/index
    installation/index
+   initial setup/index
 
 
 Indices and tables
