@@ -10,6 +10,7 @@ packages = [{include = "programming_sops"}]
 python = "^3.11"
 Sphinx = "^7.1.1"
 myst-parser = "^2.0.0"
+groundwork-sphinx-theme = "^1.1.1"
 
 
 [build-system]

@@ -146,6 +146,21 @@ files = [
 ]
 
 [[package]]
+name = "groundwork-sphinx-theme"
+version = "1.1.1"
+description = "Sphinx theme for groundwork projects (Based on flask_theme)"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "groundwork-sphinx-theme-1.1.1.tar.gz", hash = "sha256:5f1217bf34daba5fcd93e8a2a04ef5a6c2b144ec43754aec7ce14de501e23fe4"},
+    {file = "groundwork_sphinx_theme-1.1.1-py2.py3-none-any.whl", hash = "sha256:b4796989ce3cd6d5b5a3c7ebe52a8c9cf848110e9f12c2c88e2b3c0e4e8f0e24"},
+]
+
+[package.dependencies]
+Sphinx = ">=1.6.1"
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -593,4 +608,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "21c7eb6e849f4c221cb3b0371a7cc224f5cefc985226072937c1f6257cc91a5d"
+content-hash = "f8c3deac3f67f35a96e5d8488181e04d572c82c57282d2d48cc9cf4d443dfa2a"
