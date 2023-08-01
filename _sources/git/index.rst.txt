@@ -23,6 +23,25 @@ Git is a version control system. It allows you to keep track of changes to a pro
 
     * If you are interested in learning more, check out the `Git Book <https://git-scm.com/book/en/v2>`_.
 
+How does our team use it?
+-------------------------
+
+We use Git to keep track of changes to our code with branches
+
+we have three main branches in every repository:
+
+* **Main/Master:** this is the clean code that has been tested. One that you can bet your life on. This is the code that we base our competition code on.
+* **Dev:** this is the code that we are currently working on. It is not guaranteed to work, but it should be close. This is the code that we base our practice code on. This is also for testing new features in conjunction with each other.
+* **Feat/#feature_name#:** this is the code for a specific feature. It is not guaranteed to work. This is for adding and testing new features individually.
+
+What code do we run during competitions?
+
+* We make branches for each competition, which are based off of the Main branch. This is so we can edit based on the competition deviances without affecting the main code. We then merge files we like from the competition branch into the main branch after the competition.
+
+Other branches:
+* **Hotfix/#hotfix_name#:** this is for fixing bugs in the main branch. It is based off of the main branch and is merged back into the main branch after the bug is fixed.
+
+
 How do I use it?
 ----------------
 
