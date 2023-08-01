@@ -11,12 +11,17 @@ This document describes the necessary installations to effectively run code in t
 Software
 ========
 
+Follow these steps to install necessary software to run code from this organization on your computer
+
 .. tab-set::
 
     .. tab-item:: Windows
         :sync: Win
 
         1. Install Python (http://www.python.org/download/)
+
+            * Language used to write code
+
             .. caution::
 
                 Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
@@ -26,7 +31,10 @@ Software
 
                 python
 
-        3. Install Poetry by opening a powershell prompt and typing 
+        3. Install Poetry by opening a powershell prompt and typing
+
+            * Poetry is a package manager for Python
+
 
             ..  code-block:: powershell
 
@@ -38,17 +46,25 @@ Software
         :sync: Mac
 
         1. Install Rosetta 2 by opening a terminal and typing
+
+            .. information::
+                Rosetta 2 is a program that allows you to run programs that are not native to the M1 chip
+
             .. code-block:: bash
 
                 softwareupdate --install-rosetta
 
         2. Install Homebrew by opening a terminal and typing 
 
+            * Homebrew is a package manager for Mac
+
             .. code-block:: bash
 
                 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
         3. Install Python by opening a terminal and typing 
+
+            * Language used to write code
 
             .. code-block:: bash
 
@@ -61,6 +77,9 @@ Software
                 python
 
         5. Install Poetry by opening a terminal and typing 
+
+            * Poetry is a package manager for Python
+
                 
             .. code-block:: bash
 
@@ -75,6 +94,8 @@ Software
 
         1. Install Python by opening a terminal and typing 
 
+            * Language used to write code
+
             .. code-block:: bash
 
                 sudo apt-get install python3.9
@@ -86,6 +107,8 @@ Software
                 python
 
         3. Install Poetry by opening a terminal and typing 
+
+            * Poetry is a package manager for Python
 
             .. code-block:: bash
 
