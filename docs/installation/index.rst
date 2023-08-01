@@ -11,9 +11,9 @@ This document describes the necessary installations to effectively run code in t
 Software
 ========
 
-.. tabset::
+.. tab-set::
 
-    .. tabitem:: Windows
+    .. tab-item:: Windows
     :sync: Win
 
         1. Install Python (http://www.python.org/download/)
@@ -34,7 +34,7 @@ Software
 
 
 
-    .. tabitem:: Mac
+    .. tab-item:: Mac
     :sync: Mac
 
         1. Install Rosetta 2 by opening a terminal and typing
@@ -70,7 +70,7 @@ Software
 
                 if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
-    .. tabitem:: Linux
+    .. tab-item:: Linux
     :sync: Linux
 
         1. Install Python by opening a terminal and typing 
