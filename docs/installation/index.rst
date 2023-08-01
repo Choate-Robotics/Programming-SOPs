@@ -15,7 +15,9 @@ Windows
 -------
 
 1. Install Python (http://www.python.org/download/)
-    a. Make sure to check the box to add Python to your PATH
+    .. caution::
+
+        Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
 
 2. Verify Python is installed by opening a command prompt and typing 
     ..  code-block:: python
@@ -62,7 +64,7 @@ Mac
     
     .. important::
 
-        **Important**: if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
+        if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
 Linux
 -----
@@ -95,9 +97,15 @@ Linux
 IDE
 ===
 
+What is an IDE?
+---------------
+* IDE stands for Integrated Development Environment.
+* An IDE is a program that is used to write code.
+---------------
+
 There are many IDEs that can be used to develop Python code.  The following are recommended:
 
-VsCode
+VSCode
 ------
 * The most popular IDE for our team.
 * free and open source, and has a large community of developers.
@@ -147,8 +155,7 @@ Github
 
 .. tip::
 
-    **Recommended: Github Desktop**
-    --------------------------------
+    **Github Desktop**
     * Github Desktop is a GUI for git that makes it easier to use.
 
     1. Download Github Desktop from (https://desktop.github.com/)
