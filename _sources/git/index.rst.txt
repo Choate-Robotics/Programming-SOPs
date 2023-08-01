@@ -35,9 +35,7 @@ There are two ways to use Git. You can use it from the command line or you can u
 .. tab-set::
 
     .. tab-item:: GUI
-        :sync: GUI
 
-        GUI
 
         Github Desktop is a GUI for Git. It makes it easy to see what changes you have made and to sync them with the server. It also makes it easy to create branches and merge them back into the main branch.
 
@@ -47,9 +45,6 @@ There are two ways to use Git. You can use it from the command line or you can u
         You can Clone repositories at the top right...
 
     .. tab-item:: CLI
-        :sync: CLI
-        Command Line (CLI)
-
 
         The command line is a text based interface to your computer. It is a powerful tool that allows you to do many things that you can't do with a GUI. It is also a bit more complicated to use, since you have to remember the commands.
 
@@ -59,6 +54,8 @@ There are two ways to use Git. You can use it from the command line or you can u
         .. dropdown:: Basic Commands for Navigation and File Management
 
             * ``cd`` - change directory
+
+            * ``cd..`` - go up one directory
 
             * ``dir`` - list files in current directory
 
