@@ -23,7 +23,11 @@ it is a living document and will be updated as needed.
    :maxdepth: 2
    :caption: Installation:
 
-   installation/index
+   installation/index#software
+
+   installation/index#ide
+
+   installation/index#github
 
    initial setup/index
 
