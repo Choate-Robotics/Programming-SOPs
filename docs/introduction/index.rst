@@ -1,5 +1,5 @@
 ========================================================
-introduction
+Introduction
 ========================================================
 
 Welcome to the Choate Robotics Programming Documentation
