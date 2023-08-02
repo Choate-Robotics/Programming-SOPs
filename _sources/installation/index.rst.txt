@@ -206,9 +206,9 @@ Git and Github
 
 3. Verify Git is installed by opening a command prompt and typing 
     
-    .. code-block:: bash
+.. code-block:: bash
 
-        git
+    git
 
 .. tip::
 
@@ -220,3 +220,32 @@ Git and Github
     2. Run the installer
 
     3. Open Github Desktop and sign in with your Github account
+
+Other Software
+==============
+
+This is a list of other software that is used to develop code for FRC robots. its not exactly necessary to install these on every computer, but you can if you want.
+
+* WPILIB Suite:
+    
+        * WPILIB Suite is a collection of tools that are used to develop code for FRC robots.
+        * includes the WPILIB VSCode extension, Shuffleboard networktable reader, etc.
+
+        .. important:: 
+
+            * WPILIB Suite requires Java 11 to be installed.
+            * WPILIB is mostly meant for Java development, so some of the tools may not work with Python.
+    
+        * WPILIB Suite can be downloaded from (https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html)
+
+* FRC Game Tools:
+
+    * FRC Game Tools is a collection of tools that are used to develop code for FRC robots.
+    * includes the FRC Driver Station, FRC Radio Configuration Utility, and FRC Update Suite.
+
+    .. important::
+
+        * If you are using a Mac with an M1 chip, you will need to install Rosetta 2 to run the FRC Driver Station.
+        * This is necessary if you want to start the robot code from your computer
+
+    * FRC Game Tools can be downloaded from (https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#479842)

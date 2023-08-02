@@ -11,7 +11,7 @@ it is a living document and will be updated as needed.
 
 .. hint::
 
-   No idea where to go from here? Check out :doc:`installation/index`.
+   No idea where to go from here? Check out :doc:`introduction/index`.
 
 .. toctree::
    :maxdepth: 1
@@ -28,6 +28,10 @@ it is a living document and will be updated as needed.
    Install <installation/index>
 
    Setup <initial setup/index>
+
+   First Project <code/first_project>
+
+   Documentation <code/documentation>
 
 
 .. toctree::

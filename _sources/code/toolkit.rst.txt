@@ -18,7 +18,7 @@ To install this library on your computer, run the following command:
     robotpy-toolkit-7407 is already inside the poetry project, so you don't necessarily need to install it on your computer.
     It is recommended, however, since the autocompletion for IDE's will work.
 
-    * for more information about poetry, visit our `poetry page </poetry/index>`_
+    * for more information about poetry, visit our :doc: `poetry documentation <poetry/index>`
   
 Usage
 -----
@@ -27,11 +27,11 @@ Usage
 
 * Simply import the necessary classes from the library into your code:
 
-    .. code-block:: python
-        :linenos:
+.. code-block:: python
+    :linenos:
 
-        from robotpy_toolkit.sensors import limelight
+    from robotpy_toolkit.sensors import limelight
 
-        limelight = limelight.Limelight()
+    limelight = limelight.Limelight()
 
 
