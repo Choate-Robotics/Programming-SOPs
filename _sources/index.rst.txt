@@ -29,7 +29,15 @@ it is a living document and will be updated as needed.
 
    Setup <initial setup/index>
 
-   First Project <code/first_project>
+   Creating a Project <git/creating_a_new_project>
+
+   grab an existing project <git/grab_an_existing_project>
+
+   File Structure <code/file_structure>
+
+   Deploying Code <code/deploying_code>
+
+   Testing Code <code/testing_code>
 
    Documentation <code/documentation>
 
@@ -44,7 +52,9 @@ it is a living document and will be updated as needed.
 
    Hardware and Electronics <hardware/index>
 
-   File Structure <code/file_structure>
+   Subsystems <code/subsystems>
+
+   Commands <code/commands>
 
    Toolkit <code/toolkit>
 
