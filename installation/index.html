@@ -245,88 +245,92 @@ Windows</label><div class="sd-tab-content docutils">
 <div><ul class="simple">
 <li><p>Language used to write code</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>Make sure to check the box that says “Add Python to PATH”, otherwise you will have to add it manually. Thats not fun.</p>
 </div>
-</div></blockquote>
-</li>
-<li><dl>
-<dt>Verify Python is installed by opening a command prompt and typing</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+<ol class="arabic simple" start="2">
+<li><p>Verify Python is installed by opening a command prompt and typing</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
 </pre></div>
 </div>
-</dd>
-</dl>
-</li>
+<ol class="arabic" start="3">
 <li><p>Install Poetry by opening a powershell prompt and typing</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Poetry is a package manager for Python</p></li>
 </ul>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Verify Poetry is installed by opening a powershell prompt and typing</p>
-<blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span>
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Install our library (robotpy-toolkit-7407) by opening a powershell prompt and typing</p>
-<blockquote>
-<div><div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">robotpy-toolkit</span><span class="p">-</span><span class="n">7407</span>
-</pre></div>
-</div>
 </div></blockquote>
 </li>
 </ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Verify Poetry is installed by opening a powershell prompt and typing</p></li>
+</ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Install our library (robotpy-toolkit-7407) by opening a powershell prompt and typing</p></li>
+</ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">robotpy-toolkit</span><span class="p">-</span><span class="n">7407</span>
+</pre></div>
+</div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" data-sync-id="Mac" for="sd-tab-item-1">
 Mac</label><div class="sd-tab-content docutils">
-<ol class="arabic">
-<li><p>Install Rosetta 2 by opening a terminal and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>softwareupdate --install-rosetta
+<ol class="arabic simple">
+<li><p>Install Rosetta 2 by opening a terminal and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>softwareupdate --install-rosetta
 </pre></div>
 </div>
-</div></blockquote>
-</li>
+<ol class="arabic" start="2">
 <li><p>Install Homebrew by opening a terminal and typing</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Homebrew is a package manager for Mac</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-</div></blockquote>
-</li>
+<ol class="arabic" start="3">
 <li><p>Install Python by opening a terminal and typing</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Language used to write code</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install python
 </pre></div>
 </div>
-</div></blockquote>
-</li>
-<li><p>Verify Python is installed by closing and opening the terminal and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
+<ol class="arabic simple" start="4">
+<li><p>Verify Python is installed by closing and opening the terminal and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
-</div></blockquote>
-</li>
+<ol class="arabic" start="5">
 <li><p>Install Poetry by opening a terminal and typing</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Poetry is a package manager for Python</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
 </pre></div>
 </div>
@@ -334,23 +338,18 @@ Mac</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Important</p>
 <p>if you get an error concerning <code class="docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span></code>, run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p>
 </div>
-</div></blockquote>
-</li>
-<li><p>Verify Poetry is installed by closing and opening the terminal and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install robotpy-toolkit-7407
-</pre></div>
-</div>
-</div></blockquote>
-</li>
+<ol class="arabic simple" start="6">
+<li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
 </ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install robotpy-toolkit-7407
+</pre></div>
+</div>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" data-sync-id="Linux" for="sd-tab-item-2">
@@ -361,43 +360,42 @@ Linux</label><div class="sd-tab-content docutils">
 <div><ul class="simple">
 <li><p>Language used to write code</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install python3.9
 </pre></div>
 </div>
-</div></blockquote>
-</li>
-<li><p>Verify Python is installed by closing and opening the terminal and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
+<ol class="arabic simple" start="2">
+<li><p>Verify Python is installed by closing and opening the terminal and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
-</div></blockquote>
-</li>
+<ol class="arabic" start="3">
 <li><p>Install Poetry by opening a terminal and typing</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Poetry is a package manager for Python</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Verify Poetry is installed by closing and opening the terminal and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
-</pre></div>
-</div>
-</div></blockquote>
-</li>
-<li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p>
-<blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install robotpy-toolkit-7407
-</pre></div>
-</div>
 </div></blockquote>
 </li>
 </ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install robotpy-toolkit-7407
+</pre></div>
+</div>
 </div>
 </div>
 </div>

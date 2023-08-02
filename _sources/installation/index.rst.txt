@@ -22,35 +22,36 @@ Follow these steps to install necessary software to run code from this organizat
 
             * Language used to write code
 
-            .. caution::
+        .. caution::
 
-                Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
+            Make sure to check the box that says "Add Python to PATH", otherwise you will have to add it manually. Thats not fun.
 
         2. Verify Python is installed by opening a command prompt and typing 
-            ..  code-block:: python
+        
+        ..  code-block:: python
 
-                python
+            python
 
         3. Install Poetry by opening a powershell prompt and typing
 
             * Poetry is a package manager for Python
 
 
-            ..  code-block:: powershell
+        ..  code-block:: powershell
 
-                (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+            (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
         4. Verify Poetry is installed by opening a powershell prompt and typing
 
-            ..  code-block:: powershell
+        ..  code-block:: powershell
 
-                poetry
+            poetry
 
         5. Install our library (robotpy-toolkit-7407) by opening a powershell prompt and typing
 
-            ..  code-block:: powershell
+        ..  code-block:: powershell
 
-                pip install robotpy-toolkit-7407
+            pip install robotpy-toolkit-7407
 
 
 
@@ -59,59 +60,59 @@ Follow these steps to install necessary software to run code from this organizat
 
         1. Install Rosetta 2 by opening a terminal and typing
 
-            .. information::
-                Rosetta 2 is a program that allows you to run programs that are not native to the M1 chip
+        .. information::
+            Rosetta 2 is a program that allows you to run programs that are not native to the M1 chip
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                softwareupdate --install-rosetta
+            softwareupdate --install-rosetta
 
         2. Install Homebrew by opening a terminal and typing 
 
             * Homebrew is a package manager for Mac
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
         3. Install Python by opening a terminal and typing 
 
             * Language used to write code
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                brew install python
+            brew install python
 
         4. Verify Python is installed by closing and opening the terminal and typing 
             
-            .. code-block:: bash
+        .. code-block:: bash
 
-                python
+            python
 
         5. Install Poetry by opening a terminal and typing 
 
             * Poetry is a package manager for Python
 
                 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-            
-            .. important::
+            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+        
+        .. important::
 
-                if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
+            if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
         6. Verify Poetry is installed by closing and opening the terminal and typing
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                poetry
+            poetry
 
         7. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
 
-            ..  code-block:: bash
+        ..  code-block:: bash
 
-                pip install robotpy-toolkit-7407
+            pip install robotpy-toolkit-7407
 
     .. tab-item:: Linux
         :sync: Linux
@@ -120,35 +121,35 @@ Follow these steps to install necessary software to run code from this organizat
 
             * Language used to write code
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                sudo apt-get install python3.9
+            sudo apt-get install python3.9
 
         2. Verify Python is installed by closing and opening the terminal and typing 
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                python
+            python
 
         3. Install Poetry by opening a terminal and typing 
 
             * Poetry is a package manager for Python
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
         4. Verify Poetry is installed by closing and opening the terminal and typing 
 
-            .. code-block:: bash
+        .. code-block:: bash
 
-                poetry
+            poetry
 
         5. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
 
-            ..  code-block:: bash
+        ..  code-block:: bash
 
-                pip install robotpy-toolkit-7407
+            pip install robotpy-toolkit-7407
 
 IDE
 ===
