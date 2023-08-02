@@ -1,6 +1,13 @@
 Poetry
 ======
 
+.. note:: 
+    This page is a tutorial on how to use Poetry. It is not a tutorial on how to use Python.
+
+.. note::
+    In most cases, you will not have to interact with poetry directly. The ``pyproject.toml`` and ``poetry.lock`` files are already set up for you. You can skip this page if you are not interested in learning how to use Poetry.
+
+
 What is it?
 -----------
 
@@ -56,3 +63,23 @@ Running your project:
 
 .. note:: 
     a shell is a command line interface that allows you to run commands on your computer. For example, the terminal is a shell. by opening a shell inside the virtual environment, you can run commands without using ``poetry run``.
+
+Updating dependencies:
+~~~~~~~~~~~~~~~~~~~~~~
+
+1. to update a dependency, use ``poetry update <dependency>``. For example, ``poetry update numpy`` will update the numpy library to the latest version.
+2. to update all dependencies, use ``poetry update``. This will update all dependencies to the latest version.
+
+How to share your project with others?
+--------------------------------------
+
+1. to share your project with others, you need to share the ``pyproject.toml`` and ``poetry.lock`` files. These files contain the configuration and dependencies of your project.
+2. When someone else wants to run your project, they need to run ``poetry install``. This will install all dependencies in the ``poetry.lock`` file. This will also create a virtual environment for your project.
+3. They can now run your project using ``poetry run <command>``.
+
+How Choate Robotics uses Poetry:
+--------------------------------
+
+* We use Poetry to manage dependencies in our projects.
+* Since all repositories are set up by the same template, all repositories have the same ``pyproject.toml`` and ``poetry.lock`` files. Meaning the general dependencies are already installed.
+* We add more dependencies as needed.

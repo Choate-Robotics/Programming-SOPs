@@ -40,6 +40,10 @@ it is a living document and will be updated as needed.
 
    Hardware and Electronics <hardware/index>
 
+   File Structure <code/file_structure>
+
+   Toolkit <code/toolkit>
+
 
 
 
