@@ -27,7 +27,7 @@ What you need to know before you start:
 Ready to get started?
 ---------------------
 
-First, you need to install the necessary software. You can find instructions for that in the :doc:`installation/index` section of this documentation.
+First, you need to install the necessary software. You can find instructions for that here: `Installing Software <installation/index.html>`_
 
 How to use this documentation:
 ------------------------------
