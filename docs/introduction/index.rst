@@ -24,6 +24,11 @@ What you need to know before you start:
 - Basic understanding of Python
 - Basic understanding of Object-Oriented Programming
 
+Ready to get started?
+---------------------
+
+First, you need to install the necessary software. You can find instructions for that in the `Installation` section of this documentation.
+
 How to use this documentation:
 ------------------------------
 - Read it on the Github page
