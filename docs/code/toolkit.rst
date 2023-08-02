@@ -9,16 +9,16 @@ Installation
 ------------
 To install this library on your computer, run the following command:
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        pip install robotpy-toolkit-7407
+    pip install robotpy-toolkit-7407
 
-    .. note::
+.. note::
 
-        robotpy-toolkit-7407 is already inside the poetry project, so you don't necessarily need to install it on your computer.
-        It is recommended, however, since the autocompletion for IDE's will work.
+    robotpy-toolkit-7407 is already inside the poetry project, so you don't necessarily need to install it on your computer.
+    It is recommended, however, since the autocompletion for IDE's will work.
 
-        * for more information about poetry, visit our `poetry page </poetry/index>`_
+    * for more information about poetry, visit our `poetry page </poetry/index>`_
   
 Usage
 -----
