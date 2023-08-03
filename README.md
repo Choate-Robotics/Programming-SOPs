@@ -18,3 +18,11 @@ Some topics we are looking to add:
 	- What is in the toolkit
 	- What do you need to make sure you use
 * Our general robot file structure
+
+## How to contribute
+
+To contribute to this repository, you will need to fork it and then make a pull request. If you are unfamiliar with this process, please see [this guide](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
+
+## How to use this repository
+
+To Deploy to Github Pages: push to origin. Github Actions will automatically build and deploy to Github Pages.
