@@ -249,3 +249,17 @@ This is a list of other software that is used to develop code for FRC robots. it
         * This is necessary if you want to start the robot code from your computer
 
     * FRC Game Tools can be downloaded from (https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#479842)
+
+* CTRE Phoenix Tuner:
+
+    * CTRE Phoenix Tuner is a tool that is used to configure CTRE motor controllers.
+    * can be used to update firmware, configure CAN IDs, etc.
+
+    * CTRE Phoenix Tuner can be downloaded from (https://store.ctr-electronics.com/software/)
+
+* RevRobotics Hardware Client:
+
+    * RevRobotics Hardware Client is a tool that is used to configure Rev Robotics motor controllers.
+    * can be used to update firmware, configure CAN IDs, etc.
+
+    * RevRobotics Hardware Client can be downloaded from (https://docs.revrobotics.com/rev-hardware-client/)
