@@ -10,6 +10,19 @@ here is the file structure for the robot code:
 
 
     digraph file_structure {
+
+        subgraph OI {
+            label="OI/"
+            Keymap -> OI_py
+        }
+
+        subgraph tests {
+            label="tests/"
+            tests_subsystems -> tests
+            tests_commands -> tests
+            tests_sensors -> tests
+        }
+
         node [shape=box]
         commands [label="commands/"]
         subsystems [label="subsystems/"]
@@ -45,4 +58,6 @@ here is the file structure for the robot code:
         subsystems -> commands
         commands -> tests
         sensors -> tests
+        constants_py -> tests
+        constants_py -> robot_py
     }
