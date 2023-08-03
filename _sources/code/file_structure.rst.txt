@@ -35,14 +35,14 @@ here is the file structure for the robot code:
             // Add more example files in the subsystem folder, if needed
         }
 
-        subgraph oi {
+        subgraph cluster_oi {
             label="oi/"
             oi_py [label="oi.py"]
             Keymap_py [label="Keymap.py"]
             Keymap_py -> oi_py
         }
 
-        subgraph sensors {
+        subgraph cluster_sensors {
             label="sensors/"
             sensors [label="__init__.py"]
             sensor1_py [label="sensor1.py"]
@@ -63,10 +63,14 @@ here is the file structure for the robot code:
         sensors -> robot_systems_py
 
 
-        subsystems -> commands
-        sensors -> commands
+        subsystems -> command1_py
+        sensors -> command1_py
 
-        
+        subsystems -> command2_py
+        sensors -> command2_py
+
+        commands -> oi_py
+
 
         constants_py -> robot_py
         config_py -> robot_py
