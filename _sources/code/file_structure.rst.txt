@@ -8,56 +8,35 @@ here is the file structure for the robot code:
 
 .. graphviz::
 
-    digraph G {
-        rankdir=LR;
-        node [shape=record];
-        subgraph cluster_0 {
-            label="src";
-            style=filled;
-            color=lightgrey;
-            node [style=filled,color=white];
-            "main.cpp";
-            "robot.cpp";
-            "robot.h";
-            "robotmap.h";
-            "subsystems";
-            "commands";
-            "OI.h";
-        }
-        subgraph cluster_1 {
-            label="subsystems";
-            style=filled;
-            color=lightgrey;
-            node [style=filled,color=white];
-            "subsystem1.cpp";
-            "subsystem1.h";
-            "subsystem2.cpp";
-            "subsystem2.h";
-        }
-        subgraph cluster_2 {
-            label="commands";
-            style=filled;
-            color=lightgrey;
-            node [style=filled,color=white];
-            "command1.cpp";
-            "command1.h";
-            "command2.cpp";
-            "command2.h";
-        }
-        subgraph cluster_3 {
-            label="OI";
-            style=filled;
-            color=lightgrey;
-            node [style=filled,color=white];
-            "OI.cpp";
-            "OI.h";
-        }
-        "robot.cpp" -> "subsystems";
-        "robot.cpp" -> "commands";
-        "robot.cpp" -> "OI.h";
-        "subsystems" -> "subsystem1.cpp";
-        "subsystems" -> "subsystem2.cpp";
-        "commands" -> "command1.cpp";
-        "commands" -> "command2.cpp";
-        "OI.h" -> "OI.cpp";
+
+    digraph file_structure {
+        node [shape=box]
+        commands [label="commands/"]
+        subsystems [label="subsystems/"]
+        OI [label="OI/"]
+        sensors [label="sensors/"]
+        tests [label="tests/"]
+        utils [label="utils/"]
+        robot_py [label="robot.py"]
+        constants_py [label="constants.py"]
+        config_py [label="config.py"]
+        robot_systems_py [label="robot_systems.py"]
+
+        commands -> robot_py
+        commands -> OI
+        OI -> robot_py
+        constants_py -> robot_py
+        constants_py -> subsystems
+        constants_py -> sensors
+        constants_py -> utils
+        config_py -> subsystems
+        config_py -> sensors
+        subsystem -> robot_systems_py
+        sensors -> robot_systems_py
+        utils -> subsystems
+        utils -> commands
+        robot_systems_py -> robot_py
+        subsystems -> tests
+        commands -> tests
+        sensors -> tests
     }
