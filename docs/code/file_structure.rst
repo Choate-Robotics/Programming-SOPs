@@ -52,6 +52,25 @@ here is the file structure for the robot code:
             // Add more example files in the sensors folder, if needed
         }
 
+        subgraph cluster_utils {
+            label="utils/"
+            utils [label="__init__.py"]
+            util1_py [label="util1.py"]
+            util2_py [label="util2.py"]
+            util1_py -> utils
+            util2_py -> utils
+            // Add more example files in the utils folder, if needed
+        }
+
+        subgraph cluster_tests {
+            label="tests/"
+            test_commands [label="commands/"]
+            test_subsystems [label="subsystems/"]
+            test_oi [label="oi/"]
+            test_sensors [label="sensors/"]
+            test_utils [label="utils/"]
+        }
+
 
 
         robot_py [label="robot.py"]
@@ -83,6 +102,20 @@ here is the file structure for the robot code:
 
         // oi connections
         commands -> oi_py
+
+        // utils connections
+        util1_py -> subsystem1_py
+        util2_py -> subsystem1_py
+        util1_py -> subsystem2_py
+        util2_py -> subsystem2_py
+
+        //test connections
+        commands -> test_commands
+        subsystems -> test_subsystems
+        oi_py -> test_oi
+        sensors -> test_sensors
+        utils -> test_utils
+        
 
         // robot connections
         constants_py -> robot_py
