@@ -8,6 +8,10 @@ here is the file structure for the robot code:
 
 .. graphviz::
 
+    digraph file_structure {
+
+        node [shape=box, style=filled, color=lightgrey, fontname=helvetica]
+
         // Clusters for folders
         subgraph cluster_commands {
             label="commands/"
