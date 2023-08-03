@@ -23,9 +23,9 @@ here is the file structure for the robot code:
             // Add more example files in the commands folder, if needed
         }
 
-        subgraph cluster_subsystem {
+        subgraph cluster_subsystems {
             label="subsystem/"
-            subsystem [label=""]
+            subsystems [label=""]
             subsystem1_py [label="subsystem1.py"]
             subsystem2_py [label="subsystem2.py"]
             // Add more example files in the subsystem folder, if needed
@@ -44,7 +44,8 @@ here is the file structure for the robot code:
         constants_py [label="constants.py"]
         config_py [label="config.py"]
 
-        subsystems -> robot_systems_py
+        cluster_subsystems -> robot_systems_py
+        cluster_subsystems -> cluster_commands
         commands -> robot_py
 
         

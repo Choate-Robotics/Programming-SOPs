@@ -236,7 +236,7 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this headline"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<div class="graphviz"><img src="../_images/graphviz-a0a996ba391bf63569ad43c753b48e792fa2d2ad.png" alt="digraph file_structure {
+<div class="graphviz"><img src="../_images/graphviz-422df891953c255df93230259538ba4a79eec8a2.png" alt="digraph file_structure {
 
     node [shape=box, style=filled, color=lightgrey, fontname=helvetica]
 
@@ -250,9 +250,9 @@
         // Add more example files in the commands folder, if needed
     }
 
-    subgraph cluster_subsystem {
+    subgraph cluster_subsystems {
         label=&quot;subsystem/&quot;
-        subsystem [label=&quot;&quot;]
+        subsystems [label=&quot;&quot;]
         subsystem1_py [label=&quot;subsystem1.py&quot;]
         subsystem2_py [label=&quot;subsystem2.py&quot;]
         // Add more example files in the subsystem folder, if needed
@@ -271,7 +271,8 @@
     constants_py [label=&quot;constants.py&quot;]
     config_py [label=&quot;config.py&quot;]
 
-    subsystems -&gt; robot_systems_py
+    cluster_subsystems -&gt; robot_systems_py
+    cluster_subsystems -&gt; cluster_commands
     commands -&gt; robot_py
 
 
