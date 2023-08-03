@@ -236,7 +236,7 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this headline"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<div class="graphviz"><img src="../_images/graphviz-f730b593eaed9449c78c16cdceacb7ee6c4f8792.png" alt="digraph file_structure {
+<div class="graphviz"><img src="../_images/graphviz-7c890640a96e53fdbe5cc48d6f02bfe9c1dbbb38.png" alt="digraph file_structure {
 
     node [shape=box, style=filled, color=lightgrey, fontname=helvetica]
 
@@ -279,6 +279,25 @@
         // Add more example files in the sensors folder, if needed
     }
 
+    subgraph cluster_utils {
+        label=&quot;utils/&quot;
+        utils [label=&quot;__init__.py&quot;]
+        util1_py [label=&quot;util1.py&quot;]
+        util2_py [label=&quot;util2.py&quot;]
+        util1_py -&gt; utils
+        util2_py -&gt; utils
+        // Add more example files in the utils folder, if needed
+    }
+
+    subgraph cluster_tests {
+        label=&quot;tests/&quot;
+        test_commands [label=&quot;commands/&quot;]
+        test_subsystems [label=&quot;subsystems/&quot;]
+        test_oi [label=&quot;oi/&quot;]
+        test_sensors [label=&quot;sensors/&quot;]
+        test_utils [label=&quot;utils/&quot;]
+    }
+
 
 
     robot_py [label=&quot;robot.py&quot;]
@@ -310,6 +329,20 @@
 
     // oi connections
     commands -&gt; oi_py
+
+    // utils connections
+    util1_py -&gt; subsystem1_py
+    util2_py -&gt; subsystem1_py
+    util1_py -&gt; subsystem2_py
+    util2_py -&gt; subsystem2_py
+
+    //test connections
+    commands -&gt; test_commands
+    subsystems -&gt; test_subsystems
+    oi_py -&gt; test_oi
+    sensors -&gt; test_sensors
+    utils -&gt; test_utils
+
 
     // robot connections
     constants_py -&gt; robot_py
