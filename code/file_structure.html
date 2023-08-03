@@ -236,7 +236,7 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this headline"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<div class="graphviz"><img src="../_images/graphviz-422df891953c255df93230259538ba4a79eec8a2.png" alt="digraph file_structure {
+<div class="graphviz"><img src="../_images/graphviz-84061bd95820f9b469899f56e6617f5ac796e1d7.png" alt="digraph file_structure {
 
     node [shape=box, style=filled, color=lightgrey, fontname=helvetica]
 
@@ -244,24 +244,39 @@
         // Clusters for folders
     subgraph cluster_commands {
         label=&quot;commands/&quot;
-        commands [label=&quot;&quot;]
+        commands [label=&quot;__init__.py&quot;]
         command1_py [label=&quot;command1.py&quot;]
         command2_py [label=&quot;command2.py&quot;]
+        command1_py -&gt; commands
+        command2_py -&gt; commands
         // Add more example files in the commands folder, if needed
     }
 
     subgraph cluster_subsystems {
         label=&quot;subsystem/&quot;
-        subsystems [label=&quot;&quot;]
+        subsystems [label=&quot;__init__.py&quot;]
         subsystem1_py [label=&quot;subsystem1.py&quot;]
         subsystem2_py [label=&quot;subsystem2.py&quot;]
+        subsystem1_py -&gt; subsystems
+        subsystem2_py -&gt; subsystems
         // Add more example files in the subsystem folder, if needed
     }
 
     subgraph oi {
+        label=&quot;oi/&quot;
         oi_py [label=&quot;oi.py&quot;]
         Keymap_py [label=&quot;Keymap.py&quot;]
         Keymap_py -&gt; oi_py
+    }
+
+    subgraph sensors {
+        label=&quot;sensors/&quot;
+        sensors [label=&quot;__init__.py&quot;]
+        sensor1_py [label=&quot;sensor1.py&quot;]
+        sensor2_py [label=&quot;sensor2.py&quot;]
+        sensor1_py -&gt; sensors
+        sensor2_py -&gt; sensors
+        // Add more example files in the sensors folder, if needed
     }
 
 
@@ -271,8 +286,19 @@
     constants_py [label=&quot;constants.py&quot;]
     config_py [label=&quot;config.py&quot;]
 
-    cluster_subsystems -&gt; robot_systems_py
-    cluster_subsystems -&gt; cluster_commands
+    subsystems -&gt; robot_systems_py
+    sensors -&gt; robot_systems_py
+
+
+    subsystems -&gt; commands
+    sensors -&gt; commands
+
+
+
+    constants_py -&gt; robot_py
+    config_py -&gt; robot_py
+    oi_py -&gt; robot_py
+    robot_systems_py -&gt; robot_py
     commands -&gt; robot_py
 
 

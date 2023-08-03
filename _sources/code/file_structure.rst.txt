@@ -17,24 +17,39 @@ here is the file structure for the robot code:
             // Clusters for folders
         subgraph cluster_commands {
             label="commands/"
-            commands [label=""]
+            commands [label="__init__.py"]
             command1_py [label="command1.py"]
             command2_py [label="command2.py"]
+            command1_py -> commands
+            command2_py -> commands
             // Add more example files in the commands folder, if needed
         }
 
         subgraph cluster_subsystems {
             label="subsystem/"
-            subsystems [label=""]
+            subsystems [label="__init__.py"]
             subsystem1_py [label="subsystem1.py"]
             subsystem2_py [label="subsystem2.py"]
+            subsystem1_py -> subsystems
+            subsystem2_py -> subsystems
             // Add more example files in the subsystem folder, if needed
         }
 
         subgraph oi {
+            label="oi/"
             oi_py [label="oi.py"]
             Keymap_py [label="Keymap.py"]
             Keymap_py -> oi_py
+        }
+
+        subgraph sensors {
+            label="sensors/"
+            sensors [label="__init__.py"]
+            sensor1_py [label="sensor1.py"]
+            sensor2_py [label="sensor2.py"]
+            sensor1_py -> sensors
+            sensor2_py -> sensors
+            // Add more example files in the sensors folder, if needed
         }
 
 
@@ -44,8 +59,19 @@ here is the file structure for the robot code:
         constants_py [label="constants.py"]
         config_py [label="config.py"]
 
-        cluster_subsystems -> robot_systems_py
-        cluster_subsystems -> cluster_commands
+        subsystems -> robot_systems_py
+        sensors -> robot_systems_py
+
+
+        subsystems -> commands
+        sensors -> commands
+
+        
+
+        constants_py -> robot_py
+        config_py -> robot_py
+        oi_py -> robot_py
+        robot_systems_py -> robot_py
         commands -> robot_py
 
         
