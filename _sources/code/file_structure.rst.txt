@@ -85,47 +85,41 @@ here is the file structure for the robot code:
         config_py [label="config.py"]
 
         // Subsystem connections
-        constants_py -> subsystem1_py [color=orange, style=bold]
-        config_py -> subsystem1_py [color=orange, style=bold]
-        constants_py -> subsystem2_py [color=orange, style=bold]
-        config_py -> subsystem2_py [color=orange, style=bold]
+        constants_py -> subsystems
+        config_py -> subsystems
 
         // Sensor connections
-        constants_py -> sensor1_py [color=green, style=bold]
-        config_py -> sensor1_py [color=green, style=bold]
-        constants_py -> sensor2_py [color=green, style=bold]
-        config_py -> sensor2_py [color=green, style=bold]
+        constants_py -> sensors
+        config_py -> sensors
 
         // Robot system connections
-        subsystems -> robot_systems_py [color=black, style=dashed]
-        sensors -> robot_systems_py [color=black, style=dashed]
+        subsystems -> robot_systems_py
+        sensors -> robot_systems_py
 
         // Command connections
-        subsystems -> commands [color=blue, style=bold]
-        sensors -> commands [color=blue, style=bold]
+        subsystems -> commands
+        sensors -> commands
 
         // OI connections
-        commands -> oi_py [color=purple, style=bold]
+        commands -> oi_py
 
         // Utils connections
-        util1_py -> subsystem1_py [color=red, style=bold]
-        util2_py -> subsystem1_py [color=red, style=bold]
-        util1_py -> subsystem2_py [color=red, style=bold]
-        util2_py -> subsystem2_py [color=red, style=bold]
+        util1_py -> utils
+        util2_py -> utils
 
         // Test connections
-        commands -> test_commands [color=grey, style=dashed]
-        subsystems -> test_subsystems [color=grey, style=dashed]
-        oi_py -> test_oi [color=grey, style=dashed]
-        sensors -> test_sensors [color=grey, style=dashed]
-        utils -> test_utils [color=grey, style=dashed]
+        commands -> test_commands
+        subsystems -> test_subsystems
+        oi_py -> test_oi
+        sensors -> test_sensors
+        utils -> test_utils
 
         // Robot connections
-        constants_py -> robot_py [color=black, style=dotted]
-        config_py -> robot_py [color=black, style=dotted]
-        oi_py -> robot_py [color=black, style=dotted]
-        robot_systems_py -> robot_py [color=black, style=dotted]
-        commands -> robot_py [color=black, style=dotted]
+        constants_py -> robot_py
+        config_py -> robot_py
+        oi_py -> robot_py
+        robot_systems_py -> robot_py
+        commands -> robot_py
 
         // Adjust alignment and spacing
         {rank=same; subsystem1_py; subsystem2_py}

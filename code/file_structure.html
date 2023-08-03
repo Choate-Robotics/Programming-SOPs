@@ -236,7 +236,7 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this headline"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<div class="graphviz"><img src="../_images/graphviz-2b37261eee35a0f13258afdbab48d901c9c3e596.png" alt="digraph file_structure {
+<div class="graphviz"><img src="../_images/graphviz-d1b7344c4c54e39637f6e3d02a39fadf890788bf.png" alt="digraph file_structure {
     node [shape=box, style=filled, fontname=helvetica]
 
     // Clusters for folders
@@ -313,47 +313,41 @@
     config_py [label=&quot;config.py&quot;]
 
     // Subsystem connections
-    constants_py -&gt; subsystem1_py [color=orange, style=bold]
-    config_py -&gt; subsystem1_py [color=orange, style=bold]
-    constants_py -&gt; subsystem2_py [color=orange, style=bold]
-    config_py -&gt; subsystem2_py [color=orange, style=bold]
+    constants_py -&gt; subsystems
+    config_py -&gt; subsystems
 
     // Sensor connections
-    constants_py -&gt; sensor1_py [color=green, style=bold]
-    config_py -&gt; sensor1_py [color=green, style=bold]
-    constants_py -&gt; sensor2_py [color=green, style=bold]
-    config_py -&gt; sensor2_py [color=green, style=bold]
+    constants_py -&gt; sensors
+    config_py -&gt; sensors
 
     // Robot system connections
-    subsystems -&gt; robot_systems_py [color=black, style=dashed]
-    sensors -&gt; robot_systems_py [color=black, style=dashed]
+    subsystems -&gt; robot_systems_py
+    sensors -&gt; robot_systems_py
 
     // Command connections
-    subsystems -&gt; commands [color=blue, style=bold]
-    sensors -&gt; commands [color=blue, style=bold]
+    subsystems -&gt; commands
+    sensors -&gt; commands
 
     // OI connections
-    commands -&gt; oi_py [color=purple, style=bold]
+    commands -&gt; oi_py
 
     // Utils connections
-    util1_py -&gt; subsystem1_py [color=red, style=bold]
-    util2_py -&gt; subsystem1_py [color=red, style=bold]
-    util1_py -&gt; subsystem2_py [color=red, style=bold]
-    util2_py -&gt; subsystem2_py [color=red, style=bold]
+    util1_py -&gt; utils
+    util2_py -&gt; utils
 
     // Test connections
-    commands -&gt; test_commands [color=grey, style=dashed]
-    subsystems -&gt; test_subsystems [color=grey, style=dashed]
-    oi_py -&gt; test_oi [color=grey, style=dashed]
-    sensors -&gt; test_sensors [color=grey, style=dashed]
-    utils -&gt; test_utils [color=grey, style=dashed]
+    commands -&gt; test_commands
+    subsystems -&gt; test_subsystems
+    oi_py -&gt; test_oi
+    sensors -&gt; test_sensors
+    utils -&gt; test_utils
 
     // Robot connections
-    constants_py -&gt; robot_py [color=black, style=dotted]
-    config_py -&gt; robot_py [color=black, style=dotted]
-    oi_py -&gt; robot_py [color=black, style=dotted]
-    robot_systems_py -&gt; robot_py [color=black, style=dotted]
-    commands -&gt; robot_py [color=black, style=dotted]
+    constants_py -&gt; robot_py
+    config_py -&gt; robot_py
+    oi_py -&gt; robot_py
+    robot_systems_py -&gt; robot_py
+    commands -&gt; robot_py
 
     // Adjust alignment and spacing
     {rank=same; subsystem1_py; subsystem2_py}
