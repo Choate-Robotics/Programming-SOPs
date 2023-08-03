@@ -59,19 +59,26 @@ here is the file structure for the robot code:
         constants_py [label="constants.py"]
         config_py [label="config.py"]
 
+        // subsystem connections
+        constants_py -> subsystem1_py
+        config_py -> subsystem1_py
+        subsystems -> subsystem1_py
+        config_py -> subsystem2_py
+
+        // robot system connections
         subsystems -> robot_systems_py
         sensors -> robot_systems_py
 
-
+        // command connections
         subsystems -> command1_py
         sensors -> command1_py
-
         subsystems -> command2_py
         sensors -> command2_py
 
+        // oi connections
         commands -> oi_py
 
-
+        // robot connections
         constants_py -> robot_py
         config_py -> robot_py
         oi_py -> robot_py
