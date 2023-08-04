@@ -5,7 +5,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Hardware and Electronics | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
@@ -232,54 +233,54 @@
 
   <article role="main" class="flex-1 prose">
     
-  <div class="section" id="hardware-and-electronics">
-<h1>Hardware and Electronics<a class="headerlink" href="#hardware-and-electronics" title="Permalink to this headline"><span>#</span></a></h1>
+  <section id="hardware-and-electronics">
+<h1>Hardware and Electronics<a class="headerlink" href="#hardware-and-electronics" title="Permalink to this heading"><span>#</span></a></h1>
 <p>This page covers the hardware and electronics used on the robot that we utilize often.</p>
-<div class="section" id="core-components">
-<h2>Core Components<a class="headerlink" href="#core-components" title="Permalink to this headline"><span>#</span></a></h2>
+<section id="core-components">
+<h2>Core Components<a class="headerlink" href="#core-components" title="Permalink to this heading"><span>#</span></a></h2>
 <p>Every Robot we work on will have all of these components. They are the most important parts of the robot and are used in every subsystem.</p>
-<div class="section" id="roborio">
-<h3>RoboRIO<a class="headerlink" href="#roborio" title="Permalink to this headline"><span>#</span></a></h3>
+<section id="roborio">
+<h3>RoboRIO<a class="headerlink" href="#roborio" title="Permalink to this heading"><span>#</span></a></h3>
 <p>The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</p>
 <ul class="simple">
 <li><p>This is where the code is run</p></li>
 <li><p>[RoboRIO Documentation](<a class="reference external" href="http://www.ni.com/pdf/manuals/374474a.pdf">http://www.ni.com/pdf/manuals/374474a.pdf</a>)</p></li>
 <li><p>[RoboRIO Pinout](<a class="reference external" href="http://www.ni.com/pdf/manuals/374474a.pdf#page=8">http://www.ni.com/pdf/manuals/374474a.pdf#page=8</a>)</p></li>
 </ul>
-</div>
-<div class="section" id="pdh">
-<h3>PDH<a class="headerlink" href="#pdh" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="pdh">
+<h3>PDH<a class="headerlink" href="#pdh" title="Permalink to this heading"><span>#</span></a></h3>
 <p>The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</p>
-</div>
-<div class="section" id="can-wires">
-<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="can-wires">
+<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading"><span>#</span></a></h3>
 <p>The CAN Loop is a network of devices that communicate with each other. The RoboRIO, PDP, and motor controllers are all connected to the CAN Loop. The CAN Loop is used to send commands to the motor controllers and to monitor the current draw of each motor controller. Each device on the CAN loop has an ID which is used to recieve and send data.</p>
 <ul class="simple">
 <li><p>Almost 100% of our robot’s electronics are connected to the CAN Loop (EX: RoboRIO, PDP, Motor Controllers, etc.), and is the main way we communicate with the electronics</p></li>
 </ul>
-</div>
-<div class="section" id="radio">
-<h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="radio">
+<h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading"><span>#</span></a></h3>
 <p>The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</p>
 <ul class="simple">
 <li><p>This device is used to communicate with the driver station</p></li>
 </ul>
-</div>
-<div class="section" id="networktables">
-<h3>Networktables:<a class="headerlink" href="#networktables" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="networktables">
+<h3>Networktables:<a class="headerlink" href="#networktables" title="Permalink to this heading"><span>#</span></a></h3>
 <p>Networktables is a way for the RoboRIO to communicate with the driver station. It is used to send data to the driver station and to recieve data from the driver station. Networktables is used to send data such as the robot’s position, the robot’s speed, and the robot’s angle. Networktables is also used to recieve data such as the joystick’s position, the joystick’s button presses, and the joystick’s angle.</p>
 <ul class="simple">
 <li><p>We use Networktables to send data between other devices on the robot, the RoboRIO, and the driver station (EX: Limelight)</p></li>
 <li><p>[Networktables Documentation](<a class="reference external" href="http://robotpy.readthedocs.io/en/stable/guide/nt.html">http://robotpy.readthedocs.io/en/stable/guide/nt.html</a>)</p></li>
 </ul>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
   </article>
 
-  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.2</a></div>
   </footer></main>
 
 
@@ -297,11 +298,10 @@
   </div>
   
   
-<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-<script src="../_static/jquery.js"></script>
-<script src="../_static/underscore.js"></script>
-<script src="../_static/doctools.js"></script>
-<script src="../_static/design-tabs.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
 <script src="../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
   
 </body>

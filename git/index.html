@@ -5,7 +5,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Git and Github | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
@@ -232,10 +233,10 @@
 
   <article role="main" class="flex-1 prose">
     
-  <div class="section" id="git-and-github">
-<h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this headline"><span>#</span></a></h1>
-<div class="section" id="what-is-it">
-<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline"><span>#</span></a></h2>
+  <section id="git-and-github">
+<h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this heading"><span>#</span></a></h1>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this heading"><span>#</span></a></h2>
 <p>Git is a version control system. It allows you to keep track of changes to a project over time. It also allows you to collaborate with others on a project.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -260,9 +261,9 @@
 <li><p>If you are interested in learning more, check out the <a class="reference external" href="https://git-scm.com/book/en/v2">Git Book</a>.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="how-does-our-team-use-it">
-<h2>How does our team use it?<a class="headerlink" href="#how-does-our-team-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+<section id="how-does-our-team-use-it">
+<h2>How does our team use it?<a class="headerlink" href="#how-does-our-team-use-it" title="Permalink to this heading"><span>#</span></a></h2>
 <p>We use Git to keep track of changes to our code with branches</p>
 <p>we have three main branches in every repository:</p>
 <ul class="simple">
@@ -278,9 +279,9 @@
 <ul class="simple">
 <li><p><strong>Hotfix/#hotfix_name#:</strong> this is for fixing bugs in the main branch. It is based off of the main branch and is merged back into the main branch after the bug is fixed.</p></li>
 </ul>
-</div>
-<div class="section" id="how-do-i-use-it">
-<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+<section id="how-do-i-use-it">
+<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this heading"><span>#</span></a></h2>
 <p>There are two ways to use Git. You can use it from the command line or you can use a GUI. The GUI is easier to use, but the command line is more powerful.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -323,34 +324,34 @@ Basic Commands for Navigation and File Management<div class="sd-summary-down doc
 </div>
 </details><p>Here are some basic commands to get you started:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone a repository to the current directory</span>
-git clone <span class="c1">#repository_url</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="c1">#repository_url</span>
 
 <span class="c1"># check the status of your repository</span>
-git status
+git<span class="w"> </span>status
 
 <span class="c1"># add a file to the staging area</span>
-git add <span class="c1">#file_name</span>
+git<span class="w"> </span>add<span class="w"> </span><span class="c1">#file_name</span>
 
 <span class="c1"># commit your changes</span>
-git commit
+git<span class="w"> </span>commit
 
 <span class="c1"># push your changes to the server</span>
-git push
+git<span class="w"> </span>push
 
 <span class="c1"># pull changes from the server</span>
-git pull
+git<span class="w"> </span>pull
 
 <span class="c1"># create a new branch</span>
-git branch
+git<span class="w"> </span>branch
 
 <span class="c1"># switch to a different branch</span>
-git checkout <span class="c1">#branch_name</span>
+git<span class="w"> </span>checkout<span class="w"> </span><span class="c1">#branch_name</span>
 
 <span class="c1"># merge a branch into the current branch</span>
-git merge <span class="c1">#branch_name</span>
+git<span class="w"> </span>merge<span class="w"> </span><span class="c1">#branch_name</span>
 
 <span class="c1"># delete a branch</span>
-git branch -d <span class="c1">#branch_name</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span><span class="c1">#branch_name</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -359,13 +360,13 @@ git branch -d <span class="c1">#branch_name</span>
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
   </article>
 
-  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.2</a></div>
   </footer></main>
 
 
@@ -383,11 +384,10 @@ git branch -d <span class="c1">#branch_name</span>
   </div>
   
   
-<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-<script src="../_static/jquery.js"></script>
-<script src="../_static/underscore.js"></script>
-<script src="../_static/doctools.js"></script>
-<script src="../_static/design-tabs.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
 <script src="../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
   
 </body>

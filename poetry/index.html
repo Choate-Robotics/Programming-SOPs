@@ -5,7 +5,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Poetry | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
@@ -232,8 +233,8 @@
 
   <article role="main" class="flex-1 prose">
     
-  <div class="section" id="poetry">
-<h1>Poetry<a class="headerlink" href="#poetry" title="Permalink to this headline"><span>#</span></a></h1>
+  <section id="poetry">
+<h1>Poetry<a class="headerlink" href="#poetry" title="Permalink to this heading"><span>#</span></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This page is a tutorial on how to use Poetry. It is not a tutorial on how to use Python.</p>
@@ -242,8 +243,8 @@
 <p class="admonition-title">Note</p>
 <p>In most cases, you will not have to interact with poetry directly. The <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files are already set up for you. You can skip this page if you are not interested in learning how to use Poetry.</p>
 </div>
-<div class="section" id="what-is-it">
-<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline"><span>#</span></a></h2>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this heading"><span>#</span></a></h2>
 <ul class="simple">
 <li><p>Poetry is a tool for dependency management and packaging in Python with a virtual environment.</p></li>
 </ul>
@@ -258,9 +259,9 @@
 <li><p>It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.</p></li>
 <li><p>Runs inside a virtual environment, so you don’t need to manage your own virtual environment.</p></li>
 </ul>
-</div>
-<div class="section" id="why-use-it">
-<h2>Why use it?<a class="headerlink" href="#why-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+<section id="why-use-it">
+<h2>Why use it?<a class="headerlink" href="#why-use-it" title="Permalink to this heading"><span>#</span></a></h2>
 <ul class="simple">
 <li><p>“I don’t know why its not working, it runs on my machine!”</p></li>
 <li><p>It allows us to share code with others without worrying about library versions, since poetry will handle that for us.</p></li>
@@ -268,25 +269,25 @@
 <li><p>Since it runs inside a virtual environment, it doesn’t pollute our global python environment.</p></li>
 <li><p>It will work on every ones computer, since we are all using the same virtual environment.</p></li>
 </ul>
-</div>
-<div class="section" id="how-to-use-it">
-<h2>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+<section id="how-to-use-it">
+<h2>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this heading"><span>#</span></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You will need to install Poetry on your machine first.
 If you have not done so, refer to the :<a class="reference internal" href="../installation/index.html"><span class="doc">Installation</span></a> page for instructions on how to install Poetry.</p>
 </div>
-<div class="section" id="setup">
-<h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this headline"><span>#</span></a></h3>
+<section id="setup">
+<h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this heading"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><p>Create a new project folder, or navigate to an existing project folder.</p></li>
 <li><p>In the terminal, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">init</span></code>. This will create a new poetry project.</p></li>
 <li><p>The terminal will ask you a series of questions about your project configuration. You can skip most of them by pressing enter.</p></li>
 <li><p>Once you have finished, you should see a new file called <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. This is the configuration file for your project.</p></li>
 </ol>
-</div>
-<div class="section" id="adding-dependencies">
-<h3>Adding dependencies:<a class="headerlink" href="#adding-dependencies" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="adding-dependencies">
+<h3>Adding dependencies:<a class="headerlink" href="#adding-dependencies" title="Permalink to this heading"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><p>to add dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">&lt;dependency&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">numpy</span></code> will add the numpy library to your project.</p></li>
 <li><p>to install all dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all dependencies in your project. This will also create a virtual environment for your project.</p></li>
@@ -296,9 +297,9 @@ If you have not done so, refer to the :<a class="reference internal" href="../in
 <p class="admonition-title">Important</p>
 <p>Do not manually edit the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This file is automatically generated by poetry. If you want to update the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">lock</span></code>.</p>
 </div>
-</div>
-<div class="section" id="running-your-project">
-<h3>Running your project:<a class="headerlink" href="#running-your-project" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="running-your-project">
+<h3>Running your project:<a class="headerlink" href="#running-your-project" title="Permalink to this heading"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><p>to run your project, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">main.py</span></code> will run the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file in your project. this will run the file inside the virtual environment, so you don’t need to worry about installing the dependencies with pip (though its recommended since autocompletion will not work on IDEs).</p></li>
 <li><p>to open a shell inside the virtual environment, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>. This will open a shell inside the virtual environment, so you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>. To exit the shell, use <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
@@ -307,37 +308,37 @@ If you have not done so, refer to the :<a class="reference internal" href="../in
 <p class="admonition-title">Note</p>
 <p>a shell is a command line interface that allows you to run commands on your computer. For example, the terminal is a shell. by opening a shell inside the virtual environment, you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>.</p>
 </div>
-</div>
-<div class="section" id="updating-dependencies">
-<h3>Updating dependencies:<a class="headerlink" href="#updating-dependencies" title="Permalink to this headline"><span>#</span></a></h3>
+</section>
+<section id="updating-dependencies">
+<h3>Updating dependencies:<a class="headerlink" href="#updating-dependencies" title="Permalink to this heading"><span>#</span></a></h3>
 <ol class="arabic simple">
 <li><p>to update a dependency, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span> <span class="pre">&lt;dependency&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span> <span class="pre">numpy</span></code> will update the numpy library to the latest version.</p></li>
 <li><p>to update all dependencies, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span></code>. This will update all dependencies to the latest version.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="how-to-share-your-project-with-others">
-<h2>How to share your project with others?<a class="headerlink" href="#how-to-share-your-project-with-others" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+</section>
+<section id="how-to-share-your-project-with-others">
+<h2>How to share your project with others?<a class="headerlink" href="#how-to-share-your-project-with-others" title="Permalink to this heading"><span>#</span></a></h2>
 <ol class="arabic simple">
 <li><p>to share your project with others, you need to share the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files. These files contain the configuration and dependencies of your project.</p></li>
 <li><p>When someone else wants to run your project, they need to run <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all dependencies in the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This will also create a virtual environment for your project.</p></li>
 <li><p>They can now run your project using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>.</p></li>
 </ol>
-</div>
-<div class="section" id="how-choate-robotics-uses-poetry">
-<h2>How Choate Robotics uses Poetry:<a class="headerlink" href="#how-choate-robotics-uses-poetry" title="Permalink to this headline"><span>#</span></a></h2>
+</section>
+<section id="how-choate-robotics-uses-poetry">
+<h2>How Choate Robotics uses Poetry:<a class="headerlink" href="#how-choate-robotics-uses-poetry" title="Permalink to this heading"><span>#</span></a></h2>
 <ul class="simple">
 <li><p>We use Poetry to manage dependencies in our projects.</p></li>
 <li><p>Since all repositories are set up by the same template, all repositories have the same <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files. Meaning the general dependencies are already installed.</p></li>
 <li><p>We add more dependencies as needed.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
   </article>
 
-  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 4.5.0</a></div>
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.2</a></div>
   </footer></main>
 
 
@@ -355,11 +356,10 @@ If you have not done so, refer to the :<a class="reference internal" href="../in
   </div>
   
   
-<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-<script src="../_static/jquery.js"></script>
-<script src="../_static/underscore.js"></script>
-<script src="../_static/doctools.js"></script>
-<script src="../_static/design-tabs.js"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
 <script src="../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
   
 </body>
