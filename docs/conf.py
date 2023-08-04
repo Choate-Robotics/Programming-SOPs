@@ -16,6 +16,13 @@ author = 'Sebastian Plunkett'
 
 extensions = ['sphinx_design', 'sphinx.ext.graphviz','sphinxcontrib.plantuml']
 
+# Path to the PlantUML JAR file
+plantuml = 'java -jar /path/to/plantuml.jar'
+
+# PlantUML output format (default is 'png')
+plantuml_output_format = 'png'
+
+
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
