@@ -1,0 +1,50 @@
+@startuml file_structure
+!define ROOT project_root
+
+!define FOLDER(folder) folder ##[#purple]
+!define FILE(file) file ##[##blue]
+
+folder(ROOT) {
+    FOLDER(commands) {
+        FILE(__init__.py)
+        FILE(command1.py)
+        FILE(command2.py)
+    }
+
+    FOLDER(subsystem) {
+        FILE(__init__.py)
+        FILE(subsystem1.py)
+        FILE(subsystem2.py)
+    }
+
+    FOLDER(oi) {
+        FILE(oi.py)
+        FILE(Keymap.py)
+    }
+
+    FOLDER(sensors) {
+        FILE(__init__.py)
+        FILE(sensor1.py)
+        FILE(sensor2.py)
+    }
+
+    FOLDER(utils) {
+        FILE(__init__.py)
+        FILE(util1.py)
+        FILE(util2.py)
+    }
+
+    FOLDER(tests) {
+        FOLDER(commands)
+        FOLDER(subsystems)
+        FOLDER(oi)
+        FOLDER(sensors)
+        FOLDER(utils)
+    }
+
+    FILE(robot.py)
+    FILE(robot_systems.py)
+    FILE(constants.py)
+    FILE(config.py)
+}
+@enduml
