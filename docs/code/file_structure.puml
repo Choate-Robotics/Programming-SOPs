@@ -1,80 +1,42 @@
 @startuml file_structure
 
-!define FOLDER(folder_name, name) folder folder_name as name #LightBlue
-!define FILE(file_name, name) file file_name as name #LightGreen
-!define COMPONENT(comp, name) component comp as name #LightYellow
+title File Structure
 
-left to right direction
-
-folder "Root" {
-    FOLDER("Commands", Commands) {
-        FILE("__init__.py", CommandsInit)
-        FILE("Drivetrain.py", DrivetrainCommands) {
-            COMPONENT(SwerveDriveCustom, SwerveDriveCustomComp)
-            COMPONENT(ZeroSwerveDrive, ZeroSwerveDriveComp)
-        }
-    }
-
-    FOLDER("Subsystems", Subsystems) {
-        FILE("__init__.py", SubsystemsInit) 
-        FILE("Drivetrain.py", DrivetrainSubsystem)
-    }
-
-    FOLDER("Utils", Utils) {
-        FILE("__init__.py", UtilsInit)
-        FILE("function.py", Function)
-    }
-
-    FOLDER("Sensors", Sensors) {
-        FILE("__init__.py", SensorsInit)
-        FILE("Limelight.py", Limelight)
-    }
-
-    FOLDER("LEDS", LEDS) {
-        FILE("__init__.py", LEDSInit)
-        FILE("Addressable.py", LEDMain)
-    }
-
-    FOLDER("Tests", Tests) {
-        FOLDER("Commands", TestCommands) {
-            FILE("test_drivetrain.py", TestDrivetrainCommands) {
-                COMPONENT(TestSwerveDriveCustom, TestSwerveDriveCustomComp)
-                COMPONENT(TestZeroSwerveDrive, TestZeroSwerveDriveComp)
-            }
-        }
-        FOLDER("Subsystems", TestSubsystems) {
-            FILE("test_drivetrain.py", TestDrivetrainSubsystems) {
-                COMPONENT(TestDrivetrainSubsystem, TestDrivetrainSubsystemComp)
-            }
-        }
-        FOLDER("Utils", TestUtils) {
-            FILE("test_function.py", TestFunction) {
-                COMPONENT(TestFunction, TestFunctionComp)
-            }
-        }
-
-        FOLDER("Sensors", TestSensors) {
-            FILE("test_limelight.py", TestLimelight) {
-                COMPONENT(TestLimelight, TestLimelightComp)
-            }
-        }
-    }
-
-    FILE("Constants.py", Constants)
-    FILE("Config.py", Config)
-    FILE("robot_systems.py", RobotSystems) {
-        COMPONENT(Robot, RobotRobotComp) {
-            COMPONENT(drivetrain, DrivetrainComp)
-        }
-        COMPONENT(Sensors, RobotSensorsComp) {
-            COMPONENT(limelight, LimelightComp)
-        }
-        COMPONENT(LEDS, RobotLEDSComp) {
-            COMPONENT(addressable, AddressableComp)
-        }
-        COMPONENT(Pneumatics, PneumaticsComp)
-    }
-    FILE("Robot.py", Robot)
+folder Subsystems {
+    file subsystem.py
 }
+folder Sensors {
+    file sensor.py
+}
+folder Utils {
+    file util.py
+}
+folder Commands {
+    file command.py
+}
+folder OI {
+    file oi.py
+}
+folder Tests #Gold
+file constants.py
+file config.py
+file robot.py #RoyalBlue
+file robot_systems.py
+
+subsystem.py -down-> robot_systems.py
+robot_systems.py -down-> robot.py
+subsystem.py -down-> command.py
+util.py -down-> command.py
+sensor.py -down-> command.py
+command.py -down-> oi.py
+command.py -down-> robot.py
+oi.py -down-> robot.py
+
+
+Subsystems -> Tests #Gold
+Commands -> Tests #Gold
+Sensors -> Tests #Gold
+OI -down-> Tests #Gold
+Utils -> Tests #Gold
 
 @enduml
