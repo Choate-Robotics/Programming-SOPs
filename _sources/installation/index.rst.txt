@@ -173,7 +173,6 @@ VSCode
 PyCharm
 -------
 * A very popular IDE for Python development.
-* free and open source, and has a large community of developers.
 * has a free community edition and a paid professional edition.
 * More focused on Python development than VsCode.
 * can be downloaded from (https://www.jetbrains.com/pycharm/)
