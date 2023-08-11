@@ -33,6 +33,24 @@ Why use it?
 
 * It will work on every ones computer, since we are all using the same virtual environment.
 
+Poetry vs Pip and Virtualenv
+----------------------------
+
+.. note:: 
+    * Pip is the default package manager for Python. It is used to install and manage Python packages.
+    * This is what you use to install libraries like numpy, requests, etc to your computer.
+
+.. note::
+    * Virtualenv is a tool to create isolated Python environments. It is used to create virtual environments for your projects.
+    * This is what you use to create a virtual environment for your project.
+
+* Pip is a package manager, not a dependency manager. It does not handle dependencies for you.
+* Virtualenv is a tool to create isolated Python environments. It does not handle dependencies for you.
+* Poetry is a package and dependency manager. It handles dependencies for you.
+* Poetry runs inside a virtual environment, so you don't need to manage your own virtual environment.
+* In simple terms, Poetry is a combination of Pip and Virtualenv that runs seamlessly inside a virtual environment.
+* Poetry is the recommended tool for managing dependencies in Python **With** a virtual environment.
+
 How to use it?
 --------------
 
