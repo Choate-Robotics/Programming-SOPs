@@ -12,6 +12,11 @@ Every Robot we work on will have all of these components. They are the most impo
 RoboRIO
 -------
 
+.. figure:: https://cdn.andymark.com/product_images/ni-roborio-2/61535a8be281bc516843b3c1/detail.jpg?c=1632852619
+   :align: center
+
+   The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.
+
 The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.
 
 * This is where the code is run
@@ -21,6 +26,11 @@ The RoboRIO is the main controller for the robot. It is a National Instruments c
 
 PDH
 ---
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2509/REV-11-1850-PDH-Hero-FINAL__41676.1641407456.png?c=2
+    :align: center
+    
+    The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.
 
 The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.
 

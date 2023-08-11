@@ -107,6 +107,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Poetry</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-use-it">How to use it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-share-your-project-with-others">How to share your project with others?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
@@ -182,6 +183,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Poetry</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use-it">How to use it?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#setup">Setup:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adding-dependencies">Adding dependencies:</a></li>
@@ -268,6 +270,31 @@
 <li><p>It allows us to easily install our dependencies on a new machine.</p></li>
 <li><p>Since it runs inside a virtual environment, it doesn’t pollute our global python environment.</p></li>
 <li><p>It will work on every ones computer, since we are all using the same virtual environment.</p></li>
+</ul>
+</section>
+<section id="poetry-vs-pip-and-virtualenv">
+<h2>Poetry vs Pip and Virtualenv<a class="headerlink" href="#poetry-vs-pip-and-virtualenv" title="Permalink to this heading"><span>#</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Pip is the default package manager for Python. It is used to install and manage Python packages.</p></li>
+<li><p>This is what you use to install libraries like numpy, requests, etc to your computer.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Virtualenv is a tool to create isolated Python environments. It is used to create virtual environments for your projects.</p></li>
+<li><p>This is what you use to create a virtual environment for your project.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Pip is a package manager, not a dependency manager. It does not handle dependencies for you.</p></li>
+<li><p>Virtualenv is a tool to create isolated Python environments. It does not handle dependencies for you.</p></li>
+<li><p>Poetry is a package and dependency manager. It handles dependencies for you.</p></li>
+<li><p>Poetry runs inside a virtual environment, so you don’t need to manage your own virtual environment.</p></li>
+<li><p>In simple terms, Poetry is a combination of Pip and Virtualenv that runs seamlessly inside a virtual environment.</p></li>
+<li><p>Poetry is the recommended tool for managing dependencies in Python <strong>With</strong> a virtual environment.</p></li>
 </ul>
 </section>
 <section id="how-to-use-it">
