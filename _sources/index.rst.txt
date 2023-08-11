@@ -52,6 +52,8 @@ it is a living document and will be updated as needed.
 
    Hardware and Electronics <hardware/index>
 
+   Networktables <networks/networktables>
+
    Subsystems <code/subsystems>
 
    Commands <code/commands>

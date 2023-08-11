@@ -15,7 +15,7 @@
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="robotpy-toolkit-7407" href="../code/toolkit.html" />
+  <link rel="next" title="Networktables:" href="../networks/networktables.html" />
   <link rel="prev" title="Poetry" href="../poetry/index.html" />
 </head>
 
@@ -114,9 +114,11 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware and Electronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-diagram">System Diagram</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#core-components">Core Components</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
@@ -196,16 +198,19 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware and Electronics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#system-diagram">System Diagram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#core-components">Core Components</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#roborio">RoboRIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pdh">PDH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pneumatic-hub">Pneumatic Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motor-controllers">Motor Controllers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#can-wires">CAN Wires:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#radio">Radio:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#networktables">Networktables:</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
@@ -238,18 +243,25 @@
   <section id="hardware-and-electronics">
 <h1>Hardware and Electronics<a class="headerlink" href="#hardware-and-electronics" title="Permalink to this heading"><span>#</span></a></h1>
 <p>This page covers the hardware and electronics used on the robot that we utilize often.</p>
+<section id="system-diagram">
+<h2>System Diagram<a class="headerlink" href="#system-diagram" title="Permalink to this heading"><span>#</span></a></h2>
+<figure class="align-center" id="id1">
+<img alt="https://docs.wpilib.org/en/stable/_images/frc-control-system-layout-rev.svg" src="https://docs.wpilib.org/en/stable/_images/frc-control-system-layout-rev.svg" /><figcaption>
+<p><span class="caption-text">This is a diagram of the FRC Control System. It shows how all of the components are connected to each other.</span><a class="headerlink" href="#id1" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
 <section id="core-components">
 <h2>Core Components<a class="headerlink" href="#core-components" title="Permalink to this heading"><span>#</span></a></h2>
 <p>Every Robot we work on will have all of these components. They are the most important parts of the robot and are used in every subsystem.</p>
 <section id="roborio">
 <h3>RoboRIO<a class="headerlink" href="#roborio" title="Permalink to this heading"><span>#</span></a></h3>
-<figure class="align-center" id="id1">
+<figure class="align-center" id="id2">
 <img alt="https://cdn.andymark.com/product_images/ni-roborio-2/61535a8be281bc516843b3c1/detail.jpg?c=1632852619" src="https://cdn.andymark.com/product_images/ni-roborio-2/61535a8be281bc516843b3c1/detail.jpg?c=1632852619" />
 <figcaption>
-<p><span class="caption-text">The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</span><a class="headerlink" href="#id1" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</span><a class="headerlink" href="#id2" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-<p>The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</p>
 <ul class="simple">
 <li><p>This is where the code is run</p></li>
 <li><p>[RoboRIO Documentation](<a class="reference external" href="http://www.ni.com/pdf/manuals/374474a.pdf">http://www.ni.com/pdf/manuals/374474a.pdf</a>)</p></li>
@@ -258,13 +270,42 @@
 </section>
 <section id="pdh">
 <h3>PDH<a class="headerlink" href="#pdh" title="Permalink to this heading"><span>#</span></a></h3>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="id3">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2509/REV-11-1850-PDH-Hero-FINAL__41676.1641407456.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2509/REV-11-1850-PDH-Hero-FINAL__41676.1641407456.png?c=2" />
 <figcaption>
-<p><span class="caption-text">The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</span><a class="headerlink" href="#id2" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</span><a class="headerlink" href="#id3" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
-<p>The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</p>
+</section>
+<section id="pneumatic-hub">
+<h3>Pneumatic Hub<a class="headerlink" href="#pneumatic-hub" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id4">
+<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/600/2510/REV-11-1852-PH-Hero-FINAL__53879.1641407488.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/600/2510/REV-11-1852-PH-Hero-FINAL__53879.1641407488.png?c=2" />
+<figcaption>
+<p><span class="caption-text">The Pneumatic Hub is a device that controls the solenoid valves, which control the pistons. The Pneumatic Hub is connected to the RoboRIO, solenoid valves, and battery.</span><a class="headerlink" href="#id4" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="motor-controllers">
+<h3>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Permalink to this heading"><span>#</span></a></h3>
+<section id="rev-spark-max">
+<h4>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Permalink to this heading"><span>#</span></a></h4>
+<figure class="align-center" id="id5">
+<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" />
+<figcaption>
+<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ctre-falcon-500">
+<h4>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Permalink to this heading"><span>#</span></a></h4>
+<figure class="align-center" id="id6">
+<img alt="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" src="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" />
+<figcaption>
+<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 <section id="can-wires">
 <h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading"><span>#</span></a></h3>
@@ -275,17 +316,14 @@
 </section>
 <section id="radio">
 <h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading"><span>#</span></a></h3>
-<p>The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</p>
+<figure class="align-center" id="id7">
+<img alt="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" src="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" />
+<figcaption>
+<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>This device is used to communicate with the driver station</p></li>
-</ul>
-</section>
-<section id="networktables">
-<h3>Networktables:<a class="headerlink" href="#networktables" title="Permalink to this heading"><span>#</span></a></h3>
-<p>Networktables is a way for the RoboRIO to communicate with the driver station. It is used to send data to the driver station and to recieve data from the driver station. Networktables is used to send data such as the robot’s position, the robot’s speed, and the robot’s angle. Networktables is also used to recieve data such as the joystick’s position, the joystick’s button presses, and the joystick’s angle.</p>
-<ul class="simple">
-<li><p>We use Networktables to send data between other devices on the robot, the RoboRIO, and the driver station (EX: Limelight)</p></li>
-<li><p>[Networktables Documentation](<a class="reference external" href="http://robotpy.readthedocs.io/en/stable/guide/nt.html">http://robotpy.readthedocs.io/en/stable/guide/nt.html</a>)</p></li>
 </ul>
 </section>
 </section>
