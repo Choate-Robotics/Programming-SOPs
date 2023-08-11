@@ -59,7 +59,7 @@ Sensors
 Digital Input
 ~~~~~~~~~~~~~
 
-.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2511/REV-11-1854-DI-Hero-FINAL__61667.1641407516.png?c=2
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2
     :align: center
     
     The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.
@@ -69,12 +69,16 @@ Digital Input
 
 .. note:: 
     We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
+    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2
+        :align: center
+
+        this plugs into the data-port on the Spark Max
 
 
 Analog Input
 ~~~~~~~~~~~~
 
-.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2512/REV-11-1856-AI-Hero-FINAL__61667.1641407540.png?c=2
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2
     :align: center
     
     The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.
@@ -84,6 +88,10 @@ Analog Input
 
 .. note::
     We also connect analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. The same reasons apply from the Digital Input.
+    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/386/1266/JST_PH_6-Pin_Breakout_Board_Lone__73061.1548199856.png?c=2
+        :align: center
+
+        this plugs into the data-port on the Spark Max
 
 Motor Controllers
 -----------------
