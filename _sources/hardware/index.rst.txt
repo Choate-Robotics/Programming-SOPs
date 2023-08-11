@@ -53,60 +53,7 @@ Pneumatic Hub
     The Pneumatic Hub is a device that controls the solenoid valves, which control the pistons. The Pneumatic Hub is connected to the RoboRIO, solenoid valves, and battery.
 
 
-Sensors
--------
 
-Digital Input
-~~~~~~~~~~~~~
-
-.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2
-    :align: center
-    
-    The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.
-
-    * You can think of it as a 0 or 1, or a True or False
-    * These are used for limit switches, buttons, etc.
-
-
-
-Analog Input
-~~~~~~~~~~~~
-
-.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2
-    :align: center
-    
-    The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.
-
-    * you can think of it as a range of values between 0 and 1, like 0.5 or 0.25
-    * These are used for distance sensors, potentiometers, etc.
-
-
-.. note::
-    We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
-
-    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2
-        :align: center
-
-        this plugs into the data-port on the Spark Max
-
-Motor Controllers
------------------
-
-Rev Spark Max
-~~~~~~~~~~~~~
-
-.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2
-    :align: center
-    
-    The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.
-
-CTRE Falcon 500
-~~~~~~~~~~~~~~~
-
-.. figure:: https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1
-    :align: center
-    
-    The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.
 
 CAN Wires:
 ---------
@@ -132,4 +79,76 @@ Radio:
 .. The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.
 
 * This device is used to communicate with the driver station
+
+
+Motor Controllers
+=================
+
+Rev Spark Max
+-------------
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2
+    :align: center
+    
+    The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.
+
+CTRE Falcon 500
+---------------
+
+.. figure:: https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1
+    :align: center
+    
+    The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.
+
+
+Inputs
+======
+
+Digital Input
+-------------
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2
+    :align: center
+    
+    The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.
+
+    * You can think of it as a 0 or 1, or a True or False
+    * These are used for limit switches, buttons, etc.
+
+
+
+Analog Input
+------------
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2
+    :align: center
+    
+    The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.
+
+    * you can think of it as a range of values between 0 and 1, like 0.5 or 0.25
+    * These are used for distance sensors, potentiometers, etc.
+
+
+.. note::
+    We usually connect digital and analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
+
+    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2
+        :align: center
+
+        this plugs into the data-port on the Spark Max
+
+
+Vision Processors
+=================
+
+Limelight
+---------
+
+.. figure:: https://limelightvision.io/cdn/shop/products/L2SCALED_2048x.png?v=1674663124
+    :align: center
+    
+    The Limelight is a vision processor that detects the location of the target. The Limelight is connected to the RoboRIO and the camera.
+
+    * This is used for vision tracking with retroReflective tape, Feducials, and neural networks
+
 

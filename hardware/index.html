@@ -120,6 +120,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Hardware and Electronics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#system-diagram">System Diagram</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motor-controllers">Motor Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vision-processors">Vision Processors</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
@@ -211,10 +214,22 @@
 <li class="toctree-l3"><a class="reference internal" href="#roborio">RoboRIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pdh">PDH</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pneumatic-hub">Pneumatic Hub</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sensors">Sensors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#motor-controllers">Motor Controllers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#can-wires">CAN Wires:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#radio">Radio:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-controllers">Motor Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rev-spark-max">Rev Spark Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctre-falcon-500">CTRE Falcon 500</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#digital-input">Digital Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analog-input">Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vision-processors">Vision Processors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#limelight">Limelight</a></li>
 </ul>
 </li>
 </ul>
@@ -295,14 +310,60 @@
 </figcaption>
 </figure>
 </section>
-<section id="sensors">
-<h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading"><span>#</span></a></h3>
-<section id="digital-input">
-<h4>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this heading"><span>#</span></a></h4>
+<section id="can-wires">
+<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading"><span>#</span></a></h3>
 <figure class="align-center" id="id5">
+<img alt="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" src="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" />
+<figcaption>
+<p><span class="caption-text">The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Almost 100% of our robot’s electronics are connected to the CAN Loop (EX: RoboRIO, PDP, Motor Controllers, etc.), and is the main way we communicate with the electronics</p></li>
+</ul>
+</section>
+<section id="radio">
+<h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id6">
+<img alt="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" src="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" />
+<figcaption>
+<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>This device is used to communicate with the driver station</p></li>
+</ul>
+</section>
+</section>
+<section id="motor-controllers">
+<h2>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="rev-spark-max">
+<h3>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id7">
+<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" />
+<figcaption>
+<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ctre-falcon-500">
+<h3>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id8">
+<img alt="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" src="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" />
+<figcaption>
+<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id8" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="digital-input">
+<h3>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id9">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2" />
 <figcaption>
-<p><span class="caption-text">The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.</span><a class="headerlink" href="#id9" title="Permalink to this image"><span>#</span></a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>You can think of it as a 0 or 1, or a True or False</p></li>
@@ -313,11 +374,11 @@
 </figure>
 </section>
 <section id="analog-input">
-<h4>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading"><span>#</span></a></h4>
-<figure class="align-center" id="id6">
+<h3>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id10">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2" />
 <figcaption>
-<p><span class="caption-text">The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.</span><a class="headerlink" href="#id10" title="Permalink to this image"><span>#</span></a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>you can think of it as a range of values between 0 and 1, like 0.5 or 0.25</p></li>
@@ -328,60 +389,31 @@
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.</p>
-<figure class="align-center" id="id7">
+<p>We usually connect digital and analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.</p>
+<figure class="align-center" id="id11">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2" />
 <figcaption>
-<p><span class="caption-text">this plugs into the data-port on the Spark Max</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">this plugs into the data-port on the Spark Max</span><a class="headerlink" href="#id11" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </div>
 </section>
 </section>
-<section id="motor-controllers">
-<h3>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Permalink to this heading"><span>#</span></a></h3>
-<section id="rev-spark-max">
-<h4>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Permalink to this heading"><span>#</span></a></h4>
-<figure class="align-center" id="id8">
-<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" />
+<section id="vision-processors">
+<h2>Vision Processors<a class="headerlink" href="#vision-processors" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="limelight">
+<h3>Limelight<a class="headerlink" href="#limelight" title="Permalink to this heading"><span>#</span></a></h3>
+<figure class="align-center" id="id12">
+<img alt="https://limelightvision.io/cdn/shop/products/L2SCALED_2048x.png?v=1674663124" src="https://limelightvision.io/cdn/shop/products/L2SCALED_2048x.png?v=1674663124" />
 <figcaption>
-<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id8" title="Permalink to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
-</section>
-<section id="ctre-falcon-500">
-<h4>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Permalink to this heading"><span>#</span></a></h4>
-<figure class="align-center" id="id9">
-<img alt="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" src="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" />
-<figcaption>
-<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id9" title="Permalink to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<section id="can-wires">
-<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading"><span>#</span></a></h3>
-<figure class="align-center" id="id10">
-<img alt="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" src="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" />
-<figcaption>
-<p><span class="caption-text">The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.</span><a class="headerlink" href="#id10" title="Permalink to this image"><span>#</span></a></p>
-</figcaption>
-</figure>
+<p><span class="caption-text">The Limelight is a vision processor that detects the location of the target. The Limelight is connected to the RoboRIO and the camera.</span><a class="headerlink" href="#id12" title="Permalink to this image"><span>#</span></a></p>
+<div class="legend">
 <ul class="simple">
-<li><p>Almost 100% of our robot’s electronics are connected to the CAN Loop (EX: RoboRIO, PDP, Motor Controllers, etc.), and is the main way we communicate with the electronics</p></li>
+<li><p>This is used for vision tracking with retroReflective tape, Feducials, and neural networks</p></li>
 </ul>
-</section>
-<section id="radio">
-<h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading"><span>#</span></a></h3>
-<figure class="align-center" id="id11">
-<img alt="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" src="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" />
-<figcaption>
-<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id11" title="Permalink to this image"><span>#</span></a></p>
+</div>
 </figcaption>
 </figure>
-<ul class="simple">
-<li><p>This device is used to communicate with the driver station</p></li>
-</ul>
 </section>
 </section>
 </section>
