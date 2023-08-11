@@ -203,6 +203,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#roborio">RoboRIO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pdh">PDH</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pneumatic-hub">Pneumatic Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensors">Sensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#motor-controllers">Motor Controllers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#can-wires">CAN Wires:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#radio">Radio:</a></li>
@@ -286,40 +287,86 @@
 </figcaption>
 </figure>
 </section>
+<section id="sensors">
+<h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading"><span>#</span></a></h3>
+<section id="digital-input">
+<h4>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this heading"><span>#</span></a></h4>
+<figure class="align-center" id="id5">
+<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2511/REV-11-1854-DI-Hero-FINAL__61667.1641407516.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2511/REV-11-1854-DI-Hero-FINAL__61667.1641407516.png?c=2" />
+<figcaption>
+<p><span class="caption-text">The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
+<div class="legend">
+<ul class="simple">
+<li><p>You can think of it as a 0 or 1, or a True or False</p></li>
+<li><p>These are used for limit switches, buttons, etc.</p></li>
+</ul>
+</div>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.</p>
+</div>
+</section>
+<section id="analog-input">
+<h4>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading"><span>#</span></a></h4>
+<figure class="align-center" id="id6">
+<img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2512/REV-11-1856-AI-Hero-FINAL__61667.1641407540.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2512/REV-11-1856-AI-Hero-FINAL__61667.1641407540.png?c=2" />
+<figcaption>
+<p><span class="caption-text">The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
+<div class="legend">
+<ul class="simple">
+<li><p>you can think of it as a range of values between 0 and 1, like 0.5 or 0.25</p></li>
+<li><p>These are used for distance sensors, potentiometers, etc.</p></li>
+</ul>
+</div>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We also connect analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. The same reasons apply from the Digital Input.</p>
+</div>
+</section>
+</section>
 <section id="motor-controllers">
 <h3>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Permalink to this heading"><span>#</span></a></h3>
 <section id="rev-spark-max">
 <h4>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Permalink to this heading"><span>#</span></a></h4>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id7">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" />
 <figcaption>
-<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="ctre-falcon-500">
 <h4>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Permalink to this heading"><span>#</span></a></h4>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="id8">
 <img alt="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" src="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" />
 <figcaption>
-<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id8" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="can-wires">
 <h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading"><span>#</span></a></h3>
-<p>The CAN Loop is a network of devices that communicate with each other. The RoboRIO, PDP, and motor controllers are all connected to the CAN Loop. The CAN Loop is used to send commands to the motor controllers and to monitor the current draw of each motor controller. Each device on the CAN loop has an ID which is used to recieve and send data.</p>
+<figure class="align-center" id="id9">
+<img alt="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" src="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" />
+<figcaption>
+<p><span class="caption-text">The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.</span><a class="headerlink" href="#id9" title="Permalink to this image"><span>#</span></a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>Almost 100% of our robot’s electronics are connected to the CAN Loop (EX: RoboRIO, PDP, Motor Controllers, etc.), and is the main way we communicate with the electronics</p></li>
 </ul>
 </section>
 <section id="radio">
 <h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading"><span>#</span></a></h3>
-<figure class="align-center" id="id7">
+<figure class="align-center" id="id10">
 <img alt="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" src="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" />
 <figcaption>
-<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
+<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id10" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">

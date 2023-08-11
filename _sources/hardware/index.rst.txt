@@ -53,6 +53,38 @@ Pneumatic Hub
     The Pneumatic Hub is a device that controls the solenoid valves, which control the pistons. The Pneumatic Hub is connected to the RoboRIO, solenoid valves, and battery.
 
 
+Sensors
+-------
+
+Digital Input
+~~~~~~~~~~~~~
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2511/REV-11-1854-DI-Hero-FINAL__61667.1641407516.png?c=2
+    :align: center
+    
+    The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.
+
+    * You can think of it as a 0 or 1, or a True or False
+    * These are used for limit switches, buttons, etc.
+
+.. note:: 
+    We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
+
+
+Analog Input
+~~~~~~~~~~~~
+
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2512/REV-11-1856-AI-Hero-FINAL__61667.1641407540.png?c=2
+    :align: center
+    
+    The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.
+
+    * you can think of it as a range of values between 0 and 1, like 0.5 or 0.25
+    * These are used for distance sensors, potentiometers, etc.
+
+.. note::
+    We also connect analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. The same reasons apply from the Digital Input.
+
 Motor Controllers
 -----------------
 
@@ -75,9 +107,13 @@ CTRE Falcon 500
 CAN Wires:
 ---------
 
+.. figure:: https://www.mindsensors.com/406-thickbox_default/can-cable.jpg
+    :align: center
+    
+    The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.
 
 
-The CAN Loop is a network of devices that communicate with each other. The RoboRIO, PDP, and motor controllers are all connected to the CAN Loop. The CAN Loop is used to send commands to the motor controllers and to monitor the current draw of each motor controller. Each device on the CAN loop has an ID which is used to recieve and send data.
+.. The CAN Loop is a network of devices that communicate with each other. The RoboRIO, PDP, and motor controllers are all connected to the CAN Loop. The CAN Loop is used to send commands to the motor controllers and to monitor the current draw of each motor controller. Each device on the CAN loop has an ID which is used to recieve and send data.
 
 * Almost 100% of our robot's electronics are connected to the CAN Loop (EX: RoboRIO, PDP, Motor Controllers, etc.), and is the main way we communicate with the electronics
 
