@@ -63,7 +63,7 @@ There are two ways to use Git. You can use it from the command line or you can u
         .. note::
             You can download Github Desktop `here <https://desktop.github.com/>`_.
 
-        You can Clone repositories at the top right...
+        for information on how to use Github Desktop, check out the `Github Desktop Guide <https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop>`_.
 
     .. tab-item:: CLI
 
