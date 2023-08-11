@@ -46,6 +46,8 @@ it is a living document and will be updated as needed.
    :maxdepth: 2
    :caption: Getting to Know:
 
+   Driver station <hardware/driverstation>
+
    Git and Github <git/index>
 
    Poetry <poetry/index>
