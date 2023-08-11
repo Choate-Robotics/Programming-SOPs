@@ -1,4 +1,4 @@
-import os
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -17,7 +17,7 @@ author = 'Sebastian Plunkett'
 extensions = ['sphinx_design', 'sphinx.ext.graphviz','sphinxcontrib.plantuml']
 
 
-plantuml = 'java -jar %s' % os.path.join(os.path.dirname(__file__), "utils", "plantuml.jar")
+plantuml = 'java -jar /utils/plantuml.jar'
 
 # PlantUML output format (default is 'png')
 plantuml_output_format = 'png'
