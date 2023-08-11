@@ -67,12 +67,6 @@ Digital Input
     * You can think of it as a 0 or 1, or a True or False
     * These are used for limit switches, buttons, etc.
 
-.. note:: 
-    We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
-    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2
-        :align: center
-
-        this plugs into the data-port on the Spark Max
 
 
 Analog Input
@@ -86,12 +80,14 @@ Analog Input
     * you can think of it as a range of values between 0 and 1, like 0.5 or 0.25
     * These are used for distance sensors, potentiometers, etc.
 
-.. note::
-    We also connect analog sensors that relate to motor movement to the motor controllers, not the RoboRIO. The same reasons apply from the Digital Input.
-    .. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/386/1266/JST_PH_6-Pin_Breakout_Board_Lone__73061.1548199856.png?c=2
-        :align: center
 
-        this plugs into the data-port on the Spark Max
+Sensor Connections
+~~~~~~~~~~~~~~~~~~
+We usually connect digital sensors that relate to motor movement to the motor controllers, not the RoboRIO. This is because the RoboRIO is slower than the motor controllers, so the motor controllers can react faster to the sensor.
+.. figure:: https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2
+    :align: center
+
+    this plugs into the data-port on the Spark Max
 
 Motor Controllers
 -----------------
