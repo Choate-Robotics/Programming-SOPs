@@ -32,6 +32,7 @@ folder Subsystem {
     }
 }
 
+
 note top of drivetrain.py
     This is the subsystem that contains the drivetrain functions
 end note
@@ -69,6 +70,7 @@ drivetrain.py --> Drivetrain.py
 Drivetrain.py --> OI.py
 
 Keymap.py --> OI.py
+robot_systems.py --> OI.py
 
 OI.py --> robot.py
 robot_systems.py --> robot.py
