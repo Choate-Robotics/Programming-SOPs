@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Copy PlantUML files
       run: |
-        cp -r docs/*.puml docs/_build/html/
+        find docs -type f -name "*.puml" -exec cp --parents {} docs/_build/html/ \;
       if: success()  # Only copy files if the previous step (Sphinx build) was successful
     - name: Build HTML
       id: sphinx
