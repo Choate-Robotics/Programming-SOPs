@@ -1,0 +1,81 @@
+@startuml command_flow
+
+skinparam packageStyle Folder
+
+title Command Flow
+
+
+
+object robot.py {
+    run that thang baby
+}
+
+note right of robot.py
+    This is the main robot file
+end note
+
+object robot_systems.py {
+    + Robot()
+    + Sensors()
+    + LEDS()
+    + Pneumatics()
+    
+}
+
+note bottom of robot_systems.py
+    This is the file that contains all of the subsystem instances
+end note
+
+folder Subsystem {
+    object drivetrain.py {
+        + SwerveDrive()
+    }
+}
+
+
+note top of drivetrain.py
+    This is the subsystem that contains the drivetrain functions
+end note
+
+package Commands {
+    object Drivetrain.py {
+        -SwerveDriveCustom()
+        -ZeroSwerveDrive()
+    }
+}
+
+note right of Drivetrain.py::SwerveDriveCustom()
+    This is the command that lets you drive the robot
+end note
+
+note right of Drivetrain.py::ZeroSwerveDrive()
+    This is the command that zero's the robot gyro
+end note
+
+package OI {
+    object OI.py {
+        -Button(A)
+    }
+    object Keymap.py
+}
+
+
+note right of OI.py
+    This is links commands to buttons
+end note
+
+drivetrain.py --> robot_systems.py
+drivetrain.py --> Drivetrain.py
+
+Drivetrain.py --> OI.py
+
+Keymap.py --> OI.py
+robot_systems.py --> OI.py
+
+OI.py --> robot.py
+robot_systems.py --> robot.py
+Drivetrain.py --> robot.py
+
+
+
+@enduml
