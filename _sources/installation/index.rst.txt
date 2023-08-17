@@ -60,7 +60,7 @@ Follow these steps to install necessary software to run code from this organizat
 
         1. Install Rosetta 2 by opening a terminal and typing
 
-        .. information::
+        .. note::
             Rosetta 2 is a program that allows you to run programs that are not native to the M1 chip
 
         .. code-block:: bash

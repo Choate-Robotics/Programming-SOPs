@@ -9,7 +9,7 @@ Now that you've got the software installed, you'll need to set up your environme
 
 .. note::
 
-    This information requires the installation of necessary software. See :ref:`installation` for more information.
+    This information requires the installation of necessary software. See :ref:`installation <../installation/index.rst>` for more information.
 
 
 
