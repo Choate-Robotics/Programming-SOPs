@@ -31,7 +31,7 @@ it is a living document and will be updated as needed.
 
    Creating a Project <git/creating_a_new_project>
 
-   grab an existing project <git/grab_an_existing_project>
+   grab an existing project <git/grab_existing_project>
 
 .. toctree:: 
    :maxdepth: 3
