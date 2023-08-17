@@ -1,0 +1,432 @@
+
+  <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Git and Github | Programming Standard Operating Procedure  documentation</title>
+  <link rel="stylesheet" href="../_static/pygments.css" />
+  <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" />
+  <link rel="stylesheet" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  <link rel="icon" href="../_static/7407logo.jfif" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="next" title="Poetry" href="../poetry/index.html" />
+  <link rel="prev" title="Driver Station" href="../hardware/driverstation.html" />
+</head>
+
+<body class="antialiased text-gray">
+    <div id="page" data-controller="sidebar search scroll "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
+    >
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#git-and-github" title="Skip navigation links">Skip to content</a>
+
+    <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+      <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+    <button data-action="sidebar#open" data-sidebar-target="hamburger"
+  class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="inline fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../index.html"
+  title="Back to homepage">
+  <img class="h-14 w-14 p-3 inline-block" src="../_static/7407logo.jfif" alt="Logo" /><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">Programming Standard Operating Procedure  documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+    </header>
+
+    
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed pt-14 xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Home</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#ide">IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#git-and-github">Git and Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="grab_existing_project.html">grab an existing project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html">Poetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#how-to-use-it">How to use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#motor-controllers">Motor Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#inputs">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#vision-processors">Vision Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#what-to-expect-in-this-documentation">What to expect in this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#what-you-need-to-know-before-you-start">What you need to know before you start:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#ready-to-get-started">Ready to get started?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#how-to-use-this-documentation">How to use this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#how-to-contribute-to-this-documentation">How to contribute to this documentation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#ide">IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#what-is-an-ide">What is an IDE?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#vscode">VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#pycharm">PyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#vim">Vim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#git-and-github">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#how-to-install-git"><strong>How to Install Git</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#no-setup-required">No setup required</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="grab_existing_project.html">grab an existing project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git and Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../poetry/index.html">Poetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#how-to-use-it">How to use it?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#setup">Setup:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#adding-dependencies">Adding dependencies:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#running-your-project">Running your project:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../poetry/index.html#updating-dependencies">Updating dependencies:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../poetry/index.html#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#core-components">Core Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#roborio">RoboRIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#pdh">PDH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#pneumatic-hub">Pneumatic Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#can-wires">CAN Wires:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#radio">Radio:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#motor-controllers">Motor Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#rev-spark-max">Rev Spark Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#ctre-falcon-500">CTRE Falcon 500</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#inputs">Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#digital-input">Digital Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#analog-input">Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#vision-processors">Vision Processors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action="sidebar#close"
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+</aside>
+
+<main
+  class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
+  <span class="mr-1">/</span><span aria-current="page">Git and Github</span>
+</nav>
+
+  <article role="main" class="flex-1 prose">
+    
+  <section id="git-and-github">
+<h1>Git and Github<a class="headerlink" href="#git-and-github" title="Permalink to this heading"><span>#</span></a></h1>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this heading"><span>#</span></a></h2>
+<p>Git is a version control system. It allows you to keep track of changes to a project over time. It also allows you to collaborate with others on a project.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Think of it as a google doc for code with a few exceptions:</dt><dd><ul>
+<li><p>You have to manually save your changes. <strong>This is called a commit.</strong></p></li>
+<li><p>You have to manually sync your changes with the server. <strong>This is called a push.</strong></p></li>
+<li><p>You can’t see other people’s changes until they sync them with the server. <strong>This is called a pull.</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Why is git more limiting than google docs? In simple terms, security. If changes save and sync automatically, potentially breaking code would be released to the repository. Thats why you have to manually commit and push your changes. This allows you to make sure that your code is working before you release it to the repository. It also allows you to make sure that you don’t overwrite other people’s changes.</p>
+</div>
+<ul class="simple">
+<li><p>Now take that google doc and imagine that you can see every change that has ever been made to it. You can see who made the change, when they made it, and what they changed. You can also revert back to any previous version of the document. <strong>This is the Git commit history.</strong></p></li>
+<li><p>Now imagine that you can make a copy of the document, make changes to it, and then merge those changes back into the original document. You can also merge changes from other people’s copies of the document into your copy. <strong>This is branching and merging.</strong></p></li>
+<li><p>If you are interested in learning more, check out the <a class="reference external" href="https://git-scm.com/book/en/v2">Git Book</a>.</p></li>
+</ul>
+</div>
+</section>
+<section id="how-does-our-team-use-it">
+<h2>How does our team use it?<a class="headerlink" href="#how-does-our-team-use-it" title="Permalink to this heading"><span>#</span></a></h2>
+<p>We use Git to keep track of changes to our code with branches</p>
+<p>we have three main branches in every repository:</p>
+<ul class="simple">
+<li><p><strong>Main (master):</strong> this is the clean code that has been tested. One that you can bet your life on. This is the code that we base our competition code on.</p></li>
+<li><p><strong>Dev:</strong> this is the code that we are currently working on. It is not guaranteed to work, but it should be close. This is the code that we base our practice code on. This is also for testing new features in conjunction with each other.</p></li>
+<li><p><strong>Feat/#feature_name#:</strong> this is the code for a specific feature. It is not guaranteed to work. This is for adding and testing new features individually.</p></li>
+</ul>
+<p>What code do we run during competitions?</p>
+<ul class="simple">
+<li><p>We make branches for each competition, which are based off of the Main branch. This is so we can edit based on the competition deviances without affecting the main code. We then merge files we like from the competition branch into the main branch after the competition.</p></li>
+<li><p><strong>Comp/#competition_name#:</strong> as an example, we would have a branch called Comp/Worlds.</p></li>
+</ul>
+<p>Other branches:</p>
+<ul class="simple">
+<li><p><strong>Hotfix/#hotfix_name#:</strong> this is for fixing bugs in the main branch. It is based off of the main branch and is merged back into the main branch after the bug is fixed.</p></li>
+</ul>
+</section>
+<section id="how-do-i-use-it">
+<h2>How do I use it?<a class="headerlink" href="#how-do-i-use-it" title="Permalink to this heading"><span>#</span></a></h2>
+<p>There are two ways to use Git. You can use it from the command line or you can use a GUI. The GUI is easier to use, but the command line is more powerful.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>both methods utilize the same commands, meaning switching from one to another is not too challenging. The GUI just makes it easier to visualize what is happening.</p>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+GUI</label><div class="sd-tab-content docutils">
+<p>Github Desktop is a GUI for Git. It makes it easy to see what changes you have made and to sync them with the server. It also makes it easy to create branches and merge them back into the main branch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can download Github Desktop <a class="reference external" href="https://desktop.github.com/">here</a>.</p>
+</div>
+<p>for information on how to use Github Desktop, check out the <a class="reference external" href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">Github Desktop Guide</a>.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+CLI</label><div class="sd-tab-content docutils">
+<p>The command line is a text based interface to your computer. It is a powerful tool that allows you to do many things that you can’t do with a GUI. It is also a bit more complicated to use, since you have to remember the commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using a Mac, you can open the terminal by pressing command + space and typing terminal. If you are using Windows, you can open the command prompt by pressing the windows key and typing cmd.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Basic Commands for Navigation and File Management<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directory</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cd..</span></code> - go up one directory</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">dir</span></code> - list files in current directory</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make directory</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">rmdir</span></code> - remove directory</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">del</span></code> - delete file</p></li>
+</ul>
+</div>
+</details><p>Here are some basic commands to get you started:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone a repository to the current directory</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="c1">#repository_url</span>
+
+<span class="c1"># check the status of your repository</span>
+git<span class="w"> </span>status
+
+<span class="c1"># add a file to the staging area</span>
+git<span class="w"> </span>add<span class="w"> </span><span class="c1">#file_name</span>
+
+<span class="c1"># commit your changes</span>
+git<span class="w"> </span>commit
+
+<span class="c1"># push your changes to the server</span>
+git<span class="w"> </span>push
+
+<span class="c1"># pull changes from the server</span>
+git<span class="w"> </span>pull
+
+<span class="c1"># create a new branch</span>
+git<span class="w"> </span>branch
+
+<span class="c1"># switch to a different branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span><span class="c1">#branch_name</span>
+
+<span class="c1"># merge a branch into the current branch</span>
+git<span class="w"> </span>merge<span class="w"> </span><span class="c1">#branch_name</span>
+
+<span class="c1"># delete a branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span><span class="c1">#branch_name</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are interested in learning more, check out the <a class="reference external" href="https://git-scm.com/book/en/v2">Git Book</a>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+  </article>
+
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.2</a></div>
+  </footer></main>
+
+
+    <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+  </div>
+  
+  
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
+  
+</body>
+
+</html>
