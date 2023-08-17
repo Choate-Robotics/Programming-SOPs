@@ -16,11 +16,13 @@ author = 'Sebastian Plunkett'
 
 extensions = ['sphinx_design', 'sphinx.ext.graphviz','sphinxcontrib.plantuml']
 
+path = 'java -jar plantuml.jar'
 
-plantuml = 'java -jar /utils/plantuml.jar'
+plantuml = path.encode('unicode_escape').decode()
 
 # PlantUML output format (default is 'png')
 plantuml_output_format = 'png'
+
 
 
 templates_path = ['_templates']

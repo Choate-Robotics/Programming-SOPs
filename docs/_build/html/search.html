@@ -1,94 +1,304 @@
 <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; Programming Standard Operating Procedure  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b3523f8e" />
-    <link rel="stylesheet" type="text/css" href="_static/groundwork.css?v=594d7a89" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  
+  <title>Search | Programming Standard Operating Procedure  documentation</title>
+  <link rel="stylesheet" href="_static/pygments.css" />
+  <link rel="stylesheet" href="_static/theme.c973b470ab69573097f3.css" />
+  <link rel="stylesheet" href="_static/graphviz.css" />
+  <link rel="stylesheet" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  <link rel="icon" href="_static/7407logo.jfif" />
+  <link rel="search" title="Search" href="#" />
+  <link rel="index" title="Index" href="genindex.html" />
+</head>
+
+<body class="antialiased text-gray">
+    <div id="page" data-controller="sidebar search scroll "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
+    >
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#search" title="Skip navigation links">Skip to content</a>
+
+    <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+      <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+    <button data-action="sidebar#open" data-sidebar-target="hamburger"
+  class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="inline fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="index.html"
+  title="Back to homepage">
+  <img class="h-14 w-14 p-3 inline-block" src="_static/7407logo.jfif" alt="Logo" /><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">Programming Standard Operating Procedure  documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="#"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+    </header>
+
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-   
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed pt-14 xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/index.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#software">Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#ide">IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#git-and-github">Git and Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="code/file_structure.html">File Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/documentation.html">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git/index.html">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git/index.html#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git/index.html#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html">Poetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#how-to-use-it">How to use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#motor-controllers">Motor Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#inputs">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#vision-processors">Vision Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="networks/networktables.html">Networktables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#what-to-expect-in-this-documentation">What to expect in this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#what-you-need-to-know-before-you-start">What you need to know before you start:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#ready-to-get-started">Ready to get started?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#how-to-use-this-documentation">How to use this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction/index.html#how-to-contribute-to-this-documentation">How to contribute to this documentation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#ide">IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#what-is-an-ide">What is an IDE?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#vscode">VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#pycharm">PyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#vim">Vim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#git-and-github">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation/index.html#how-to-install-git"><strong>How to Install Git</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="initial%20setup/index.html#no-setup-required">No setup required</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="code/file_structure.html">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/documentation.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git/index.html">Git and Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/index.html#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git/index.html#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="poetry/index.html">Poetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#why-use-it">Why use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#how-to-use-it">How to use it?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#setup">Setup:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#adding-dependencies">Adding dependencies:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#running-your-project">Running your project:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poetry/index.html#updating-dependencies">Updating dependencies:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poetry/index.html#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html#core-components">Core Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#roborio">RoboRIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#pdh">PDH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#pneumatic-hub">Pneumatic Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#can-wires">CAN Wires:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#radio">Radio:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html#motor-controllers">Motor Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#rev-spark-max">Rev Spark Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#ctre-falcon-500">CTRE Falcon 500</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html#inputs">Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#digital-input">Digital Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#analog-input">Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html#vision-processors">Vision Processors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/index.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="networks/networktables.html">Networktables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</div>
 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">Programming Standard Operating Procedure  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
-      </ul>
-    </div>  
+  <button
+      data-action="sidebar#close"
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+</aside>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <h1 id="search-documentation">Search</h1>
+<main
+  class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="index.html">Programming Standard Operating Procedure  documentation</a>
+  <span class="mr-1">/</span><span aria-current="page">Search</span>
+</nav>
+
+  <article role="main" class="flex-1 prose">
+    
+<div id="fallback" class="my-8 text-sm text-red-700">
+  <script>document.querySelector("#fallback").style.display = "none"</script>
   
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
+    Please activate Javascript to enable searching the documentation.
+  
+</div>
+<div id="search-results" class="max-w-prose mt-16"></div>
+
+  </article>
+
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.1</a></div>
+  </footer></main>
+
+
+    <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
   </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
   
 
-            <div class="clearer"></div>
-          </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="nav-item nav-item-0"><a href="index.html">Programming Standard Operating Procedure  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Search</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2023, Sebastian Plunkett.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.1.
-    </div>
-  </body>
+  
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+<script src="_static/doctools.js?v=888ff710"></script>
+<script src="_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="_static/design-tabs.js?v=36754332"></script>
+<script src="_static/theme.c8991bd7bb6e57cbeea8.js"></script>
+  
+<script src="_static/searchtools.js" defer></script>
+<script src="_static/language_data.js" defer></script>
+<script src="searchindex.js" defer></script>
+
+</body>
+
 </html>

@@ -1,0 +1,423 @@
+
+  <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <title>Poetry | Programming Standard Operating Procedure  documentation</title>
+  <link rel="stylesheet" href="../_static/pygments.css" />
+  <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" />
+  <link rel="stylesheet" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  <link rel="icon" href="../_static/7407logo.jfif" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="next" title="Hardware and Electronics" href="../hardware/index.html" />
+  <link rel="prev" title="Git and Github" href="../git/index.html" />
+</head>
+
+<body class="antialiased text-gray">
+    <div id="page" data-controller="sidebar search scroll "
+      data-action="keydown@window->search#focus "
+      class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
+    >
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#poetry" title="Skip navigation links">Skip to content</a>
+
+    <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
+      <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
+    <button data-action="sidebar#open" data-sidebar-target="hamburger"
+  class="xl:hidden h-14 w-14 leading-14 text-gray-100 hover:bg-gray-700 hover:text-brand focus:outline-none focus:bg-gray-700 focus:text-brand">
+  <span class="sr-only">Open navigation menu</span>
+  <svg aria-hidden="true" class="inline fill-current h-8 w-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </svg>
+</button><a class="hover:bg-gray-700 focus:bg-gray-700 focus:outline-none" href="../index.html"
+  title="Back to homepage">
+  <img class="h-14 w-14 p-3 inline-block" src="../_static/7407logo.jfif" alt="Logo" /><span class="hidden lg:inline-block shrink-0 font-medium text-gray-100 mx-5 leading-14 tracking-wider">Programming Standard Operating Procedure  documentation</span>
+</a></div><div class="flex justify-end items-center flex-1"><form
+  id="searchbox"
+  action="../search.html"
+  data-action="click->search#focusSearchInput"
+  method="get"
+  class="flex print:hidden justify-between items-center leading-14 md:ml-4 bg-gray-dark text-gray-300 focus-within:bg-gray-50 focus-within:text-gray-800 focus-within:absolute focus-within:inset-x-0 focus-within:top-0 md:focus-within:w-full md:focus-within:static z-10">
+
+  <button
+    class="text-inherit h-14 w-14"
+    aria-label="Get search results"
+    tabindex="-1"
+  >
+    <svg aria-hidden="true" class="fill-current stroke-current h-8 w-8" stroke-width="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </button>
+
+  <input
+    name="q"
+    id="search-input"
+    data-search-target="searchInput"
+    type="search"
+    aria-label="Search the docs"
+    placeholder="Search the docs"
+    class="pr-2 bg-transparent text-inherit focus:outline-none w-0 md:w-auto focus:w-full transition-all duration-100"
+  />
+</form></div>
+</div>
+    </header>
+
+    
+<aside data-sidebar-target="sidebar" class="grid-area-sidebar h-full fixed pt-14 xl:relative inset-y-0 left-0 z-20 xl:z-0 print:hidden overflow-y-auto transition-all transform transform-gpu -translate-x-full opacity-0 duration-300 xl:translate-x-0 xl:opacity-100">
+  <nav
+  role="navigation"
+  class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
+>
+  <div class="nav-toc flex-1 pl-6"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Home</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#ide">IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#git-and-github">Git and Github</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../git/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../git/index.html#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../git/index.html#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Poetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-it">How to use it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#motor-controllers">Motor Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#inputs">Inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#vision-processors">Vision Processors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#what-to-expect-in-this-documentation">What to expect in this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#what-you-need-to-know-before-you-start">What you need to know before you start:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#ready-to-get-started">Ready to get started?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#how-to-use-this-documentation">How to use this documentation:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#how-to-contribute-to-this-documentation">How to contribute to this documentation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#ide">IDE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#what-is-an-ide">What is an IDE?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#vscode">VSCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#pycharm">PyCharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#vim">Vim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#git-and-github">Git and Github</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/index.html#how-to-install-git"><strong>How to Install Git</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#no-setup-required">No setup required</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html#how-does-our-team-use-it">How does our team use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/index.html#how-do-i-use-it">How do I use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Poetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-it">Why use it?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#poetry-vs-pip-and-virtualenv">Poetry vs Pip and Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-it">How to use it?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setup">Setup:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-dependencies">Adding dependencies:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-your-project">Running your project:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-dependencies">Updating dependencies:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-share-your-project-with-others">How to share your project with others?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-choate-robotics-uses-poetry">How Choate Robotics uses Poetry:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Hardware and Electronics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#system-diagram">System Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#core-components">Core Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#roborio">RoboRIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#pdh">PDH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#pneumatic-hub">Pneumatic Hub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#can-wires">CAN Wires:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#radio">Radio:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#motor-controllers">Motor Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#rev-spark-max">Rev Spark Max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#ctre-falcon-500">CTRE Falcon 500</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#inputs">Inputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#digital-input">Digital Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#analog-input">Analog Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/index.html#vision-processors">Vision Processors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#limelight">Limelight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../networks/networktables.html">Networktables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  <button
+      data-action="sidebar#close"
+      title="Close navigation menu"
+      class="text-4xl text-gray-800 p-4 bottom-0 hover:text-brand xl:hidden focus:text-brand self-center">
+    <span class="sr-only">Close navigation menu</span>
+    <svg aria-hidden="true" class="fill-current stroke-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
+</nav>
+</aside>
+
+<main
+  class="px-4 pt-14 xl:ml-fluid grid-area-main overflow-y-auto flex flex-col flex-1 h-full mx-0 md:mx-auto xl:mr-0"
+><nav role="navigation"
+     aria-label="breadcrumbs"
+     class="print:hidden mt-12 text-sm text-gray-light">
+  <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
+  <span class="mr-1">/</span><span aria-current="page">Poetry</span>
+</nav>
+
+  <article role="main" class="flex-1 prose">
+    
+  <section id="poetry">
+<h1>Poetry<a class="headerlink" href="#poetry" title="Permalink to this heading"><span>#</span></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is a tutorial on how to use Poetry. It is not a tutorial on how to use Python.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In most cases, you will not have to interact with poetry directly. The <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files are already set up for you. You can skip this page if you are not interested in learning how to use Poetry.</p>
+</div>
+<section id="what-is-it">
+<h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this heading"><span>#</span></a></h2>
+<ul class="simple">
+<li><p>Poetry is a tool for dependency management and packaging in Python with a virtual environment.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>dependencies are libraries that your project depends on. For example, if you are using the requests library, then requests is a dependency of your project.</p></li>
+<li><p>a virtual environment is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages. Different virtual environments can have different versions of Python, and can have different sets of installed packages. Think of it as a standalone machine in simple terms.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.</p></li>
+<li><p>Runs inside a virtual environment, so you don’t need to manage your own virtual environment.</p></li>
+</ul>
+</section>
+<section id="why-use-it">
+<h2>Why use it?<a class="headerlink" href="#why-use-it" title="Permalink to this heading"><span>#</span></a></h2>
+<ul class="simple">
+<li><p>“I don’t know why its not working, it runs on my machine!”</p></li>
+<li><p>It allows us to share code with others without worrying about library versions, since poetry will handle that for us.</p></li>
+<li><p>It allows us to easily install our dependencies on a new machine.</p></li>
+<li><p>Since it runs inside a virtual environment, it doesn’t pollute our global python environment.</p></li>
+<li><p>It will work on every ones computer, since we are all using the same virtual environment.</p></li>
+</ul>
+</section>
+<section id="poetry-vs-pip-and-virtualenv">
+<h2>Poetry vs Pip and Virtualenv<a class="headerlink" href="#poetry-vs-pip-and-virtualenv" title="Permalink to this heading"><span>#</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Pip is the default package manager for Python. It is used to install and manage Python packages.</p></li>
+<li><p>This is what you use to install libraries like numpy, requests, etc to your computer.</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Virtualenv is a tool to create isolated Python environments. It is used to create virtual environments for your projects.</p></li>
+<li><p>This is what you use to create a virtual environment for your project.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Pip is a package manager, not a dependency manager. It does not handle dependencies for you.</p></li>
+<li><p>Virtualenv is a tool to create isolated Python environments. It does not handle dependencies for you.</p></li>
+<li><p>Poetry is a package and dependency manager. It handles dependencies for you.</p></li>
+<li><p>Poetry runs inside a virtual environment, so you don’t need to manage your own virtual environment.</p></li>
+<li><p>In simple terms, Poetry is a combination of Pip and Virtualenv that runs seamlessly inside a virtual environment.</p></li>
+<li><p>Poetry is the recommended tool for managing dependencies in Python <strong>With</strong> a virtual environment.</p></li>
+</ul>
+</section>
+<section id="how-to-use-it">
+<h2>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this heading"><span>#</span></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to install Poetry on your machine first.
+If you have not done so, refer to the :<a class="reference internal" href="../installation/index.html"><span class="doc">Installation</span></a> page for instructions on how to install Poetry.</p>
+</div>
+<section id="setup">
+<h3>Setup:<a class="headerlink" href="#setup" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>Create a new project folder, or navigate to an existing project folder.</p></li>
+<li><p>In the terminal, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">init</span></code>. This will create a new poetry project.</p></li>
+<li><p>The terminal will ask you a series of questions about your project configuration. You can skip most of them by pressing enter.</p></li>
+<li><p>Once you have finished, you should see a new file called <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>. This is the configuration file for your project.</p></li>
+</ol>
+</section>
+<section id="adding-dependencies">
+<h3>Adding dependencies:<a class="headerlink" href="#adding-dependencies" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>to add dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">&lt;dependency&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">numpy</span></code> will add the numpy library to your project.</p></li>
+<li><p>to install all dependencies, run the command <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all dependencies in your project. This will also create a virtual environment for your project.</p></li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">lock</span></code> to update the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This file contains the exact versions of the dependencies that you are using. This is useful for sharing your project with others.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do not manually edit the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This file is automatically generated by poetry. If you want to update the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">lock</span></code>.</p>
+</div>
+</section>
+<section id="running-your-project">
+<h3>Running your project:<a class="headerlink" href="#running-your-project" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>to run your project, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">main.py</span></code> will run the <code class="docutils literal notranslate"><span class="pre">main.py</span></code> file in your project. this will run the file inside the virtual environment, so you don’t need to worry about installing the dependencies with pip (though its recommended since autocompletion will not work on IDEs).</p></li>
+<li><p>to open a shell inside the virtual environment, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">shell</span></code>. This will open a shell inside the virtual environment, so you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>. To exit the shell, use <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>a shell is a command line interface that allows you to run commands on your computer. For example, the terminal is a shell. by opening a shell inside the virtual environment, you can run commands without using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span></code>.</p>
+</div>
+</section>
+<section id="updating-dependencies">
+<h3>Updating dependencies:<a class="headerlink" href="#updating-dependencies" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>to update a dependency, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span> <span class="pre">&lt;dependency&gt;</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span> <span class="pre">numpy</span></code> will update the numpy library to the latest version.</p></li>
+<li><p>to update all dependencies, use <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">update</span></code>. This will update all dependencies to the latest version.</p></li>
+</ol>
+</section>
+</section>
+<section id="how-to-share-your-project-with-others">
+<h2>How to share your project with others?<a class="headerlink" href="#how-to-share-your-project-with-others" title="Permalink to this heading"><span>#</span></a></h2>
+<ol class="arabic simple">
+<li><p>to share your project with others, you need to share the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files. These files contain the configuration and dependencies of your project.</p></li>
+<li><p>When someone else wants to run your project, they need to run <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code>. This will install all dependencies in the <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file. This will also create a virtual environment for your project.</p></li>
+<li><p>They can now run your project using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">&lt;command&gt;</span></code>.</p></li>
+</ol>
+</section>
+<section id="how-choate-robotics-uses-poetry">
+<h2>How Choate Robotics uses Poetry:<a class="headerlink" href="#how-choate-robotics-uses-poetry" title="Permalink to this heading"><span>#</span></a></h2>
+<ul class="simple">
+<li><p>We use Poetry to manage dependencies in our projects.</p></li>
+<li><p>Since all repositories are set up by the same template, all repositories have the same <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> files. Meaning the general dependencies are already installed.</p></li>
+<li><p>We add more dependencies as needed.</p></li>
+</ul>
+</section>
+</section>
+
+
+  </article>
+
+  <footer><div class="mt-20 mb-4 text-sm text-gray-700 print:mt-4">&copy; 2023, Sebastian Plunkett&nbsp;Made with <a class="text-link hover:text-brand focus:text-brand hover:underline focus:underline" href="https://www.sphinx-doc.org">Sphinx 7.1.1</a></div>
+  </footer></main>
+
+
+    <button
+  data-search-target="snackbar"
+  data-action="search#hideSnackbar"
+  class="fixed bottom-0 right-0 z-20 opacity-0 p-4 m-4 tracking-wide bg-gray-900 text-gray-100 transition transform transform-gpu duration-500 translate-y-full"
+>
+  Clear highlights
+</button><div
+  data-sidebar-target="screen"
+  data-action="click->sidebar#close"
+  class="fixed hidden inset-0 bg-black bg-opacity-50">
+</div>
+  </div>
+  
+  
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="../_static/theme.c8991bd7bb6e57cbeea8.js"></script>
+  
+</body>
+
+</html>

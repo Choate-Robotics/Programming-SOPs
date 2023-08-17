@@ -33,11 +33,19 @@ it is a living document and will be updated as needed.
 
    grab an existing project <git/grab_an_existing_project>
 
+.. toctree:: 
+   :maxdepth: 3
+   :caption: Writing and Deploying Code:
+
    File Structure <code/file_structure>
 
-   Deploying Code <code/deploying_code>
+   Writing a Subsystem <code/subsystems>
+
+   Writing a Command <code/commands>
 
    Testing Code <code/testing_code>
+
+   Deploying Code <code/deploying_code>
 
    Documentation <code/documentation>
 
