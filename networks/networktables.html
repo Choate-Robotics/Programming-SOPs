@@ -127,8 +127,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../hardware/index.html#vision-processors">Vision Processors</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Networktables:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Networktables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
@@ -245,8 +247,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Networktables:</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Networktables</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
@@ -290,9 +294,8 @@
 <li><p>Networktables is a Pub/Sub system, meaning that devices can automatically recieve data from other devices without having to request it.</p></li>
 <li><p>[Networktables Documentation](<a class="reference external" href="http://robotpy.readthedocs.io/en/stable/guide/nt.html">http://robotpy.readthedocs.io/en/stable/guide/nt.html</a>)</p></li>
 </ul>
-</section>
 <section id="communicating-from-the-roborio">
-<h1>Communicating from the RoboRIO:<a class="headerlink" href="#communicating-from-the-roborio" title="Permalink to this heading"><span>#</span></a></h1>
+<h2>Communicating from the RoboRIO:<a class="headerlink" href="#communicating-from-the-roborio" title="Permalink to this heading"><span>#</span></a></h2>
 <p>To communicate with the networktable system, you must first instance the networktable object. This is done by using the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ntcore</span>
 
@@ -325,6 +328,7 @@
 </pre></div>
 </div>
 <p>This will start a publisher that will send data to the networktable.</p>
+</section>
 </section>
 
 
