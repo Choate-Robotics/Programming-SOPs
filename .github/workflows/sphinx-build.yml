@@ -1,58 +1,30 @@
-# name: Sphinx build with PlantUML
+name: Build and deploy 
 
-# on:
-#   push:
-#     branches:
-#       - main  # Modify this to match your default branch
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Build HTML
-#       id: sphinx
-#       run: |
-#         pip install -r docs/requirements.txt  # Install any dependencies
-#         sphinx-build -b html -a docs docs/_build/html/
-#       continue-on-error: false  # Abort if Sphinx build fails
-#     - name: Copy PlantUML files
-#       run: |
-#         cp -r docs/**/*.puml docs/_build/html/
-#       if: success()  # Only copy files if the previous step (Sphinx build) was successful
-#     - name: Upload artifacts
-#       uses: actions/upload-artifact@v2
-#       with:
-#         name: html-docs
-#         path: docs/_build/html/
-#     - name: Deploy
-#       uses: peaceiris/actions-gh-pages@v3
-#       if: github.ref == 'refs/heads/main' && steps.sphinx.outcome == 'success'
-#       with:
-#         github_token: ${{ secrets.GITHUB_TOKEN }}
-#         publish_dir: docs/_build/html/
-
-name: "Sphinx: Render docs"
-
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Build HTML
-      uses: ammaraskar/sphinx-action@master
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: html-docs
-        path: docs/_build/html/
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/html/
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          submodules: true  # TODO remove this if not using submodules in Hexo
+
+      - name: Install 🔧
+        run: yarn install
+
+      - name: Build 🏗️
+        run: |
+          yarn clean
+          yarn build
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
