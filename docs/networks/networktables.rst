@@ -11,7 +11,7 @@ Networktables is a way for the RoboRIO to communicate with the driver station. I
 
 .. graphviz:: 
 
-    digraph G{
+    digraph{
         rankdir=LR;
         node [shape=box];
         "Driver Station" -- "Networktables";
