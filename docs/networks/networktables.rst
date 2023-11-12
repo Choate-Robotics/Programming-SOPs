@@ -27,7 +27,7 @@ To communicate with the networktable system, you must first instance the network
 
     import ntcore
 
-    table = ntcore.NetworkTables.getTable("tablename")
+    table = ntcore.NetworkTables.NetworkTableInstance.getTable("tablename")
 
 .. note::
     The ``tablename`` is the name of the table you want to communicate with. The table name is usually the name of the robot.
