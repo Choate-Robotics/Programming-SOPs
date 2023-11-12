@@ -70,6 +70,26 @@ it is a living document and will be updated as needed.
 
    Toolkit <code/toolkit>
 
+   PID and trapezoidal controllers <code/pid>
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced Topics:
+
+   Swerve Drive <code/swerve>
+
+   Odometry <code/odometry>
+
+   Vision <code/vision>
+
+   Trajectory Generation <code/trajectory>
+
+   Arm Mechanisms <code/arm>
+
+
+
+
 
 
 
