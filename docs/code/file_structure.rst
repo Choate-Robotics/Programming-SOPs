@@ -8,6 +8,8 @@ here is the file structure for the robot code:
 
 .. .. uml:: 
     
+..     @startuml
+
 ..     title File Structure
 
 ..     folder Subsystems {
@@ -56,6 +58,29 @@ here is the file structure for the robot code:
 ..     config.py -down-> subsystem.py #Green
 ..     config.py -down-> util.py #Green
 ..     config.py -down-> sensor.py #Green
+
+..     @enduml
+
+.. graphviz:: 
+
+    digraph G {
+        rankdir=LR;
+        node [shape=box];
+        subsystems [label="Subsystems"];
+        sensors [label="Sensors"];
+        utils [label="Utils"];
+        commands [label="Commands"];
+        oi [label="OI"];
+        tests [label="Tests"];
+        subsystems -> tests;
+        sensors -> tests;
+        utils -> tests;
+        commands -> tests;
+        oi -> tests;
+        subsystems -> subsystem;
+        subsystem -> robot_systems;
+        }
+
 
 ...yeah, that's a lot of stuff. Let's break it down.
 
