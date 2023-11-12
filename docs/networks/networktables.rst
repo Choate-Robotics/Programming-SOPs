@@ -12,8 +12,12 @@ Networktables is a way for the RoboRIO to communicate with the driver station. I
 .. graphviz:: 
 
     digraph{
-        "Raspberry Pi" -> "Networktables";
-        "Networktables" -> "Raspberry Pi";
+        "Networktables" <-> "Raspberry Pi";
+        "Networktables" <-> "RoboRIO";
+        "Networktables" <-> "Driver Station";
+        "Networktables" <-> "Limelight";
+        
+        
     }
 
 Communicating from the RoboRIO:
