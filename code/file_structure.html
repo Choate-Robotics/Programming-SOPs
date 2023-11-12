@@ -286,23 +286,9 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this heading"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<div class="graphviz"><img src="../_images/graphviz-6adcf8097b3903bb063c07a23df0153b5062ffb9.png" alt="digraph G {
-    rankdir=LR;
-    node [shape=box];
-    subsystems [label=&quot;Subsystems&quot;];
-    sensors [label=&quot;Sensors&quot;];
-    utils [label=&quot;Utils&quot;];
-    commands [label=&quot;Commands&quot;];
-    oi [label=&quot;OI&quot;];
-    tests [label=&quot;Tests&quot;];
-    subsystems -&gt; tests;
-    sensors -&gt; tests;
-    utils -&gt; tests;
-    commands -&gt; tests;
-    oi -&gt; tests;
-    subsystems -&gt; subsystem;
-    subsystem -&gt; robot_systems;
-    }" class="graphviz" /></div>
+<div class="graphviz"><img src="../_images/graphviz-e6c409e609c3c46a8fbc2d37548af8b64d4b5f01.png" alt="digraph {
+    &quot;From&quot; -&gt; &quot;To&quot;;
+}" class="graphviz" /></div>
 <p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
 </section>
 
