@@ -9,9 +9,20 @@ Networktables is a way for the RoboRIO to communicate with the driver station. I
 
 * [Networktables Documentation](http://robotpy.readthedocs.io/en/stable/guide/nt.html)
 
+.. graphviz:: 
+
+    digraph G{
+        rankdir=LR;
+        node [shape=box];
+        "Driver Station" -- "Networktables";
+        "Networktables" -- "RoboRIO";
+        "Networktables" -- "Limelight";
+        "Networktables" -- "Arduino";
+        "Networktables" -- "Raspberry Pi";
+    }
 
 Communicating from the RoboRIO:
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To communicate with the networktable system, you must first instance the networktable object. This is done by using the following code:
 
