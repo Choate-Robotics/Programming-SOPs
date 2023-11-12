@@ -39,5 +39,6 @@ How to contribute to this documentation:
 ----------------------------------------
 - Fork the repository
 - Make your changes
+- - If you are adding a new diagram, please use graphviz, since it is automatically rendered by Sphinx and easy to edit -- see the other diagrams for examples.
 - Submit a pull request
 
