@@ -294,9 +294,13 @@
 <li><p>Networktables is a Pub/Sub system, meaning that devices can automatically recieve data from other devices without having to request it.</p></li>
 <li><p>[Networktables Documentation](<a class="reference external" href="http://robotpy.readthedocs.io/en/stable/guide/nt.html">http://robotpy.readthedocs.io/en/stable/guide/nt.html</a>)</p></li>
 </ul>
-<div class="graphviz"><img src="../_images/graphviz-d43d28bc84af34cc4607fc73fdd761b0b8fac4e8.png" alt="digraph{
-    &quot;Raspberry Pi&quot; -&gt; &quot;Networktables&quot;;
-    &quot;Networktables&quot; -&gt; &quot;Raspberry Pi&quot;;
+<div class="graphviz"><img src="../_images/graphviz-9f73adb371c1356a45916dd8daae76f837a8939b.png" alt="digraph{
+    &quot;Networktables&quot; &lt;-&gt; &quot;Raspberry Pi&quot;;
+    &quot;Networktables&quot; &lt;-&gt; &quot;RoboRIO&quot;;
+    &quot;Networktables&quot; &lt;-&gt; &quot;Driver Station&quot;;
+    &quot;Networktables&quot; &lt;-&gt; &quot;Limelight&quot;;
+
+
 }" class="graphviz" /></div>
 <section id="communicating-from-the-roborio">
 <h2>Communicating from the RoboRIO:<a class="headerlink" href="#communicating-from-the-roborio" title="Permalink to this heading"><span>#</span></a></h2>
