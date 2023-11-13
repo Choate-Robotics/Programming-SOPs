@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>PID: | Programming Standard Operating Procedure  documentation</title>
+  <title>PID Control | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/graphviz.css" />
@@ -24,7 +24,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#pid" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#pid-control" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -136,7 +136,14 @@
 <li class="toctree-l3"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PID and trapezoidal controllers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PID Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proportional-p">Proportional (P):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integral-i">Integral (I):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#derivative-d">Derivative (D):</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feedforward-control">Feedforward Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swerve.html">Swerve Drive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odometry.html">Odometry</a></li>
 </ul>
@@ -256,7 +263,14 @@
 <li class="toctree-l2"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PID and trapezoidal controllers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PID Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#proportional-p">Proportional (P):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integral-i">Integral (I):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#derivative-d">Derivative (D):</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#feedforward-control">Feedforward Control</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics:</span></p>
 <ul>
@@ -281,14 +295,44 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">PID:</span>
+  <span class="mr-1">/</span><span aria-current="page">PID Control</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <section id="pid">
-<h1>PID:<a class="headerlink" href="#pid" title="Permalink to this heading"><span>#</span></a></h1>
-<p>Whats up with PID?</p>
+  <section id="pid-control">
+<h1>PID Control<a class="headerlink" href="#pid-control" title="Permalink to this heading"><span>#</span></a></h1>
+<figure class="align-center">
+<img alt="PID Control" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fplcynergy.com%2Fpid-controller%2F&amp;psig=AOvVaw2hQid8IxX788rqph1034vG&amp;ust=1699983383652000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBEQjRxqFwoTCIjg1-DBwYIDFQAAAAAdAAAAABAH" />
+</figure>
+<p>PID (Proportional-Integral-Derivative) control is a widely used feedback control algorithm in engineering. It plays a crucial role in maintaining desired setpoints or target values in various systems, including robotics.</p>
+<section id="proportional-p">
+<h2>Proportional (P):<a class="headerlink" href="#proportional-p" title="Permalink to this heading"><span>#</span></a></h2>
+<p>The proportional term in a PID controller produces an output value that is proportional to the current error. It results in a control response that reduces the error by a certain factor. Increasing the proportional gain can make the system respond more aggressively but may lead to overshooting the setpoint.</p>
+</section>
+<section id="integral-i">
+<h2>Integral (I):<a class="headerlink" href="#integral-i" title="Permalink to this heading"><span>#</span></a></h2>
+<p>The integral term accounts for past errors by summing up the error values over time and applying a correction based on the accumulated error. It eliminates any residual steady-state error and helps the system reach the setpoint accurately.</p>
+</section>
+<section id="derivative-d">
+<h2>Derivative (D):<a class="headerlink" href="#derivative-d" title="Permalink to this heading"><span>#</span></a></h2>
+<p>The derivative term anticipates future error by calculating the rate of change of the error over time. It provides a control response to counteract rapid changes in error, preventing overshoot and oscillations.</p>
+</section>
+</section>
+<section id="use-of-pid-in-first-robotics">
+<h1>Use of PID in First Robotics<a class="headerlink" href="#use-of-pid-in-first-robotics" title="Permalink to this heading"><span>#</span></a></h1>
+<p>First Robotics competitions often rely on PID controllers for precise control of various robot functions. Here’s how PID control is utilized:</p>
+<ul class="simple">
+<li><p>Motor Control: PID loops can control motor speed or position to achieve consistent robot movements or maintain specific arm or shooter positions.</p></li>
+<li><p>Shooter Systems: PID controllers are used to precisely control shooter velocity and angle for accurate object launching.</p></li>
+<li><p>Autonomous Navigation: PID control helps the robot navigate to specific positions or follow predefined paths accurately, especially in autonomous modes.</p></li>
+<li><p>Stability and Balance: In situations where robots need to balance on platforms or manipulate objects delicately, PID control ensures stability and precise control.</p></li>
+</ul>
+</section>
+<section id="feedforward-control">
+<h1>Feedforward Control<a class="headerlink" href="#feedforward-control" title="Permalink to this heading"><span>#</span></a></h1>
+<p>Feedforward control is a technique often used in conjunction with PID control. It helps anticipate and compensate for known disturbances or external forces, allowing the system to respond faster and reducing the reliance on PID corrections. In robotics, feedforward control is frequently used to account for factors like gravity, friction, or other known influences that affect the system’s behavior.</p>
+<p>For example, when a robot arm is lifting an object, feedforward control can consider the weight of the object and apply a control input to counteract the gravitational force. This reduces the error that the PID controller needs to correct, making the system more responsive and stable.</p>
 </section>
 
 
