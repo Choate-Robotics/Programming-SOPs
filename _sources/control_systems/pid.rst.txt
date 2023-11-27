@@ -1,7 +1,7 @@
 PID Control
 ===========
 
-.. figure:: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thorlabs.com%2Fnewgrouppage9.cfm%3Fobjectgroup_id%3D9013&psig=AOvVaw0NiGa6m9k1TEFyP0OFsRTg&ust=1701126304764000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDQ2rrj4oIDFQAAAAAdAAAAABAR
+.. figure:: https://geekeeceebee.com/img/PID_tuning.gif
    :alt: PID Control
    :align: center
 
