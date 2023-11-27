@@ -6,7 +6,7 @@ Profiled PID control, similar to regular PID control, is a control loop feedback
 
 
 .. note::
-    for a review on PID control, see <pid.rst>
+    for a review on PID control, see `PID <pid.rst>`_
 
 A profiled PID is used over normal PID when the system being controlled has physical constraints on acceleration and velocity. For example, a robot arm may have a maximum acceleration and velocity that it can achieve. A profiled PID will take these constraints into account when generating the control signal.
 
