@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>PID Control | Programming Standard Operating Procedure  documentation</title>
+  <title>Profiled PID Control | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/graphviz.css" />
@@ -15,8 +15,8 @@
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="Swerve Drive:" href="swerve.html" />
-  <link rel="prev" title="robotpy-toolkit-7407" href="toolkit.html" />
+  <link rel="next" title="Swerve Drive:" href="../code/swerve.html" />
+  <link rel="prev" title="PID Control" href="pid.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -24,7 +24,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#pid-control" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#profiled-pid-control" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -90,14 +90,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../git/creating_a_new_project.html">Creating a Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../git/grab_existing_project.html">grab an existing project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file_structure.html">File Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deploying_code.html">Deploying Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html">Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
-<li class="toctree-l3"><a class="reference internal" href="documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
-<li class="toctree-l3"><a class="reference internal" href="documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="documentation.html#limelight">Limelight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
@@ -131,21 +131,22 @@
 <li class="toctree-l3"><a class="reference internal" href="../networks/networktables.html#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="toolkit.html">Toolkit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="toolkit.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PID Control</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#proportional-p">Proportional (P):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#integral-i">Integral (I):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#derivative-d">Derivative (D):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pid.html">PID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#pid-control-theory">PID Control Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#tuning-the-pid-controller">Tuning the PID Controller</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#feedforward-control">Feedforward Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="swerve.html">Swerve Drive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odometry.html">Odometry</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profiled PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/swerve.html">Swerve Drive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/odometry.html">Odometry</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
@@ -190,19 +191,19 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="file_structure.html">File Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deploying_code.html">Deploying Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="documentation.html#limelight">Limelight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/documentation.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-and-wpilib">RobotPy and WPILib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#robotpy-toolkit-7407">robotpy-toolkit-7407</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#ctre-and-revrobotics">CTRE and REVRobotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/documentation.html#limelight">Limelight</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
 </ul>
@@ -258,24 +259,44 @@
 <li class="toctree-l2"><a class="reference internal" href="../networks/networktables.html#communicating-from-the-roborio">Communicating from the RoboRIO:</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolkit.html">Toolkit</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolkit.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/toolkit.html">Toolkit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PID Control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#proportional-p">Proportional (P):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#integral-i">Integral (I):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#derivative-d">Derivative (D):</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Motion Control Systems:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pid.html">PID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pid.html#pid-control-theory">PID Control Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#proportional-p">Proportional (P):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#integral-i">Integral (I):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#derivative-d">Derivative (D):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#feed-forward-ff">feed-forward (FF):</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#feedforward-control">Feedforward Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#find-your-feedback-sensor">Find your feedback sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#find-your-setpoint">Find your setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#find-your-control-output">Find your control output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#use-the-pid-controller-class-from-the-wpilib-library">Use the PID controller class from the wpilib library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#calculate-the-error-and-set-the-output">Calculate the error and set the output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pid.html#tuning-the-pid-controller">Tuning the PID Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pid.html#troubleshooting-pid-control">Troubleshooting PID Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Profiled PID</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="swerve.html">Swerve Drive</a></li>
-<li class="toctree-l1"><a class="reference internal" href="odometry.html">Odometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/swerve.html">Swerve Drive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/odometry.html">Odometry</a></li>
 </ul>
 </div>
 
@@ -295,44 +316,66 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">PID Control</span>
+  <span class="mr-1">/</span><span aria-current="page">Profiled PID Control</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <section id="pid-control">
-<h1>PID Control<a class="headerlink" href="#pid-control" title="Permalink to this heading"><span>#</span></a></h1>
-<figure class="align-center">
-<img alt="PID Control" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fplcynergy.com%2Fpid-controller%2F&amp;psig=AOvVaw2hQid8IxX788rqph1034vG&amp;ust=1699983383652000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBEQjRxqFwoTCIjg1-DBwYIDFQAAAAAdAAAAABAH" />
-</figure>
-<p>PID (Proportional-Integral-Derivative) control is a widely used feedback control algorithm in engineering. It plays a crucial role in maintaining desired setpoints or target values in various systems, including robotics.</p>
-<section id="proportional-p">
-<h2>Proportional (P):<a class="headerlink" href="#proportional-p" title="Permalink to this heading"><span>#</span></a></h2>
-<p>The proportional term in a PID controller produces an output value that is proportional to the current error. It results in a control response that reduces the error by a certain factor. Increasing the proportional gain can make the system respond more aggressively but may lead to overshooting the setpoint.</p>
-</section>
-<section id="integral-i">
-<h2>Integral (I):<a class="headerlink" href="#integral-i" title="Permalink to this heading"><span>#</span></a></h2>
-<p>The integral term accounts for past errors by summing up the error values over time and applying a correction based on the accumulated error. It eliminates any residual steady-state error and helps the system reach the setpoint accurately.</p>
-</section>
-<section id="derivative-d">
-<h2>Derivative (D):<a class="headerlink" href="#derivative-d" title="Permalink to this heading"><span>#</span></a></h2>
-<p>The derivative term anticipates future error by calculating the rate of change of the error over time. It provides a control response to counteract rapid changes in error, preventing overshoot and oscillations.</p>
-</section>
-</section>
-<section id="use-of-pid-in-first-robotics">
-<h1>Use of PID in First Robotics<a class="headerlink" href="#use-of-pid-in-first-robotics" title="Permalink to this heading"><span>#</span></a></h1>
-<p>First Robotics competitions often rely on PID controllers for precise control of various robot functions. Here’s how PID control is utilized:</p>
-<ul class="simple">
-<li><p>Motor Control: PID loops can control motor speed or position to achieve consistent robot movements or maintain specific arm or shooter positions.</p></li>
-<li><p>Shooter Systems: PID controllers are used to precisely control shooter velocity and angle for accurate object launching.</p></li>
-<li><p>Autonomous Navigation: PID control helps the robot navigate to specific positions or follow predefined paths accurately, especially in autonomous modes.</p></li>
-<li><p>Stability and Balance: In situations where robots need to balance on platforms or manipulate objects delicately, PID control ensures stability and precise control.</p></li>
-</ul>
-</section>
-<section id="feedforward-control">
-<h1>Feedforward Control<a class="headerlink" href="#feedforward-control" title="Permalink to this heading"><span>#</span></a></h1>
-<p>Feedforward control is a technique often used in conjunction with PID control. It helps anticipate and compensate for known disturbances or external forces, allowing the system to respond faster and reducing the reliance on PID corrections. In robotics, feedforward control is frequently used to account for factors like gravity, friction, or other known influences that affect the system’s behavior.</p>
-<p>For example, when a robot arm is lifting an object, feedforward control can consider the weight of the object and apply a control input to counteract the gravitational force. This reduces the error that the PID controller needs to correct, making the system more responsive and stable.</p>
+  <section id="profiled-pid-control">
+<h1>Profiled PID Control<a class="headerlink" href="#profiled-pid-control" title="Permalink to this heading"><span>#</span></a></h1>
+<p>Profiled PID control, similar to regular PID control, is a control loop feedback mechanism that incorporates acceleraton and velocity limits with a trapezoidal constraint.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>for a review on PID control, see &lt;pid.rst&gt;</p>
+</div>
+<p>A profiled PID is used over normal PID when the system being controlled has physical constraints on acceleration and velocity. For example, a robot arm may have a maximum acceleration and velocity that it can achieve. A profiled PID will take these constraints into account when generating the control signal.</p>
+<p>The profiled PID is implemented as a subclass of the regular PID class. The profiled PID class overrides the <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.calculate()</span></code> method to add the acceleration and velocity constraints.</p>
+<p>The profiled PID class also adds two new methods, <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.setAccelerationLimits()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.setVelocityLimits()</span></code>, which set the acceleration and velocity limits, respectively.</p>
+<p>You can create a profiled PID controller using the <code class="xref py py-class docutils literal notranslate"><span class="pre">ProfiledPIDController</span></code> class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">ProfiledPIDController</span>
+<span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">TrapezoidProfile</span>
+
+<span class="n">constraints</span> <span class="o">=</span> <span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">Constraints</span><span class="p">(</span><span class="n">max_velocity</span><span class="o">=</span><span class="mf">1.7</span><span class="p">,</span> <span class="n">max_acceleration</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">controller</span> <span class="o">=</span> <span class="n">ProfiledPIDController</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)</span>
+
+<span class="c1"># Set the goal state</span>
+
+<span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">State</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="c1"># Calculate the feedforward and feedback terms</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
+
+<span class="c1"># Use the output to control the mechanism</span>
+
+<span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">ProfiledPIDController</span></code> class is a subclass of the <code class="xref py py-class docutils literal notranslate"><span class="pre">PIDController</span></code> class. This means that you can use a profiled PID controller anywhere you would use a regular PID controller. For example, you can use a profiled PID controller in the <code class="xref py py-class docutils literal notranslate"><span class="pre">wpilib.controller.RamseteController</span></code> class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">RamseteController</span>
+<span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+
+<span class="n">trajectory</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">()</span>
+
+<span class="n">controller</span> <span class="o">=</span> <span class="n">RamseteController</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Set the goal state</span>
+
+<span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">trajectory</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="c1"># Calculate the feedforward and feedback terms</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
+
+<span class="c1"># Use the output to control the mechanism</span>
+
+<span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 
 

@@ -16,7 +16,7 @@
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
   <link rel="next" title="Odometry:" href="odometry.html" />
-  <link rel="prev" title="PID Control" href="pid.html" />
+  <link rel="prev" title="Profiled PID Control" href="../control_systems/profiled_pid.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -136,14 +136,15 @@
 <li class="toctree-l3"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pid.html">PID Control</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pid.html#proportional-p">Proportional (P):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pid.html#integral-i">Integral (I):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pid.html#derivative-d">Derivative (D):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html">PID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#pid-control-theory">PID Control Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#tuning-the-pid-controller">Tuning the PID Controller</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pid.html#feedforward-control">Feedforward Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Swerve Drive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odometry.html">Odometry</a></li>
 </ul>
@@ -263,14 +264,34 @@
 <li class="toctree-l2"><a class="reference internal" href="toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pid.html">PID Control</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pid.html#proportional-p">Proportional (P):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pid.html#integral-i">Integral (I):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pid.html#derivative-d">Derivative (D):</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Motion Control Systems:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../control_systems/pid.html">PID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#pid-control-theory">PID Control Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#proportional-p">Proportional (P):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#integral-i">Integral (I):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#derivative-d">Derivative (D):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#feed-forward-ff">feed-forward (FF):</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pid.html#feedforward-control">Feedforward Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-feedback-sensor">Find your feedback sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-setpoint">Find your setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-control-output">Find your control output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#use-the-pid-controller-class-from-the-wpilib-library">Use the PID controller class from the wpilib library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#calculate-the-error-and-set-the-output">Calculate the error and set the output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#tuning-the-pid-controller">Tuning the PID Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#troubleshooting-pid-control">Troubleshooting PID Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics:</span></p>
 <ul class="current">

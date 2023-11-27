@@ -70,7 +70,25 @@ it is a living document and will be updated as needed.
 
    Toolkit <code/toolkit>
 
-   PID and trapezoidal controllers <code/pid>
+.. .. toctree:: 
+..    :maxdepth: 2
+..    :caption: Troubleshooting:
+
+..    Common Errors <troubleshooting/common_errors>
+
+..    Common Problems <troubleshooting/common_problems>
+
+..    Common Solutions <troubleshooting/common_solutions>
+
+..    Common Questions <troubleshooting/common_questions>
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Motion Control Systems:
+
+   PID <control_systems/pid>
+
+   Profiled PID <control_systems/profiled_pid>
 
 
 .. toctree::

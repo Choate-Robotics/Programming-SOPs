@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Initial Setup | Programming Standard Operating Procedure  documentation</title>
+  <title>PID Control | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/graphviz.css" />
@@ -15,8 +15,8 @@
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="Making a Project" href="../git/creating_a_new_project.html" />
-  <link rel="prev" title="Installation" href="../installation/index.html" />
+  <link rel="next" title="Profiled PID Control" href="profiled_pid.html" />
+  <link rel="prev" title="robotpy-toolkit-7407" href="../code/toolkit.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -24,7 +24,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#initial-setup" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#pid-control" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -84,8 +84,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#we-ve-got-the-software-now-what">We’ve got the software… now what?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../git/creating_a_new_project.html">Creating a Project</a></li>
@@ -136,15 +136,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../code/toolkit.html#usage">Usage</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html">PID</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#pid-control-theory">PID Control Theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#tuning-the-pid-controller">Tuning the PID Controller</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pid-control-theory">PID Control Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tuning-the-pid-controller">Tuning the PID Controller</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profiled_pid.html">Profiled PID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/swerve.html">Swerve Drive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../code/odometry.html">Odometry</a></li>
 </ul>
@@ -162,7 +162,7 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Install</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html#software">Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html#ide">IDE</a><ul>
@@ -179,9 +179,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html#other-software">Other Software</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#no-setup-required">No setup required</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../initial%20setup/index.html">Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../initial%20setup/index.html#we-ve-got-the-software-now-what">We’ve got the software… now what?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../initial%20setup/index.html#no-setup-required">No setup required</a></li>
 </ul>
 </li>
 </ul>
@@ -266,32 +266,32 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Motion Control Systems:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../control_systems/pid.html">PID</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#why-do-we-need-pid-control">Why do we need PID control?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#pid-control-theory">PID Control Theory</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#proportional-p">Proportional (P):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#integral-i">Integral (I):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#derivative-d">Derivative (D):</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#feed-forward-ff">feed-forward (FF):</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">PID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-do-we-need-pid-control">Why do we need PID control?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-of-pid-in-first-robotics">Use of PID in First Robotics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pid-control-theory">PID Control Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proportional-p">Proportional (P):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integral-i">Integral (I):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#derivative-d">Derivative (D):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feed-forward-ff">feed-forward (FF):</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-feedback-sensor">Find your feedback sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-setpoint">Find your setpoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#find-your-control-output">Find your control output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#use-the-pid-controller-class-from-the-wpilib-library">Use the PID controller class from the wpilib library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#calculate-the-error-and-set-the-output">Calculate the error and set the output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-pid-control-for-first-robotics">Creating PID Control for FIRST Robotics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#find-your-feedback-sensor">Find your feedback sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#find-your-setpoint">Find your setpoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#find-your-control-output">Find your control output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-the-pid-controller-class-from-the-wpilib-library">Use the PID controller class from the wpilib library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calculate-the-error-and-set-the-output">Calculate the error and set the output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../control_systems/pid.html#tuning-the-pid-controller">Tuning the PID Controller</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../control_systems/pid.html#troubleshooting-pid-control">Troubleshooting PID Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuning-the-pid-controller">Tuning the PID Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting-pid-control">Troubleshooting PID Control</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profiled_pid.html">Profiled PID</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics:</span></p>
 <ul>
@@ -316,23 +316,152 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">Initial Setup</span>
+  <span class="mr-1">/</span><span aria-current="page">PID Control</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <section id="initial-setup">
-<h1>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading"><span>#</span></a></h1>
-<section id="we-ve-got-the-software-now-what">
-<h2>We’ve got the software… now what?<a class="headerlink" href="#we-ve-got-the-software-now-what" title="Permalink to this heading"><span>#</span></a></h2>
-<p>Now that you’ve got the software installed, you’ll need to set up your environment. This is a one-time process that will allow you to use the software from the command line.</p>
+  <section id="pid-control">
+<h1>PID Control<a class="headerlink" href="#pid-control" title="Permalink to this heading"><span>#</span></a></h1>
+<figure class="align-center">
+<img alt="PID Control" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.thorlabs.com%2Fnewgrouppage9.cfm%3Fobjectgroup_id%3D9013&amp;psig=AOvVaw0NiGa6m9k1TEFyP0OFsRTg&amp;ust=1701126304764000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCKDQ2rrj4oIDFQAAAAAdAAAAABAR" />
+</figure>
+<p>PID (Proportional-Integral-Derivative) control is a widely used feedback control algorithm in engineering. It plays a crucial role in maintaining desired setpoints or target values in various systems like motors, including robotics.</p>
+<p>PID control is a closed-loop control technique that uses feedback from the system to control the process. It continuously calculates an error value as the difference between a desired setpoint and a measured process variable and applies a correction based on proportional, integral, and derivative terms. The goal is to minimize the error and achieve the desired setpoint as quickly as possible.</p>
+<p>PID control is used in a wide range of applications, including robotics, manufacturing, and process control. It is also used in many First Robotics competitions to control various robot functions like motor speed, shooter velocity, and autonomous navigation.</p>
+<section id="why-do-we-need-pid-control">
+<h2>Why do we need PID control?<a class="headerlink" href="#why-do-we-need-pid-control" title="Permalink to this heading"><span>#</span></a></h2>
+<p>PID control is a popular control technique because it is simple, robust, and effective.
+It is easy to implement and can be used to control a wide range of systems. It is also very reliable and can handle various disturbances and uncertainties in the system.
+Finally, it is very effective at minimizing the error and achieving the desired setpoint quickly.</p>
+<p>If PID control was not used in robotics, the robot would not be able to maintain a consistent speed or position and would not be able to perform precise movements, as different external factors would affect the robot’s behavior, like friction, gravity, or other disturbances.</p>
+<p>We use PID control in robotics to achieve consistent, presise, and smooth movements, which is crucial for mechanisms that can be easily damaged or require precise control, like arm mechanisms or shooter systems.</p>
+</section>
+<section id="use-of-pid-in-first-robotics">
+<h2>Use of PID in First Robotics<a class="headerlink" href="#use-of-pid-in-first-robotics" title="Permalink to this heading"><span>#</span></a></h2>
+<p>First Robotics competitions often rely on PID controllers for precise control of various robot functions. Here’s how PID control is utilized:</p>
+<ul class="simple">
+<li><p>Motor Control: PID loops can control motor speed or position to achieve consistent robot movements or maintain specific arm or shooter positions.</p></li>
+<li><p>Shooter Systems: PID controllers are used to precisely control shooter velocity and angle for accurate object launching.</p></li>
+<li><p>Autonomous Navigation: PID control helps the robot navigate to specific positions or follow predefined paths accurately, especially in autonomous modes.</p></li>
+<li><p>Stability and Balance: In situations where robots need to balance on platforms or manipulate objects delicately, PID control ensures stability and precise control.</p></li>
+</ul>
+</section>
+<section id="pid-control-theory">
+<h2>PID Control Theory<a class="headerlink" href="#pid-control-theory" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="proportional-p">
+<h3>Proportional (P):<a class="headerlink" href="#proportional-p" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The proportional term in a PID controller produces an output value that is proportional to the current error. It results in a control response that reduces the error by a certain factor. Increasing the proportional gain can make the system respond more aggressively but may lead to overshooting the setpoint.</p>
+</section>
+<section id="integral-i">
+<h3>Integral (I):<a class="headerlink" href="#integral-i" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The integral term accounts for past errors by summing up the error values over time and applying a correction based on the accumulated error. It eliminates any residual steady-state error and helps the system reach the setpoint accurately.</p>
+</section>
+<section id="derivative-d">
+<h3>Derivative (D):<a class="headerlink" href="#derivative-d" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The derivative term anticipates future error by calculating the rate of change of the error over time. It provides a control response to counteract rapid changes in error, preventing overshoot and oscillations.</p>
+</section>
+<section id="feed-forward-ff">
+<h3>feed-forward (FF):<a class="headerlink" href="#feed-forward-ff" title="Permalink to this heading"><span>#</span></a></h3>
+<p>feed-forward is a term that is added to the PID controller to compensate for external forces acting on the system, like friction or gravity. It is used to improve the system’s response and achieve the desired setpoint more quickly.</p>
+</section>
+</section>
+<section id="creating-pid-control-for-first-robotics">
+<h2>Creating PID Control for FIRST Robotics<a class="headerlink" href="#creating-pid-control-for-first-robotics" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="find-your-feedback-sensor">
+<h3>Find your feedback sensor<a class="headerlink" href="#find-your-feedback-sensor" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The first step in creating a PID controller is to find a sensor that can provide feedback about the system’s current state. The sensor should be able to measure the process variable (PV) or the system’s current state and provide feedback to the controller.
+The sensor can be a potentiometer, encoder, or any other device that can measure the system’s current state.</p>
+</section>
+<section id="find-your-setpoint">
+<h3>Find your setpoint<a class="headerlink" href="#find-your-setpoint" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The setpoint is the desired value that the system should achieve. It can be a specific position, speed, or any other value that the system needs to maintain.
+The setpoint can be a constant value or a variable that changes over time.</p>
+</section>
+<section id="find-your-control-output">
+<h3>Find your control output<a class="headerlink" href="#find-your-control-output" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The control output is the value that the PID controller calculates and sends to the system to achieve the desired setpoint.
+It can be a voltage, current, or any other value that the system can use to control the process.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This information requires the installation of necessary software. See <span class="xref std std-ref">installation</span> for more information.</p>
+<p>The control output should be within the system’s operating range. For example, if the system uses a motor, the control output should be a voltage or current that the motor can handle.
+It also needs to be within the sensor’s measurement range. For example, if the sensor is a potentiometer, the control output should be a voltage that the potentiometer can measure.
+Finally, it needs to be within the systems’ physical limits. For example, if the system is a robot arm, the control output should be a position that the arm can reach, otherwise the arm will be damaged.</p>
 </div>
-<section id="no-setup-required">
-<h3>No setup required<a class="headerlink" href="#no-setup-required" title="Permalink to this heading"><span>#</span></a></h3>
-<p>As of now, no setup is required for running robot code.</p>
+</section>
+<section id="use-the-pid-controller-class-from-the-wpilib-library">
+<h3>Use the PID controller class from the wpilib library<a class="headerlink" href="#use-the-pid-controller-class-from-the-wpilib-library" title="Permalink to this heading"><span>#</span></a></h3>
+<p>Here is the class and helpful methods that can be used to create a PID controller in Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib</span> <span class="kn">import</span> <span class="n">PIDController</span>
+
+<span class="n">pid</span> <span class="o">=</span> <span class="n">PIDController</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span> <span class="c1"># WPIlib PID Controller Class - Takes in P, I, and D values</span>
+
+<span class="n">pid</span><span class="o">.</span><span class="n">setSetpoint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Set the desired setpoint</span>
+
+<span class="n">pid</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span> <span class="c1"># Enable the PID controller</span>
+
+<span class="n">pid</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span> <span class="c1"># Disable the PID controller</span>
+
+<span class="n">pid</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Reset the PID controller to its initial state - Very important to call this before restarting a Command, otherwise the PID controller will continue from the previous Command</span>
+
+<span class="n">pid</span><span class="o">.</span><span class="n">getSetpoint</span><span class="p">()</span> <span class="c1"># Get the current setpoint</span>
+</pre></div>
+</div>
+</section>
+<section id="calculate-the-error-and-set-the-output">
+<h3>Calculate the error and set the output<a class="headerlink" href="#calculate-the-error-and-set-the-output" title="Permalink to this heading"><span>#</span></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">setpoint</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Set the desired setpoint</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">pid</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">setpoint</span><span class="p">)</span> <span class="c1"># Calculate the PID output based on the current sensor value</span>
+
+<span class="n">motor</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="c1"># Set the motor output to the PID output</span>
+</pre></div>
+</div>
+<p>Repeat the above step in a loop to continuously calculate the PID output and set the motor output.</p>
+</section>
+</section>
+<section id="tuning-the-pid-controller">
+<h2>Tuning the PID Controller<a class="headerlink" href="#tuning-the-pid-controller" title="Permalink to this heading"><span>#</span></a></h2>
+<p>Tuning is the process of adjusting the PID controller’s parameters to achieve the desired response.</p>
+<p>The PID controller has three parameters: the proportional gain, the integral gain, and the derivative gain.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It may also be necessary to add a feed-forward term to the PID controller to compensate for external forces acting on the system, like friction or gravity.</p>
+<p>Not all PID controllers use all three parameters. Some PID controllers only use the proportional and Derivative gain, while others use all three parameters.
+In FIRST Robotics, it is rare to use the integral gain, as it can cause the system to overshoot the setpoint and oscillate around it.</p>
+</div>
+<ol class="arabic">
+<li><p>Identify whether the system is affected by a constant external force, like gravity or friction. If so, add a feed-forward term to the PID controller to compensate for the external force.
+This value should be a number that is right before the system starts moving. For example, if the system starts moving at 0.1 volts, the feed-forward term should be 0.1 volts.
+.. important:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">If</span> <span class="n">your</span> <span class="n">external</span> <span class="n">force</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">like</span> <span class="n">gravity</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">use</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">feed</span><span class="o">-</span><span class="n">forward</span> <span class="n">term</span> <span class="n">to</span> <span class="n">compensate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">force</span> <span class="n">when</span> <span class="n">traveling</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">opposite</span> <span class="n">direction</span><span class="o">.</span>
+</pre></div>
+</div>
+</li>
+<li><p>Set the integral gain to 0 and the derivative gain to 0. This will make the PID controller act like a proportional controller, which is the simplest type of controller.</p></li>
+<li><p>Increase the proportional gain until the system starts to oscillate around the setpoint. This is called the critical gain. The critical gain is the gain at which the system starts to oscillate.</p></li>
+<li><p>Increase the derivative gain until the system stops oscillating and reaches the setpoint quickly. This is called the critical damping. The critical damping is the gain at which the system stops oscillating.</p></li>
+<li><p>This may be enough to achieve the desired response. If not, increase the integral gain until the system reaches the setpoint accurately. This is called the critical integral gain. The critical integral gain is the gain at which the system reaches the setpoint accurately.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Some PID controllers may work under different conditions, like when the system is moving or when the setpoint is changing. It is important to test the PID controller under different conditions to ensure that it works properly.</p>
+</div>
+<section id="troubleshooting-pid-control">
+<h3>Troubleshooting PID Control<a class="headerlink" href="#troubleshooting-pid-control" title="Permalink to this heading"><span>#</span></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the system is not responding to the PID controller, check the following:</p>
+<ul class="simple">
+<li><p>Make sure that the sensor is connected properly and is working correctly.</p></li>
+<li><p>Make sure that the control output is within the system’s operating range and is traveling in the correct direction.</p></li>
+<li><p>Make sure that the control output is within the sensor’s measurement range.</p></li>
+<li><p>Make sure that the control output is within the system’s physical limits.</p></li>
+</ul>
+</div>
+<figure class="align-center">
+<img alt="PID Control Troubleshooting Diagram" src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.picontrolsolutions.com%2Fproducts%2Fsupertune-fully-automatic-auto-tuning-software%2F&amp;psig=AOvVaw0NiGa6m9k1TEFyP0OFsRTg&amp;ust=1701126304764000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBIQjRxqFwoTCKDQ2rrj4oIDFQAAAAAdAAAAABBH" />
+</figure>
 </section>
 </section>
 </section>
