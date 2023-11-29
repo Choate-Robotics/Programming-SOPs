@@ -91,24 +91,25 @@ Follow these steps to install necessary software to run code from this organizat
 
         5. Install Poetry by opening a terminal and typing 
 
-            * Poetry is a package manager for Python
+            .. note::
+                Poetry is a package manager for Python for more information `Poetry <../poetry/index.html>`_
 
                 
         .. code-block:: bash
 
-            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+            curl -sSL https://install.python-poetry.org | python3 -
         
         .. important::
 
             if you get an error concerning ``[SSL: CERTIFICATE_VERIFY_FAILED]``, run ``open /Applications/Python\ 3.9/Install\ Certificates.command`` and try again
 
-        6. Verify Poetry is installed by closing and opening the terminal and typing
+        1. Verify Poetry is installed by closing and opening the terminal and typing
 
         .. code-block:: bash
 
             poetry
 
-        7. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
+        1. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
 
         ..  code-block:: bash
 
@@ -125,13 +126,13 @@ Follow these steps to install necessary software to run code from this organizat
 
             sudo apt-get install python3.9
 
-        2. Verify Python is installed by closing and opening the terminal and typing 
+        1. Verify Python is installed by closing and opening the terminal and typing 
 
         .. code-block:: bash
 
             python
 
-        3. Install Poetry by opening a terminal and typing 
+        1. Install Poetry by opening a terminal and typing 
 
             * Poetry is a package manager for Python
 
@@ -139,13 +140,13 @@ Follow these steps to install necessary software to run code from this organizat
 
             curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-        4. Verify Poetry is installed by closing and opening the terminal and typing 
+        1. Verify Poetry is installed by closing and opening the terminal and typing 
 
         .. code-block:: bash
 
             poetry
 
-        5. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
+        1. Install our library (robotpy-toolkit-7407) by opening command prompt and typing
 
         ..  code-block:: bash
 
