@@ -92,7 +92,7 @@ Follow these steps to install necessary software to run code from this organizat
         5. Install Poetry by opening a terminal and typing 
 
             .. note::
-                Poetry is a package manager for Python for more information `Poetry <../poetry/index.html>`_
+                Poetry is a package manager for Python for more information: `Poetry <../poetry/index.html>`_
 
                 
         .. code-block:: bash
