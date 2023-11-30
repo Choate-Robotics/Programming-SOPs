@@ -102,6 +102,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#downloading-and-installing-the-software">Downloading and Installing the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#software-setup">Software Setup:</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
@@ -206,6 +208,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/driverstation.html">Driver station</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#downloading-and-installing-the-software">Downloading and Installing the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/driverstation.html#software-setup">Software Setup:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#id6">Driver Station:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#radio-configuration">Radio Configuration:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#advantagescope">AdvantageScope:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/driverstation.html#ctr-pheonix-tuner">CTR Pheonix Tuner:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
@@ -441,26 +451,27 @@ Mac</label><div class="sd-tab-content docutils">
 <ol class="arabic" start="5">
 <li><p>Install Poetry by opening a terminal and typing</p>
 <blockquote>
-<div><ul class="simple">
-<li><p>Poetry is a package manager for Python</p></li>
-</ul>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Poetry is a package manager for Python for more information: <a class="reference external" href="../poetry/index.html">Poetry</a></p>
+</div>
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>if you get an error concerning <code class="docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span></code>, run <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">/Applications/Python\</span> <span class="pre">3.9/Install\</span> <span class="pre">Certificates.command</span></code> and try again</p>
 </div>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple">
 <li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
 </pre></div>
 </div>
-<ol class="arabic simple" start="7">
+<ol class="arabic simple">
 <li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407
@@ -482,13 +493,13 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3.9
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple">
 <li><p>Verify Python is installed by closing and opening the terminal and typing</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
-<ol class="arabic" start="3">
+<ol class="arabic">
 <li><p>Install Poetry by opening a terminal and typing</p>
 <blockquote>
 <div><ul class="simple">
@@ -500,13 +511,13 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-
 </pre></div>
 </div>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple">
 <li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple">
 <li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407

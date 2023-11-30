@@ -102,6 +102,8 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Driver station</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-and-installing-the-software">Downloading and Installing the Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#software-setup">Software Setup:</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
@@ -206,6 +208,14 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Driver station</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-and-installing-the-software">Downloading and Installing the Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-setup">Software Setup:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Driver Station:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#radio-configuration">Radio Configuration:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advantagescope">AdvantageScope:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ctr-pheonix-tuner">CTR Pheonix Tuner:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../git/index.html">Git and Github</a><ul>
@@ -329,7 +339,11 @@
 <p>If you need to set up a new driver station, you will need to install the following software:</p>
 <ul class="simple">
 <li><p>FRC Game Tools - for the driver station software</p></li>
-<li><p>FRC WPILIB Suite - for Shuffleboard and other utilities</p></li>
+<li><p>FRC WPILIB Suite (TOOLS ONLY) - for Shuffleboard and other utilities</p></li>
+<li><p>Radio Configuration Utility - for configuring the radio</p></li>
+<li><p>AdvantageScope - for recieving and recording data</p></li>
+<li><p>Pheonix Tuner - for configuring CTRE motor controllers and sensors</p></li>
+<li><p>Rev Hardware Client - for configuring Rev Robotics motor controllers</p></li>
 </ul>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -343,6 +357,121 @@ You don’t want to be caught with a non-functional driver station at a competit
 The Event Organizers will give you a replacement as long as you ask.</p></li>
 </ul>
 </div>
+</section>
+<section id="downloading-and-installing-the-software">
+<h2>Downloading and Installing the Software<a class="headerlink" href="#downloading-and-installing-the-software" title="Permalink to this heading"><span>#</span></a></h2>
+<ol class="arabic">
+<li><p>First, download the First FRC Game Tools from the FIRST website.
+You can find the download link <a class="reference external" href="https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#479842">here</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Make sure to download the latest version of the software.</p></li>
+<li><p>This will take a while to install, so you can do the next steps while it is installing.</p></li>
+</ul>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>The important programs to pin are:
+* Driver Station
+* RoboRIO Imaging Tool</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><dl>
+<dt>Next, download the FRC WPILIB Suite (TOOLS ONLY) from the WPILib website.</dt><dd><p>You can find the download like <a class="reference external" href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html">here</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Make sure to only install the tools, not the whole suite, as we do not program in Java or C++.</p></li>
+</ul>
+</div>
+<p>This Suite will install a lot of software, but make sure to pin the following:
+* Shuffleboard</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Next, download the Radio Configuration Tool from the WPIlib website.</dt><dd><p>You can find the download link <a class="reference external" href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/radio-programming.html">here</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Next, Visit Mechanical Advantages Github to download AdvantageScope.</dt><dd><p>You can find the download link <a class="reference external" href="https://github.com/Mechanical-Advantage/AdvantageScope">here</a>.</p>
+<p>Follow the directions on the Github page to install the software.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Next, visit CTRE’s website to download Pheonix Framework Installer.</dt><dd><p>You can find the download link <a class="reference external" href="https://store.ctr-electronics.com/software/">here</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have bought the Pheonix Tuner Pro license, you will need to sign in to your account.</p>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Finally, visit Rev Robotics website to download the Rev Hardware Client.</dt><dd><p>You can find the download link <a class="reference external" href="https://docs.revrobotics.com/rev-hardware-client/">here</a>.</p>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+<section id="software-setup">
+<h2>Software Setup:<a class="headerlink" href="#software-setup" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="id6">
+<h3>Driver Station:<a class="headerlink" href="#id6" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>First, open the Driver Station, and select the “Setup” tab.</p></li>
+<li><p>Switch the team number to our team number (Team 7407)</p></li>
+</ol>
+</section>
+<section id="radio-configuration">
+<h3>Radio Configuration:<a class="headerlink" href="#radio-configuration" title="Permalink to this heading"><span>#</span></a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="For Practice" for="sd-tab-item-0">
+For Practice</label><div class="sd-tab-content docutils">
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Connect the radio to the computer using an ethernet cable. It must be powered on, but not connected to the robot.</p></li>
+<li><p>Open the Radio Configuration Utility.</p></li>
+<li><p>Enter the team number (7407) and click “Load Firmware”.</p></li>
+<li><p>Watch it stand on business for a while.</p></li>
+<li><p>You’re done!</p></li>
+</ol>
+</div></blockquote>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="For Competition" for="sd-tab-item-1">
+For Competition</label><div class="sd-tab-content docutils">
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Locate and connect the radio to the selected Radio stations at the event using an ethernet cable. The Radio should be powered on, but not connected to the robot.</p></li>
+<li><p>Enter the team number (7407) and click “Load Firmware”.</p></li>
+<li><p>Watch it stand on business for a while.</p></li>
+<li><p>You’re done!</p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+</section>
+<section id="advantagescope">
+<h3>AdvantageScope:<a class="headerlink" href="#advantagescope" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>Click on the “help” tab, and select ‘Config’</p></li>
+<li><p>Type in our team IP address (I forgor) and exit the program.</p></li>
+<li><p>You’re done!</p></li>
+</ol>
+</section>
+<section id="ctr-pheonix-tuner">
+<h3>CTR Pheonix Tuner:<a class="headerlink" href="#ctr-pheonix-tuner" title="Permalink to this heading"><span>#</span></a></h3>
+<ol class="arabic simple">
+<li><p>Open the program and enter the team IP address (I forgor) and click “Connect”.</p></li>
+<li><p>You’re done!</p></li>
+</ol>
+</section>
 </section>
 </section>
 
