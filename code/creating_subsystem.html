@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Odometry: | Programming Standard Operating Procedure  documentation</title>
+  <title>&lt;no title&gt; | Programming Standard Operating Procedure  documentation</title>
   <link rel="stylesheet" href="../_static/pygments.css" />
   <link rel="stylesheet" href="../_static/theme.c973b470ab69573097f3.css" />
   <link rel="stylesheet" href="../_static/graphviz.css" />
@@ -15,8 +15,6 @@
   <link rel="icon" href="../_static/7407logo.jfif" />
   <link rel="search" title="Search" href="../search.html" />
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="next" title="&lt;no title&gt;" href="vision.html" />
-  <link rel="prev" title="Swerve Drive:" href="swerve.html" />
 </head>
 
 <body class="antialiased text-gray">
@@ -24,7 +22,7 @@
       data-action="keydown@window->search#focus "
       class="min-h-screen xl:h-screen flex flex-col xl:grid xl:grid-layout print:block print:h-auto"
     >
-      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#odometry" title="Skip navigation links">Skip to content</a>
+      <a class="block transition -translate-x-full focus:translate-x-0 opacity-0 focus:opacity-100 text-xl bg-white p-4 z-20 absolute top-0 left-0 h-14" href="#lt-no-title-gt" title="Skip navigation links">Skip to content</a>
 
     <header class="grid-area-header z-10 h-14 fixed w-full top-0 print:hidden">
       <div class="bg-gray-dark shadow-md flex items-center h-full xl:px-2 relative"><div class="flex items-center">
@@ -71,8 +69,8 @@
   role="navigation"
   class="h-full overflow-y-auto bg-white text-gray-600 pt-8 flex flex-col"
 >
-  <div class="nav-toc flex-1 pl-6"><ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Home</a><ul class="current">
+  <div class="nav-toc flex-1 pl-6"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../introduction/index.html#welcome-to-the-choate-robotics-programming-documentation">Welcome to the Choate Robotics Programming Documentation</a></li>
 </ul>
@@ -151,7 +149,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swerve.html">Swerve Drive</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Odometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odometry.html">Odometry</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a><ul>
@@ -310,9 +308,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../control_systems/profiled_pid.html">Profiled PID</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="swerve.html">Swerve Drive</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Odometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odometry.html">Odometry</a></li>
 </ul>
 </div>
 
@@ -332,64 +330,12 @@
      aria-label="breadcrumbs"
      class="print:hidden mt-12 text-sm text-gray-light">
   <a class="text-gray-light text-sm hover:text-gray-dark font-medium focus:text-gray-dark" href="../index.html">Programming Standard Operating Procedure  documentation</a>
-  <span class="mr-1">/</span><span aria-current="page">Odometry:</span>
+  <span class="mr-1">/</span><span aria-current="page">&lt;no title&gt;</span>
 </nav>
 
   <article role="main" class="flex-1 prose">
     
-  <section id="odometry">
-<h1>Odometry:<a class="headerlink" href="#odometry" title="Permalink to this heading"><span>#</span></a></h1>
-<p>Odometry is the process of tracking the position and orientation of a robot as it moves. In FIRST Robotics, odometry is used to accurately navigate the robot on the field and perform tasks such as picking up and delivering game pieces.</p>
-<p>One way to implement odometry in FIRST Robotics is by using encoders on the robot’s wheels to measure the distance traveled. By combining the encoder data with the robot’s starting position and orientation, the robot’s current position and orientation can be calculated.</p>
-<p>The WPIlib library provides a Pose3D class that can be used to represent the robot’s position and orientation in 3D space. The Pose3D class has methods for updating the position and orientation based on encoder data, as well as methods for converting between different coordinate systems.</p>
-<p>Here’s an example of using the Pose3D class in Python to track the robot’s position and orientation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
-
-<span class="c1"># Initialize the starting position and orientation</span>
-<span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Update the position and orientation based on encoder data</span>
-<span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="p">)</span>
-
-<span class="c1"># Print the new position and orientation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>In addition to the Pose3D class, the WPIlib library also provides methods for estimating the robot’s position and orientation based on sensor data from a camera or other sensors. These methods use techniques such as visual odometry and sensor fusion to improve the accuracy of the position and orientation estimates.</p>
-<p>To add this information to the odometry.rst file, you can start by explaining what odometry is and why it’s important in FIRST Robotics. Then, you can provide an example of using the Pose3D class in Python to track the robot’s position and orientation. Finally, you can mention the other methods available in the WPIlib library for estimating the robot’s position and orientation based on sensor data.Odometry is the process of tracking the position and orientation of a robot as it moves. In FIRST Robotics, odometry is used to accurately navigate the robot on the field and perform tasks such as picking up and delivering game pieces.</p>
-<p>One way to implement odometry in FIRST Robotics is by using encoders on the robot’s wheels to measure the distance traveled. By combining the encoder data with the robot’s starting position and orientation, the robot’s current position and orientation can be calculated.</p>
-<p>The WPIlib library provides a Pose3D class that can be used to represent the robot’s position and orientation in 3D space. The Pose3D class has methods for updating the position and orientation based on encoder data, as well as methods for converting between different coordinate systems.</p>
-<p>Here’s an example of using the Pose3D class in Python to track the robot’s position and orientation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
-
-<span class="c1"># Initialize the starting position and orientation</span>
-<span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Update the position and orientation based on encoder data</span>
-<span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="p">)</span>
-
-<span class="c1"># Print the new position and orientation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>In addition to the Pose3D class, the WPIlib library also provides methods for estimating the robot’s position and orientation based on sensor data from a camera or other sensors.
-These methods use techniques such as visual odometry and sensor fusion to improve the accuracy of the position and orientation estimates.</p>
-<p>Using odometry in swerve drive, we can calculate the position of the robot on the field. This is useful for autonomous, as we can use the position to determine where we are on the field and where we need to go. We can also use the position to determine if we are in the correct position to score a game piece.</p>
-<p>To fine tune the odometry, we use onboard vision sensors to detect the position of the robot on the field. This allows us to correct any errors in the odometry and improve the accuracy of the position estimates.</p>
-</section>
-
+  
 
   </article>
 
