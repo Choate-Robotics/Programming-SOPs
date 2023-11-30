@@ -8,7 +8,7 @@ here is the file structure for the robot code:
 
 .. graphviz:: 
 
-    digraph {
+    .. digraph {
         "From" -> "To";
     }
 

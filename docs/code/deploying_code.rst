@@ -2,7 +2,7 @@
 Deploying Code
 ================
 
-
+.. graphviz::
     .. digraph file_structure {
 
     ..     node [shape=box, style=filled, color=lightgrey, fontname=helvetica]
