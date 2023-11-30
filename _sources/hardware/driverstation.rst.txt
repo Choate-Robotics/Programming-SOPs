@@ -38,8 +38,10 @@ Downloading and Installing the Software
     * This will take a while to install, so you can do the next steps while it is installing.
 
   The important programs to pin are:
-  * Driver Station
-  * RoboRIO Imaging Tool
+
+     * Driver Station
+    
+     * RoboRIO Imaging Tool
 
 2. Next, download the FRC WPILIB Suite (TOOLS ONLY) from the WPILib website.
     You can find the download like `here <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html>`_.
@@ -48,7 +50,9 @@ Downloading and Installing the Software
         * Make sure to only install the tools, not the whole suite, as we do not program in Java or C++.
     
     This Suite will install a lot of software, but make sure to pin the following:
-    * Shuffleboard
+    
+       * Shuffleboard
+
 3. Next, download the Radio Configuration Tool from the WPIlib website.
     You can find the download link `here <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-3/radio-programming.html>`_.
     
