@@ -71,8 +71,86 @@ Here is the flow:
 Core Folders
 ------------
 
-Subsystem
-~~~~~~~~~
+Subsystems
+~~~~~~~~~~
+
+The subsystem folder contains all of the subsystem mechanisms for the robot. this includes the drivetrain, elevator, intake, etc.
+
+Subsystem classes contain methods for controlling the subsystem, and are called by commands.
+
+This class will initialize in the ``robot_systems.py`` file under the ``Robot`` class. This will allow the subsystems to be called by commands.
+
+.. note:: 
+
+    For example, a subsystem for the elevator could have the following methods:
+
+    * ``move_to_height(height)`` - moves the elevator to a certain height
+    * ``move_to_speed(speed)`` - moves the elevator at a certain speed
+    * ``stop()`` - stops the elevator
+    * ``get_height()`` - returns the height of the elevator
+    * ``zero_elevator()`` - zeros the elevator encoder by sending the elevator to the bottom and resetting the encoder.
+    * ``get_encoder()`` - returns the encoder value of the elevator
+
+    These classes should be as simple as possible, and should not contain any logic. All logic should be contained in commands.
+
+    Its also important to add in comments for each method, so that the code is easy to understand.
+
+.. important::
+
+    Most subsystems will contain the ``init()`` method. This method is called when the robot is initialized and recieving connection from devices
+    under the CAN network. This method should be used to initialize encoders, motors, etc.
+
+    
+    This will be called in the ``RobotInit()`` method in ``robot.py`` using the ``robot_systems.py`` file.
+
+    * If you don't initialize your motors in the ``init()`` method but at the top of the class, the robot will not work, and you will get errors or connection loss.
+    
+    Please please please put it in there for our sanity.
+
+
+.. important:: 
+    
+    * All subsystems must inherit from the :class:`.Subsystem` class.
+    * Subsystems are not running any logic whatsoever. They are simply a way to organize code in a clean manner.
+
+Sensors
+~~~~~~~
+
+The sensor folder contains all of the sensors for the robot. This includes the gyro, encoders, etc.
+
+Similar to the subsystems, sensor classes contain methods for getting data from the sensors, and are called by commands.
+
+This class will initialize in the ``robot_systems.py`` file under the ``Sensor`` class. This will allow the sensors to be called by commands.
+
+.. note:: 
+
+    For example, a sensor for a limelight camera could have the following methods:
+
+    * ``get_distance()`` - returns the distance from the limelight to the target
+    * ``get_angle()`` - returns the angle from the limelight to the target
+    * ``get_target()`` - returns whether or not the limelight has a target
+
+    These classes should be as simple as possible, and should not contain any logic. All logic should be contained in commands.
+
+Commands
+~~~~~~~~
+
+commands are the logic of the robot. They are called by the OI or the robot runtime, and call methods from subsystems and sensors.
+
+There are many different ways to write a command, but the most common way is to use the ``initialize()``, ``execute()``, and ``isFinished()`` methods.
+
+.. note:: 
+
+    For example, a command for moving the elevator to a certain height could have the following methods:
+
+    * ``initialize()`` - initializes the command
+    * ``execute()`` - moves the elevator to the height
+    * ``isFinished()`` - returns whether or not the elevator is at the height
+    * ``end()`` - stops the elevator
+
+    These methods should use the functions from the subsystems and sensors to control the robot.
+
+    Its also important to add in comments for each method, so that the code is easy to understand.
 
 
 Subsystem, Sensor, Command flow
@@ -85,5 +163,5 @@ Subsystem, Sensor, Command flow
         "Sensor" -> "Command";
     }
 
-
+This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.
 
