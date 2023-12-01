@@ -36,55 +36,13 @@ here is the file structure for the robot code:
 |   │   ├── commands/
 |   │   │   └── test_example_command.py
 |   │   └── sensors/
-|   │       └── test_example_sensor.py
+|   │   │   └── test_example_sensor.py
 |   ├── constants.py
 |   ├── config.py
 |   ├── robot_systems.py
 |   └── robot.py
 
-.. graphviz:: 
-
-    digraph {
-        'auto/';
-        'oi/';
-        'commands/';
-        'subsystems/';
-        'sensors/';
-        'utils/';
-        'units/';
-        'tests/';
-        'constants.py';
-        'config.py';
-        'robot_systems.py';
-        'robot.py';
-    }
-
-...yeah, that's a lot of stuff. Let's break it down.
-
-Core Folders
-------------
-
-::
-    .
-    ├── Commands/
-    │   ├── __init__.py
-    │   └── example_command.py
-    ├── Subsystems/
-    │   ├── __init__.py
-    │   └── example_subsystem.py
-    ├── Sensors/
-    │   ├── __init__.py
-    │   └── example_sensor.py
-
-.. graphviz:: 
-
-    digraph {
-        "Subsystem" -> "Command";
-        "Sensor" -> "Command";
-    }
-
-Flow
-----
+Here is the flow:
 
 .. graphviz:: 
     
@@ -107,3 +65,25 @@ Flow
         "robot_systems.py" -> "Robot";
 
     }
+
+...yeah, that's a lot of stuff. Let's break it down.
+
+Core Folders
+------------
+
+Subsystem
+~~~~~~~~~
+
+
+Subsystem, Sensor, Command flow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. graphviz:: 
+
+    digraph {
+        "Subsystem" -> "Command";
+        "Sensor" -> "Command";
+    }
+
+
+
