@@ -198,7 +198,9 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">File Structure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#core-folders">Core Folders</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#subsystem">Subsystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subsystems">Subsystems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sensors">Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#subsystem-sensor-command-flow">Subsystem, Sensor, Command flow</a></li>
 </ul>
 </li>
@@ -404,8 +406,75 @@
 <p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
 <section id="core-folders">
 <h2>Core Folders<a class="headerlink" href="#core-folders" title="Permalink to this heading"><span>#</span></a></h2>
-<section id="subsystem">
-<h3>Subsystem<a class="headerlink" href="#subsystem" title="Permalink to this heading"><span>#</span></a></h3>
+<section id="subsystems">
+<h3>Subsystems<a class="headerlink" href="#subsystems" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The subsystem folder contains all of the subsystem mechanisms for the robot. this includes the drivetrain, elevator, intake, etc.</p>
+<p>Subsystem classes contain methods for controlling the subsystem, and are called by commands.</p>
+<p>This class will initialize in the <code class="docutils literal notranslate"><span class="pre">robot_systems.py</span></code> file under the <code class="docutils literal notranslate"><span class="pre">Robot</span></code> class. This will allow the subsystems to be called by commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, a subsystem for the elevator could have the following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">move_to_height(height)</span></code> - moves the elevator to a certain height</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move_to_speed(speed)</span></code> - moves the elevator at a certain speed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop()</span></code> - stops the elevator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_height()</span></code> - returns the height of the elevator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zero_elevator()</span></code> - zeros the elevator encoder by sending the elevator to the bottom and resetting the encoder.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_encoder()</span></code> - returns the encoder value of the elevator</p></li>
+</ul>
+<p>These classes should be as simple as possible, and should not contain any logic. All logic should be contained in commands.</p>
+<p>Its also important to add in comments for each method, so that the code is easy to understand.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Most subsystems will contain the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method. This method is called when the robot is initialized and recieving connection from devices
+under the CAN network. This method should be used to initialize encoders, motors, etc.</p>
+<p>This will be called in the <code class="docutils literal notranslate"><span class="pre">RobotInit()</span></code> method in <code class="docutils literal notranslate"><span class="pre">robot.py</span></code> using the <code class="docutils literal notranslate"><span class="pre">robot_systems.py</span></code> file.</p>
+<ul class="simple">
+<li><p>If you don’t initialize your motors in the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method but at the top of the class, the robot will not work, and you will get errors or connection loss.</p></li>
+</ul>
+<p>Please please please put it in there for our sanity.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>All subsystems must inherit from the <code class="xref py py-class docutils literal notranslate"><span class="pre">Subsystem</span></code> class.</p></li>
+<li><p>Subsystems are not running any logic whatsoever. They are simply a way to organize code in a clean manner.</p></li>
+</ul>
+</div>
+</section>
+<section id="sensors">
+<h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The sensor folder contains all of the sensors for the robot. This includes the gyro, encoders, etc.</p>
+<p>Similar to the subsystems, sensor classes contain methods for getting data from the sensors, and are called by commands.</p>
+<p>This class will initialize in the <code class="docutils literal notranslate"><span class="pre">robot_systems.py</span></code> file under the <code class="docutils literal notranslate"><span class="pre">Sensor</span></code> class. This will allow the sensors to be called by commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, a sensor for a limelight camera could have the following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_distance()</span></code> - returns the distance from the limelight to the target</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_angle()</span></code> - returns the angle from the limelight to the target</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_target()</span></code> - returns whether or not the limelight has a target</p></li>
+</ul>
+<p>These classes should be as simple as possible, and should not contain any logic. All logic should be contained in commands.</p>
+</div>
+</section>
+<section id="commands">
+<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this heading"><span>#</span></a></h3>
+<p>commands are the logic of the robot. They are called by the OI or the robot runtime, and call methods from subsystems and sensors.</p>
+<p>There are many different ways to write a command, but the most common way is to use the <code class="docutils literal notranslate"><span class="pre">initialize()</span></code>, <code class="docutils literal notranslate"><span class="pre">execute()</span></code>, and <code class="docutils literal notranslate"><span class="pre">isFinished()</span></code> methods.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, a command for moving the elevator to a certain height could have the following methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initialize()</span></code> - initializes the command</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute()</span></code> - moves the elevator to the height</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isFinished()</span></code> - returns whether or not the elevator is at the height</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end()</span></code> - stops the elevator</p></li>
+</ul>
+<p>These methods should use the functions from the subsystems and sensors to control the robot.</p>
+<p>Its also important to add in comments for each method, so that the code is easy to understand.</p>
+</div>
 </section>
 <section id="subsystem-sensor-command-flow">
 <h3>Subsystem, Sensor, Command flow<a class="headerlink" href="#subsystem-sensor-command-flow" title="Permalink to this heading"><span>#</span></a></h3>
@@ -413,6 +482,7 @@
     &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
     &quot;Sensor&quot; -&gt; &quot;Command&quot;;
 }" class="graphviz" /></div>
+<p>This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.</p>
 </section>
 </section>
 </section>
