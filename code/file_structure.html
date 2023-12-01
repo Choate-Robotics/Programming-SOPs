@@ -92,7 +92,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../git/grab_existing_project.html">grab an existing project</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">File Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#core-folders">Core Folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flow">Flow</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
@@ -198,8 +197,11 @@
 <p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">File Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#core-folders">Core Folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#flow">Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-folders">Core Folders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subsystem">Subsystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subsystem-sensor-command-flow">Subsystem, Sensor, Command flow</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
@@ -373,35 +375,13 @@
 <div class="line">│   ├── commands/</div>
 <div class="line">│   │   └── test_example_command.py</div>
 <div class="line">│   └── sensors/</div>
-<div class="line">│       └── test_example_sensor.py</div>
+<div class="line">│   │   └── test_example_sensor.py</div>
 <div class="line">├── constants.py</div>
 <div class="line">├── config.py</div>
 <div class="line">├── robot_systems.py</div>
 <div class="line">└── robot.py</div>
 </div>
-<p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
-<section id="core-folders">
-<h2>Core Folders<a class="headerlink" href="#core-folders" title="Permalink to this heading"><span>#</span></a></h2>
-<dl class="simple">
-<dt>::</dt><dd><p>.
-├── Commands/
-│   ├── __init__.py
-│   └── example_command.py
-├── Subsystems/
-│   ├── __init__.py
-│   └── example_subsystem.py
-├── Sensors/
-│   ├── __init__.py
-│   └── example_sensor.py</p>
-</dd>
-</dl>
-<div class="graphviz"><img src="../_images/graphviz-9c6ad3befcdf3d3d7affc0e7f8c727bd48897d1a.png" alt="digraph {
-    &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
-    &quot;Sensor&quot; -&gt; &quot;Command&quot;;
-}" class="graphviz" /></div>
-</section>
-<section id="flow">
-<h2>Flow<a class="headerlink" href="#flow" title="Permalink to this heading"><span>#</span></a></h2>
+<p>Here is the flow:</p>
 <div class="graphviz"><img src="../_images/graphviz-ee374700654a74f020030a1ee42869aa93b2f5c4.png" alt="digraph {
     &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
     &quot;Sensor&quot; -&gt; &quot;Command&quot;;
@@ -421,6 +401,19 @@
     &quot;robot_systems.py&quot; -&gt; &quot;Robot&quot;;
 
 }" class="graphviz" /></div>
+<p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
+<section id="core-folders">
+<h2>Core Folders<a class="headerlink" href="#core-folders" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="subsystem">
+<h3>Subsystem<a class="headerlink" href="#subsystem" title="Permalink to this heading"><span>#</span></a></h3>
+</section>
+<section id="subsystem-sensor-command-flow">
+<h3>Subsystem, Sensor, Command flow<a class="headerlink" href="#subsystem-sensor-command-flow" title="Permalink to this heading"><span>#</span></a></h3>
+<div class="graphviz"><img src="../_images/graphviz-9c6ad3befcdf3d3d7affc0e7f8c727bd48897d1a.png" alt="digraph {
+    &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
+    &quot;Sensor&quot; -&gt; &quot;Command&quot;;
+}" class="graphviz" /></div>
+</section>
 </section>
 </section>
 
