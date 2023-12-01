@@ -92,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../git/grab_existing_project.html">grab an existing project</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">File Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#core-folders">Core Folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complementary-files-and-folders">Complementary Files and Folders</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
@@ -202,6 +203,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#sensors">Sensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#subsystem-sensor-command-flow">Subsystem, Sensor, Command flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#complementary-files-and-folders">Complementary Files and Folders</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utils">utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constants-py">constants.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-py">config.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updated-flow">Updated flow</a></li>
 </ul>
 </li>
 </ul>
@@ -483,6 +491,65 @@ under the CAN network. This method should be used to initialize encoders, motors
     &quot;Sensor&quot; -&gt; &quot;Command&quot;;
 }" class="graphviz" /></div>
 <p>This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.</p>
+</section>
+</section>
+<section id="complementary-files-and-folders">
+<h2>Complementary Files and Folders<a class="headerlink" href="#complementary-files-and-folders" title="Permalink to this heading"><span>#</span></a></h2>
+<section id="utils">
+<h3>utils<a class="headerlink" href="#utils" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The utils folder contains cross-subsystem functions that are used by both subsystems and commands.</p>
+<p>These functions are not bound to any class, and are not called in the <code class="docutils literal notranslate"><span class="pre">robot_systems.py</span></code> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For example, a function for converting inches to meters could be in the utils folder:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">inches_to_meters(inches)</span></code> - converts inches to meters</p></li>
+</ul>
+<p>These functions should be as simple as possible, and should not contain any logic. All logic should be contained in commands.</p>
+</div>
+</section>
+<section id="constants-py">
+<h3>constants.py<a class="headerlink" href="#constants-py" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The constants file contains all of the physical constants for the robot
+(IE: variables that are in correlation with physical measurements, and therefore, not likely to change).</p>
+<p>Constants variables are used in the subsystems and sensors to control the robot.</p>
+<p>Some examples of constants are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DRIVETRAIN_WHEEL_DIAMETER</span></code> - the diameter of the drivetrain wheels</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ELEVATOR_MAX_HEIGHT</span></code> - the maximum height of the elevator</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRIVETRAIN_MAX_SPEED</span></code> - the maximum speed of the drivetrain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DRIVETRAIN_MAX_ACCELERATION</span></code> - the maximum acceleration of the drivetrain</p></li>
+</ul>
+<p>you get the idea.</p>
+</section>
+<section id="config-py">
+<h3>config.py<a class="headerlink" href="#config-py" title="Permalink to this heading"><span>#</span></a></h3>
+<p>The config file contains all of the configuration variables for the robot
+(IE: variables that are not in correlation with physical measurements, which are more likely to change on the fly during events).</p>
+<p>Config variables are used in the subsystems and sensors to control the robot.</p>
+<p>Some examples of configuration variables are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ELEVATOR_MOTOR_ID</span></code> - the CAN ID of the elevator motor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ABSOLUTE_ENCODER_OFFSET</span></code> - the offset of the absolute encoder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ELEVATOR_ZERO_SPEED</span></code> - the speed of the elevator when zeroing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ELEVATOR_ACCELERATION</span></code> - the acceleration of the elevator (This is not the same as the maximum acceleration of the elevator, in which case the elevator would physically break)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SENSOR_DIO_PORT</span></code> - the DIO port of the sensor</p></li>
+</ul>
+<p>you get the idea.</p>
+</section>
+<section id="updated-flow">
+<h3>Updated flow<a class="headerlink" href="#updated-flow" title="Permalink to this heading"><span>#</span></a></h3>
+<div class="graphviz"><img src="../_images/graphviz-fb06c715d1e66f104acb9c43b402bd50e68bd30e.png" alt="digraph {
+    &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
+    &quot;Sensor&quot; -&gt; &quot;Command&quot;;
+    &quot;Util&quot; -&gt; &quot;Command&quot;;
+    &quot;constants.py&quot; -&gt; &quot;Subsystem&quot;;
+    &quot;constants.py&quot; -&gt; &quot;Sensor&quot;;
+    &quot;constants.py&quot; -&gt; &quot;Util&quot;;
+    &quot;config.py&quot; -&gt; &quot;Subsystem&quot;;
+    &quot;config.py&quot; -&gt; &quot;Sensor&quot;;
+    &quot;config.py&quot; -&gt; &quot;Util&quot;;
+}" class="graphviz" /></div>
 </section>
 </section>
 </section>
