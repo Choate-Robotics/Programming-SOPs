@@ -165,3 +165,80 @@ Subsystem, Sensor, Command flow
 
 This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.
 
+Complementary Files and Folders
+-------------------------------
+
+utils
+~~~~~
+
+The utils folder contains cross-subsystem functions that are used by both subsystems and commands.
+
+These functions are not bound to any class, and are not called in the ``robot_systems.py`` file.
+
+.. note:: 
+    
+        For example, a function for converting inches to meters could be in the utils folder:
+    
+        * ``inches_to_meters(inches)`` - converts inches to meters
+    
+        These functions should be as simple as possible, and should not contain any logic. All logic should be contained in commands.
+
+constants.py
+~~~~~~~~~~~~
+
+The constants file contains all of the physical constants for the robot 
+(IE: variables that are in correlation with physical measurements, and therefore, not likely to change). 
+
+Constants variables are used in the subsystems and sensors to control the robot.
+
+Some examples of constants are:
+
+* ``DRIVETRAIN_WHEEL_DIAMETER`` - the diameter of the drivetrain wheels
+
+* ``ELEVATOR_MAX_HEIGHT`` - the maximum height of the elevator
+
+* ``DRIVETRAIN_MAX_SPEED`` - the maximum speed of the drivetrain
+
+* ``DRIVETRAIN_MAX_ACCELERATION`` - the maximum acceleration of the drivetrain
+
+you get the idea.
+
+
+config.py
+~~~~~~~~~
+
+The config file contains all of the configuration variables for the robot
+(IE: variables that are not in correlation with physical measurements, which are more likely to change on the fly during events).
+
+Config variables are used in the subsystems and sensors to control the robot.
+
+Some examples of configuration variables are:
+
+* ``ELEVATOR_MOTOR_ID`` - the CAN ID of the elevator motor
+
+* ``ABSOLUTE_ENCODER_OFFSET`` - the offset of the absolute encoder
+
+* ``ELEVATOR_ZERO_SPEED`` - the speed of the elevator when zeroing
+
+* ``ELEVATOR_ACCELERATION`` - the acceleration of the elevator (This is not the same as the maximum acceleration of the elevator, in which case the elevator would physically break)
+
+* ``SENSOR_DIO_PORT`` - the DIO port of the sensor
+
+you get the idea.
+
+Updated flow
+~~~~~~~~~~~~
+
+.. graphviz:: 
+
+    digraph {
+        "Subsystem" -> "Command";
+        "Sensor" -> "Command";
+        "Util" -> "Command";
+        "constants.py" -> "Subsystem";
+        "constants.py" -> "Sensor";
+        "constants.py" -> "Util";
+        "config.py" -> "Subsystem";
+        "config.py" -> "Sensor";
+        "config.py" -> "Util";
+    }
