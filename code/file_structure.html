@@ -341,55 +341,59 @@
 <h1>File Structure<a class="headerlink" href="#file-structure" title="Permalink to this heading"><span>#</span></a></h1>
 <p>the file structure for the robot code:</p>
 <p>here is the file structure for the robot code:</p>
-<p>.
-<a href="#id1"><span class="problematic" id="id2">|</span></a>── autos/
-|   <a href="#id3"><span class="problematic" id="id4">|</span></a>── __init__.py
-|   <a href="#id5"><span class="problematic" id="id6">|</span></a>── example_auto.py
-<a href="#id7"><span class="problematic" id="id8">|</span></a>── oi/
-|   <a href="#id9"><span class="problematic" id="id10">|</span></a>── Keymap.py
-|   <a href="#id11"><span class="problematic" id="id12">|</span></a>── OI.py
-<a href="#id13"><span class="problematic" id="id14">|</span></a>── commands/
-|   <a href="#id15"><span class="problematic" id="id16">|</span></a>── __init__.py
-|   <a href="#id17"><span class="problematic" id="id18">|</span></a>── example_command.py
-<a href="#id19"><span class="problematic" id="id20">|</span></a>── subsystems/
-|   <a href="#id21"><span class="problematic" id="id22">|</span></a>── __init__.py
-|   <a href="#id23"><span class="problematic" id="id24">|</span></a>── example_subsystem.py
-<a href="#id25"><span class="problematic" id="id26">|</span></a>── sensors/
-|   <a href="#id27"><span class="problematic" id="id28">|</span></a>── __init__.py
-|   <a href="#id29"><span class="problematic" id="id30">|</span></a>── example_sensor.py
-<a href="#id31"><span class="problematic" id="id32">|</span></a>── utils/
-|   <a href="#id33"><span class="problematic" id="id34">|</span></a>── __init__.py
-|   <a href="#id35"><span class="problematic" id="id36">|</span></a>── example_function.py
-<a href="#id37"><span class="problematic" id="id38">|</span></a>── units/
-|   <a href="#id39"><span class="problematic" id="id40">|</span></a>── __init__.py
-|   <a href="#id41"><span class="problematic" id="id42">|</span></a>── SI.py
-<a href="#id43"><span class="problematic" id="id44">|</span></a>── tests/
-|   <a href="#id45"><span class="problematic" id="id46">|</span></a>── utils/
-|   |   <a href="#id47"><span class="problematic" id="id48">|</span></a>── test_example_function.py
-|   <a href="#id49"><span class="problematic" id="id50">|</span></a>── subsystems/
-|   |   <a href="#id51"><span class="problematic" id="id52">|</span></a>── test_example_subsystem.py
-|   <a href="#id53"><span class="problematic" id="id54">|</span></a>── commands/
-|   |   <a href="#id55"><span class="problematic" id="id56">|</span></a>── test_example_command.py
-|   <a href="#id57"><span class="problematic" id="id58">|</span></a>── sensors/
-|       <a href="#id59"><span class="problematic" id="id60">|</span></a>── test_example_sensor.py
-<a href="#id61"><span class="problematic" id="id62">|</span></a>── .deploy_cfg
-<a href="#id63"><span class="problematic" id="id64">|</span></a>── constants.py
-<a href="#id65"><span class="problematic" id="id66">|</span></a>── config.py
-<a href="#id67"><span class="problematic" id="id68">|</span></a>── robot_systems.py
-<a href="#id69"><span class="problematic" id="id70">|</span></a>── robot.py</p>
+<dl class="simple">
+<dt>::</dt><dd><p>.
+├── Autos/
+│   ├── __init__.py
+│   └── example_auto.py
+├── oi/
+│   ├── Keymap.py
+│   └── OI.py
+├── Commands/
+│   ├── __init__.py
+│   └── example_command.py
+├── Subsystems/
+│   ├── __init__.py
+│   └── example_subsystem.py
+├── Sensors/
+│   ├── __init__.py
+│   └── example_sensor.py
+├── Utils/
+│   └── example_function.py
+├── Units/
+│   ├── __init__.py
+│   └── SI.py
+├── Tests/
+│   ├── Utils/
+│   │   └── test_example_function.py
+│   ├── subsystems/
+│   │   └── test_example_subsystem.py
+│   ├── Commands/
+│   │   └── test_example_command.py
+│   └── sensors/
+│       └── test_example_sensor.py
+├── constants.py
+├── config.py
+├── robot_systems.py
+└── robot.py</p>
+</dd>
+</dl>
 <p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
 <section id="core-folders">
 <h2>Core Folders<a class="headerlink" href="#core-folders" title="Permalink to this heading"><span>#</span></a></h2>
-<p>.
-<a href="#id71"><span class="problematic" id="id72">|</span></a>── commands/
-|   <a href="#id73"><span class="problematic" id="id74">|</span></a>── __init__.py
-|   <a href="#id75"><span class="problematic" id="id76">|</span></a>── example_command.py
-<a href="#id77"><span class="problematic" id="id78">|</span></a>── subsystems/
-|   <a href="#id79"><span class="problematic" id="id80">|</span></a>── __init__.py
-|   <a href="#id81"><span class="problematic" id="id82">|</span></a>── example_subsystem.py
-<a href="#id83"><span class="problematic" id="id84">|</span></a>── sensors/
-|   <a href="#id85"><span class="problematic" id="id86">|</span></a>── __init__.py
-|   <a href="#id87"><span class="problematic" id="id88">|</span></a>── example_sensor.py</p>
+<dl class="simple">
+<dt>::</dt><dd><p>.
+├── Commands/
+│   ├── __init__.py
+│   └── example_command.py
+├── Subsystems/
+│   ├── __init__.py
+│   └── example_subsystem.py
+├── Sensors/
+│   ├── __init__.py
+│   └── example_sensor.py</p>
+</dd>
+</dl>
 <div class="graphviz"><img src="../_images/graphviz-9c6ad3befcdf3d3d7affc0e7f8c727bd48897d1a.png" alt="digraph {
     &quot;Subsystem&quot; -&gt; &quot;Command&quot;;
     &quot;Sensor&quot; -&gt; &quot;Command&quot;;
