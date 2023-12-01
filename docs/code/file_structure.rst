@@ -7,33 +7,33 @@ the file structure for the robot code:
 here is the file structure for the robot code:
 
 
-|   .
-|   ├── Autos/
+|   root/
+|   ├── autos/
 |   │   ├── __init__.py
 |   │   └── example_auto.py
 |   ├── oi/
 |   │   ├── Keymap.py
 |   │   └── OI.py
-|   ├── Commands/
+|   ├── commands/
 |   │   ├── __init__.py
 |   │   └── example_command.py
-|   ├── Subsystems/
+|   ├── subsystems/
 |   │   ├── __init__.py
 |   │   └── example_subsystem.py
-|   ├── Sensors/
+|   ├── sensors/
 |   │   ├── __init__.py
 |   │   └── example_sensor.py
-|   ├── Utils/
+|   ├── utils/
 |   │   └── example_function.py
-|   ├── Units/
+|   ├── units/
 |   │   ├── __init__.py
 |   │   └── SI.py
-|   ├── Tests/
-|   │   ├── Utils/
+|   ├── tests/
+|   │   ├── utils/
 |   │   │   └── test_example_function.py
 |   │   ├── subsystems/
 |   │   │   └── test_example_subsystem.py
-|   │   ├── Commands/
+|   │   ├── commands/
 |   │   │   └── test_example_command.py
 |   │   └── sensors/
 |   │       └── test_example_sensor.py
@@ -41,6 +41,23 @@ here is the file structure for the robot code:
 |   ├── config.py
 |   ├── robot_systems.py
 |   └── robot.py
+
+.. graphviz:: 
+
+    digraph {
+        'auto/';
+        'oi/';
+        'commands/';
+        'subsystems/';
+        'sensors/';
+        'utils/';
+        'units/';
+        'tests/';
+        'constants.py';
+        'config.py';
+        'robot_systems.py';
+        'robot.py';
+    }
 
 ...yeah, that's a lot of stuff. Let's break it down.
 
