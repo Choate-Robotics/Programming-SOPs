@@ -82,3 +82,28 @@ Core Folders
         "Subsystem" -> "Command";
         "Sensor" -> "Command";
     }
+
+Flow
+----
+
+.. graphviz:: 
+    
+    digraph {
+        "Subsystem" -> "Command";
+        "Sensor" -> "Command";
+        "Util" -> "Command";
+        "Subsystem" -> "robot_systems.py";
+        "Sensor" -> "robot_systems.py";
+        "Constant" -> "Subsystem";
+        "Constant" -> "Sensor";
+        "Constant" -> "Util";
+        "Config" -> "Subsystem";
+        "Config" -> "Sensor";
+        "Config" -> "Util";
+        "Keymap" -> "OI";
+        "Command" -> "OI";
+        "Command" -> "Robot"
+        "OI" -> "Robot";
+        "robot_systems.py" -> "Robot";
+
+    }
