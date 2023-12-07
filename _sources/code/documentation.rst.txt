@@ -15,7 +15,7 @@ RobotPy and WPILib
 
 - [RobotPy](http://robotpy.readthedocs.io/en/stable/)
 
-- [WPILib](https://wpilib.screenstepslive.com/s/4485)
+- [WPILib](https://docs.wpilib.org/en/stable/index.html)
 
 robotpy-toolkit-7407
 --------------------
