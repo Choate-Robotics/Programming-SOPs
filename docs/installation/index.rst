@@ -229,7 +229,7 @@ This is a list of other software that is used to develop code for FRC robots. it
 .. important:: 
 
     * Most of the software listed here is only available for Windows.
-    * The installation process for most of these programs can be found `here <../hardware/driverstation.html>_`
+    * The installation process for most of these programs can be found `here <../hardware/driverstation.html>`_
 
 * WPILIB Suite:
     

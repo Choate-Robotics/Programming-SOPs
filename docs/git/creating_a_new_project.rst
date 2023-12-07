@@ -20,4 +20,4 @@ If you are looking to make a new project, follow these steps to get started:
 
 You're all set, and in a few moments you should be able to see your new repository!
 
-To see how to get the repository onto your computer, see `grabbing an existing project <./grab_existing_project.html>_`
+To see how to get the repository onto your computer, see `grabbing an existing project <./grab_existing_project.html>`_
