@@ -8,7 +8,9 @@ If you are looking to make a new project, follow these steps to get started:
 
 2. Under the tab 'Repository Template', select 'Choate-Robotics/DriveCode-Template'. This will use the template repository as a base for your new project, and contains all the necessary files and test automation to get started.
 
-3. Name your repository. This should be the name of your project, and should be descriptive. For example, if you are making a robot that shoots balls, you might name it "Ball-Shooter".
+3. Make sure to include all branches from the template repository. This will ensure that you have all the necessary repository rules.
+
+4. Name your repository. This should be the name of your project, and should be descriptive. For example, if you are making a robot that shoots balls, you might name it "Ball-Shooter".
    
    .. important::
 
@@ -16,7 +18,7 @@ If you are looking to make a new project, follow these steps to get started:
         
         EX: "7407-DriveCode-RapidReact"
 
-4. Make sure the repository is public, and click "Create Repository".
+5. Make sure the repository is public, and click "Create Repository".
 
 You're all set, and in a few moments you should be able to see your new repository!
 
