@@ -22,7 +22,7 @@ robotpy-toolkit-7407
 
 * The robotpy-toolkit-7407 is a library that we use to make programming our robot easier. It contains many functions that we use to make our code more readable and easier to write.
 
-- [robotpy-toolkit-7407](https://choate-robotics.github.io/robotpy-toolkit-7407/)
+- [robotpy-toolkit-7407](https://choate-robotics.github.io/7407-robotpy-toolkit/)
 
 
 CTRE and REVRobotics
