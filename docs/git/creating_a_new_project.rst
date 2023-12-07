@@ -12,10 +12,12 @@ If you are looking to make a new project, follow these steps to get started:
    
    .. important::
 
-        If you are making a robot for a competition, you should name it after the competition. EX: "7407-DriveCode-RapidReact"
+        If you are making a robot for a competition, you should name it after the competition. 
+        
+        EX: "7407-DriveCode-RapidReact"
 
 4. Make sure the repository is public, and click "Create Repository".
 
 You're all set, and in a few moments you should be able to see your new repository!
 
-To see how to get the repository onto your computer, see `grabbing an existing project <grab_existing_project.html>_`
+To see how to get the repository onto your computer, see `grabbing an existing project <./grab_existing_project.html>_`
