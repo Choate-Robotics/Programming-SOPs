@@ -11,7 +11,7 @@
 <meta content="File Structure | Programming Standard Operating Procedure  documentation" property="og:title"/>
 <meta content="File Structure | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=1c6a6288" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=cede9724" rel="stylesheet" type="text/css"/>
 <link href="../_static/graphviz.css?v=eafc0fe6" rel="stylesheet" type="text/css"/>
 <link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
 <link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
@@ -34,7 +34,7 @@
     </script>
 </head>
 <body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
-<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
 <div class="hidden mr-4 md:flex">
@@ -267,10 +267,6 @@ under the CAN network. This method should be used to initialize encoders, motors
 </section>
 <section id="subsystem-sensor-command-flow">
 <h3>Subsystem, Sensor, Command flow<a class="headerlink" href="#subsystem-sensor-command-flow" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#subsystem-sensor-command-flow'"><span>#</span></a></h3>
-<div class="graphviz"><img alt='digraph {
-    "Subsystem" -&gt; "Command";
-    "Sensor" -&gt; "Command";
-}' class="graphviz" src="../_images/graphviz-9c6ad3befcdf3d3d7affc0e7f8c727bd48897d1a.png"/></div>
 <p>This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.</p>
 </section>
 </section>
@@ -335,7 +331,7 @@ under the CAN network. This method should be used to initialize encoders, motors
 </section>
 </section>
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
-<div class="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<div class="sticky top-16 -mt-10 max-h-[calc(var(100vh)-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
 <li><a :data-current="activeSection === '#core-folders'" class="reference internal" href="#core-folders">Core Folders</a><ul>
 <li><a :data-current="activeSection === '#subsystems'" class="reference internal" href="#subsystems">Subsystems</a></li>

@@ -158,9 +158,10 @@ Subsystem, Sensor, Command flow
 
 .. graphviz:: 
 
-    digraph {
+    .. digraph {
         "Subsystem" -> "Command";
         "Sensor" -> "Command";
+
     }
 
 This is the standard flow for a command. The command calls methods from the subsystems and sensors to control the robot.
