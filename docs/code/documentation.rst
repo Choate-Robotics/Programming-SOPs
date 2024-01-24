@@ -15,14 +15,14 @@ RobotPy and WPILib
 
 - [RobotPy](http://robotpy.readthedocs.io/en/stable/)
 
-- [WPILib](https://wpilib.screenstepslive.com/s/4485)
+- [WPILib](https://docs.wpilib.org/en/stable/index.html)
 
 robotpy-toolkit-7407
 --------------------
 
 * The robotpy-toolkit-7407 is a library that we use to make programming our robot easier. It contains many functions that we use to make our code more readable and easier to write.
 
-- [robotpy-toolkit-7407](https://choate-robotics.github.io/robotpy-toolkit-7407/)
+- [robotpy-toolkit-7407](https://choate-robotics.github.io/7407-robotpy-toolkit/)
 
 
 CTRE and REVRobotics
