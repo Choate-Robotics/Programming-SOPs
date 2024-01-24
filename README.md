@@ -2,6 +2,8 @@
 
 In this repository we will create a series of documents that can be used to be a reference for current and future programmers on team 7407. Each document on here should be a short and easy to digest guide to some part of the process of adding to the code base of 7407. 
 
+The current version of these notes can be viewed [here](https://choate-robotics.github.io/Programming-SOPs/index.html)
+
 Some topics we are looking to add:
 
 * Setting up a programming environment. This would include:
@@ -25,4 +27,4 @@ To contribute to this repository, you will need to fork it and then make a pull 
 
 ## How to use this repository
 
-To Deploy to Github Pages: push to origin. Github Actions will automatically build and deploy to Github Pages.
+To Deploy to Github Pages: push to origin/main. Github Actions will automatically build and deploy to Github Pages.
