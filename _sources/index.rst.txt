@@ -1,13 +1,12 @@
-.. Programming Standard Operating Procedure documentation master file, created by
+.. Programming Standard Operating Procedure Documentation master file, created by
    sphinx-quickstart on Mon Jul 31 21:25:53 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 ==========================================================
-Choate Robotics Programming Standard Operating Procedure's
+Choate Robotics Programming Standard Operating Procedures
 ==========================================================
 
-this is the standard operating procedures for programming at choate robotics. 
-it is a living document and will be updated as needed.
+These are the Standard Operating Procedures for the Choate Robotics Programming Team. It is a living document and is constantly being updated.
 
 .. hint::
 
