@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 
-<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
 <head>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Odometry: | Programming Standard Operating Procedure  documentation</title>
-<meta content="Odometry: | Programming Standard Operating Procedure  documentation" property="og:title"/>
-<meta content="Odometry: | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
+<title>Odometry: | Project Empower  documentation</title>
+<meta content="Odometry: | Project Empower  documentation" property="og:title"/>
+<meta content="Odometry: | Project Empower  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=8958d2b4" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=eafc0fe6" rel="stylesheet" type="text/css"/>
-<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/custom.css?v=ccd5acd5" rel="stylesheet" type="text/css"/>
 <link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
-<link href="../_static/7407logo.jfif" rel="icon"/>
+<link href="../_static/yri_icon_dark.png" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="vision.html" rel="next" title="&lt;no title&gt;"/>
@@ -39,7 +40,7 @@
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
 <div class="hidden mr-4 md:flex">
 <a class="flex items-center mr-6" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/7407logo.jfif" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Programming Standard Operating Procedure  documentation</span>
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower  documentation</span>
 </a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
 <svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
@@ -70,12 +71,11 @@
 </header>
 <div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
 <a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/7407logo.jfif" width="16"/><span class="font-bold text-clip whitespace-nowrap">Programming Standard Operating Procedure  documentation</span>
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower  documentation</span>
 </a>
 <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
 <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Home</a></li>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
@@ -124,7 +124,7 @@
 <div class="w-full min-w-0 mx-auto">
 <nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
 <a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
-<span class="hidden md:inline">Programming Standard Operating Procedure  documentation</span>
+<span class="hidden md:inline">Project Empower  documentation</span>
 <svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
@@ -133,51 +133,51 @@
 </nav>
 <div id="content" role="main">
 <section id="odometry">
-<h1>Odometry:<a class="headerlink" href="#odometry" title="Permalink to this heading"><span>#</span></a></h1>
+<h1>Odometry:<a class="headerlink" href="#odometry" title="Link to this heading"><span>#</span></a></h1>
 <p>Odometry is the process of tracking the position and orientation of a robot as it moves. In FIRST Robotics, odometry is used to accurately navigate the robot on the field and perform tasks such as picking up and delivering game pieces.</p>
 <p>One way to implement odometry in FIRST Robotics is by using encoders on the robot’s wheels to measure the distance traveled. By combining the encoder data with the robot’s starting position and orientation, the robot’s current position and orientation can be calculated.</p>
 <p>The WPIlib library provides a Pose3D class that can be used to represent the robot’s position and orientation in 3D space. The Pose3D class has methods for updating the position and orientation based on encoder data, as well as methods for converting between different coordinate systems.</p>
 <p>Here’s an example of using the Pose3D class in Python to track the robot’s position and orientation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
-
-<span class="c1"># Initialize the starting position and orientation</span>
-<span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Update the position and orientation based on encoder data</span>
-<span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="p">)</span>
-
-<span class="c1"># Print the new position and orientation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
+</span><span id="line-2">
+</span><span id="line-3"><span class="c1"># Initialize the starting position and orientation</span>
+</span><span id="line-4"><span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="line-5">
+</span><span id="line-6"><span class="c1"># Update the position and orientation based on encoder data</span>
+</span><span id="line-7"><span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="line-8"><span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="line-9"><span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="line-10"><span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
+</span><span id="line-11">    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
+</span><span id="line-12">    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</span><span id="line-13"><span class="p">)</span>
+</span><span id="line-14">
+</span><span id="line-15"><span class="c1"># Print the new position and orientation</span>
+</span><span id="line-16"><span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
 <p>In addition to the Pose3D class, the WPIlib library also provides methods for estimating the robot’s position and orientation based on sensor data from a camera or other sensors. These methods use techniques such as visual odometry and sensor fusion to improve the accuracy of the position and orientation estimates.</p>
 <p>To add this information to the odometry.rst file, you can start by explaining what odometry is and why it’s important in FIRST Robotics. Then, you can provide an example of using the Pose3D class in Python to track the robot’s position and orientation. Finally, you can mention the other methods available in the WPIlib library for estimating the robot’s position and orientation based on sensor data.Odometry is the process of tracking the position and orientation of a robot as it moves. In FIRST Robotics, odometry is used to accurately navigate the robot on the field and perform tasks such as picking up and delivering game pieces.</p>
 <p>One way to implement odometry in FIRST Robotics is by using encoders on the robot’s wheels to measure the distance traveled. By combining the encoder data with the robot’s starting position and orientation, the robot’s current position and orientation can be calculated.</p>
 <p>The WPIlib library provides a Pose3D class that can be used to represent the robot’s position and orientation in 3D space. The Pose3D class has methods for updating the position and orientation based on encoder data, as well as methods for converting between different coordinate systems.</p>
 <p>Here’s an example of using the Pose3D class in Python to track the robot’s position and orientation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
-
-<span class="c1"># Initialize the starting position and orientation</span>
-<span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="c1"># Update the position and orientation based on encoder data</span>
-<span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
-    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="p">)</span>
-
-<span class="c1"># Print the new position and orientation</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">from</span> <span class="nn">wpilib.geometry</span> <span class="kn">import</span> <span class="n">Pose3D</span>
+</span><span id="line-2">
+</span><span id="line-3"><span class="c1"># Initialize the starting position and orientation</span>
+</span><span id="line-4"><span class="n">starting_pose</span> <span class="o">=</span> <span class="n">Pose3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="line-5">
+</span><span id="line-6"><span class="c1"># Update the position and orientation based on encoder data</span>
+</span><span id="line-7"><span class="n">left_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="line-8"><span class="n">right_encoder_distance</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="line-9"><span class="n">robot_width</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="line-10"><span class="n">new_pose</span> <span class="o">=</span> <span class="n">starting_pose</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
+</span><span id="line-11">    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">-</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="n">robot_width</span><span class="p">,</span>
+</span><span id="line-12">    <span class="p">(</span><span class="n">left_encoder_distance</span> <span class="o">+</span> <span class="n">right_encoder_distance</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</span><span id="line-13"><span class="p">)</span>
+</span><span id="line-14">
+</span><span id="line-15"><span class="c1"># Print the new position and orientation</span>
+</span><span id="line-16"><span class="nb">print</span><span class="p">(</span><span class="n">new_pose</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
 <p>In addition to the Pose3D class, the WPIlib library also provides methods for estimating the robot’s position and orientation based on sensor data from a camera or other sensors.
 These methods use techniques such as visual odometry and sensor fusion to improve the accuracy of the position and orientation estimates.</p>
@@ -190,15 +190,15 @@ These methods use techniques such as visual odometry and sensor fusion to improv
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.1.2</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024, Youth Research Initiative Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
 </div>
 </div>
 </footer>
 </div>
-<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
-<script src="../_static/doctools.js?v=888ff710"></script>
-<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
-<script defer="defer" src="../_static/theme.js?v=8dc3ddfe"></script>
+<script src="../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
 </html>
