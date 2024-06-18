@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
-<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
 <head>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Hardware and Electronics | Project Empower  documentation</title>
-<meta content="Hardware and Electronics | Project Empower  documentation" property="og:title"/>
-<meta content="Hardware and Electronics | Project Empower  documentation" name="twitter:title"/>
+<title>Hardware and Electronics | Programming Standard Operating Procedure  documentation</title>
+<meta content="Hardware and Electronics | Programming Standard Operating Procedure  documentation" property="og:title"/>
+<meta content="Hardware and Electronics | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=ecdfb4fc" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
-<link href="../_static/styles/custom.css?v=ccd5acd5" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=eafc0fe6" rel="stylesheet" type="text/css"/>
+<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
 <link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
-<link href="../_static/yri_icon_dark.png" rel="icon"/>
+<link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
 <link href="../networks/networktables.html" rel="next" title="Networktables:"/>
@@ -40,7 +39,7 @@
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
 <div class="hidden mr-4 md:flex">
 <a class="flex items-center mr-6" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/yri_icon_dark.png" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Project Empower  documentation</span>
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/7407logo.jfif" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Programming Standard Operating Procedure  documentation</span>
 </a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
 <svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
@@ -71,11 +70,12 @@
 </header>
 <div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
 <a class="!justify-start text-sm md:!hidden bg-background" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/yri_icon_dark.png" width="16"/><span class="font-bold text-clip whitespace-nowrap">Project Empower  documentation</span>
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/7407logo.jfif" width="16"/><span class="font-bold text-clip whitespace-nowrap">Programming Standard Operating Procedure  documentation</span>
 </a>
 <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
 <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
-<ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
@@ -124,7 +124,7 @@
 <div class="w-full min-w-0 mx-auto">
 <nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
 <a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
-<span class="hidden md:inline">Project Empower  documentation</span>
+<span class="hidden md:inline">Programming Standard Operating Procedure  documentation</span>
 <svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
@@ -133,25 +133,25 @@
 </nav>
 <div id="content" role="main">
 <section id="hardware-and-electronics">
-<h1>Hardware and Electronics<a class="headerlink" href="#hardware-and-electronics" title="Link to this heading"><span>#</span></a></h1>
+<h1>Hardware and Electronics<a class="headerlink" href="#hardware-and-electronics" title="Permalink to this heading"><span>#</span></a></h1>
 <p>This page covers the hardware and electronics used on the robot that we utilize often.</p>
 <section id="system-diagram">
-<h2>System Diagram<a class="headerlink" href="#system-diagram" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#system-diagram'"><span>#</span></a></h2>
+<h2>System Diagram<a class="headerlink" href="#system-diagram" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#system-diagram'"><span>#</span></a></h2>
 <figure class="align-center" id="id1">
 <img alt="https://docs.wpilib.org/en/stable/_images/frc-control-system-layout-rev.svg" src="https://docs.wpilib.org/en/stable/_images/frc-control-system-layout-rev.svg"/><figcaption>
-<p><span class="caption-text">This is a diagram of the FRC Control System. It shows how all of the components are connected to each other.</span><a class="headerlink" href="#id1" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">This is a diagram of the FRC Control System. It shows how all of the components are connected to each other.</span><a class="headerlink" href="#id1" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="core-components">
-<h2>Core Components<a class="headerlink" href="#core-components" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#core-components'"><span>#</span></a></h2>
+<h2>Core Components<a class="headerlink" href="#core-components" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#core-components'"><span>#</span></a></h2>
 <p>Every Robot we work on will have all of these components. They are the most important parts of the robot and are used in every subsystem.</p>
 <section id="roborio">
-<h3>RoboRIO<a class="headerlink" href="#roborio" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#roborio'"><span>#</span></a></h3>
+<h3>RoboRIO<a class="headerlink" href="#roborio" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#roborio'"><span>#</span></a></h3>
 <figure class="align-center" id="id2">
 <img alt="https://cdn.andymark.com/product_images/ni-roborio-2/61535a8be281bc516843b3c1/detail.jpg?c=1632852619" src="https://cdn.andymark.com/product_images/ni-roborio-2/61535a8be281bc516843b3c1/detail.jpg?c=1632852619"/>
 <figcaption>
-<p><span class="caption-text">The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</span><a class="headerlink" href="#id2" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The RoboRIO is the main controller for the robot. It is a National Instruments controller that runs a real-time operating system. It is programmed in LabVIEW, C++, Java, or in our case, Python. The RoboRIO is connected to the PDP, radio, and motor controllers.</span><a class="headerlink" href="#id2" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -161,29 +161,29 @@
 </ul>
 </section>
 <section id="pdh">
-<h3>PDH<a class="headerlink" href="#pdh" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#pdh'"><span>#</span></a></h3>
+<h3>PDH<a class="headerlink" href="#pdh" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#pdh'"><span>#</span></a></h3>
 <figure class="align-center" id="id3">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2509/REV-11-1850-PDH-Hero-FINAL__41676.1641407456.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/602/2509/REV-11-1850-PDH-Hero-FINAL__41676.1641407456.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</span><a class="headerlink" href="#id3" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Power Distribution Hub (PDH) is a device that distributes power to the motor controllers and RoboRIO. It also monitors the current draw of each motor controller and the RoboRIO. The PDP is connected to the RoboRIO, motor controllers, and battery.</span><a class="headerlink" href="#id3" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="pneumatic-hub">
-<h3>Pneumatic Hub<a class="headerlink" href="#pneumatic-hub" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#pneumatic-hub'"><span>#</span></a></h3>
+<h3>Pneumatic Hub<a class="headerlink" href="#pneumatic-hub" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#pneumatic-hub'"><span>#</span></a></h3>
 <figure class="align-center" id="id4">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/600/2510/REV-11-1852-PH-Hero-FINAL__53879.1641407488.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/600/2510/REV-11-1852-PH-Hero-FINAL__53879.1641407488.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">The Pneumatic Hub is a device that controls the solenoid valves, which control the pistons. The Pneumatic Hub is connected to the RoboRIO, solenoid valves, and battery.</span><a class="headerlink" href="#id4" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Pneumatic Hub is a device that controls the solenoid valves, which control the pistons. The Pneumatic Hub is connected to the RoboRIO, solenoid valves, and battery.</span><a class="headerlink" href="#id4" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="can-wires">
-<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#can-wires'"><span>#</span></a></h3>
+<h3>CAN Wires:<a class="headerlink" href="#can-wires" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#can-wires'"><span>#</span></a></h3>
 <figure class="align-center" id="id5">
 <img alt="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg" src="https://www.mindsensors.com/406-thickbox_default/can-cable.jpg"/>
 <figcaption>
-<p><span class="caption-text">The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.</span><a class="headerlink" href="#id5" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The CAN Wires are used to connect the RoboRIO, PDP, and motor controllers together. The CAN Wires are connected to the RoboRIO, PDP, and motor controllers.</span><a class="headerlink" href="#id5" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -191,11 +191,11 @@
 </ul>
 </section>
 <section id="radio">
-<h3>Radio:<a class="headerlink" href="#radio" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#radio'"><span>#</span></a></h3>
+<h3>Radio:<a class="headerlink" href="#radio" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#radio'"><span>#</span></a></h3>
 <figure class="align-center" id="id6">
 <img alt="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992" src="https://cdn.andymark.com/product_images/open-mesh-om5p-ac-dual-band-1-17-gbps-access-point-radio/am-3205/5c33d218fe93c61bdeff9b12/detail.jpg?c=1546899992"/>
 <figcaption>
-<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id6" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The radio is a device that allows the RoboRIO to communicate with the driver station. It is connected to the RoboRIO and the PDP. The radio is used to send data to the driver station and to recieve data from the driver station. The radio is also used to connect to the robot wirelessly.</span><a class="headerlink" href="#id6" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -204,34 +204,34 @@
 </section>
 </section>
 <section id="motor-controllers">
-<h2>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#motor-controllers'"><span>#</span></a></h2>
+<h2>Motor Controllers<a class="headerlink" href="#motor-controllers" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#motor-controllers'"><span>#</span></a></h2>
 <section id="rev-spark-max">
-<h3>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#rev-spark-max'"><span>#</span></a></h3>
+<h3>Rev Spark Max<a class="headerlink" href="#rev-spark-max" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#rev-spark-max'"><span>#</span></a></h3>
 <figure class="align-center" id="id7">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/360/2795/MAX_HERO-noflag__60247.1650573462.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id7" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Spark Max is a motor controller that controls the brushless motors. The Spark Max is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id7" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="ctre-falcon-500">
-<h3>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#ctre-falcon-500'"><span>#</span></a></h3>
+<h3>CTRE Falcon 500<a class="headerlink" href="#ctre-falcon-500" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#ctre-falcon-500'"><span>#</span></a></h3>
 <figure class="align-center" id="id8">
 <img alt="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1" src="https://cdn11.bigcommerce.com/s-7cuph2j78p/images/stencil/1280x1280/products/134/643/3__19352.1673993701.png?c=1"/>
 <figcaption>
-<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id8" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Falcon 500 is a motor with a built-in motor controller. The Falcon 500 is connected to the RoboRIO, PDH, and brushless motors through the CAN Loop.</span><a class="headerlink" href="#id8" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="inputs">
-<h2>Inputs<a class="headerlink" href="#inputs" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#inputs'"><span>#</span></a></h2>
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#inputs'"><span>#</span></a></h2>
 <section id="digital-input">
-<h3>Digital Input<a class="headerlink" href="#digital-input" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#digital-input'"><span>#</span></a></h3>
+<h3>Digital Input<a class="headerlink" href="#digital-input" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#digital-input'"><span>#</span></a></h3>
 <figure class="align-center" id="id9">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280w/products/242/2787/Button_Sensor_REV-31-1425_1_not_lm__59552.1650572155.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.</span><a class="headerlink" href="#id9" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Digital Input is a device that detects if a digital signal is high or low (like a button). The Digital Input is connected to the RoboRIO DIO ports and the digital sensor.</span><a class="headerlink" href="#id9" title="Permalink to this image"><span>#</span></a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>You can think of it as a 0 or 1, or a True or False</p></li>
@@ -242,11 +242,11 @@
 </figure>
 </section>
 <section id="analog-input">
-<h3>Analog Input<a class="headerlink" href="#analog-input" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#analog-input'"><span>#</span></a></h3>
+<h3>Analog Input<a class="headerlink" href="#analog-input" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#analog-input'"><span>#</span></a></h3>
 <figure class="align-center" id="id10">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/340/2734/2M_Distance_Sensor__87798.1650562207.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.</span><a class="headerlink" href="#id10" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Analog Input is a device that detects the voltage of an analog signal (like a distance sensor). The Analog Input is connected to the RoboRIO PWM port and the analog sensor.</span><a class="headerlink" href="#id10" title="Permalink to this image"><span>#</span></a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>you can think of it as a range of values between 0 and 1, like 0.5 or 0.25</p></li>
@@ -261,20 +261,20 @@
 <figure class="align-center" id="id11">
 <img alt="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2" src="https://cdn11.bigcommerce.com/s-t3eo8vwp22/images/stencil/1280x1280/products/387/1270/Spark_Max_Data_Port_Breakout_Board_Lone__47117.1548200358.png?c=2"/>
 <figcaption>
-<p><span class="caption-text">this plugs into the data-port on the Spark Max</span><a class="headerlink" href="#id11" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">this plugs into the data-port on the Spark Max</span><a class="headerlink" href="#id11" title="Permalink to this image"><span>#</span></a></p>
 </figcaption>
 </figure>
 </div>
 </section>
 </section>
 <section id="vision-processors">
-<h2>Vision Processors<a class="headerlink" href="#vision-processors" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#vision-processors'"><span>#</span></a></h2>
+<h2>Vision Processors<a class="headerlink" href="#vision-processors" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#vision-processors'"><span>#</span></a></h2>
 <section id="limelight">
-<h3>Limelight<a class="headerlink" href="#limelight" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#limelight'"><span>#</span></a></h3>
+<h3>Limelight<a class="headerlink" href="#limelight" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#limelight'"><span>#</span></a></h3>
 <figure class="align-center" id="id12">
 <img alt="https://limelightvision.io/cdn/shop/products/L2SCALED_2048x.png?v=1674663124" src="https://limelightvision.io/cdn/shop/products/L2SCALED_2048x.png?v=1674663124"/>
 <figcaption>
-<p><span class="caption-text">The Limelight is a vision processor that detects the location of the target. The Limelight is connected to the RoboRIO and the camera.</span><a class="headerlink" href="#id12" title="Link to this image"><span>#</span></a></p>
+<p><span class="caption-text">The Limelight is a vision processor that detects the location of the target. The Limelight is connected to the RoboRIO and the camera.</span><a class="headerlink" href="#id12" title="Permalink to this image"><span>#</span></a></p>
 <div class="legend">
 <ul class="simple">
 <li><p>This is used for vision tracking with retroReflective tape, Feducials, and neural networks</p></li>
@@ -319,14 +319,14 @@
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2024, Youth Research Initiative Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.1.2</a></p>
 </div>
 </div>
 </footer>
 </div>
-<script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+<script src="../_static/doctools.js?v=888ff710"></script>
+<script src="../_static/sphinx_highlight.js?v=4825356b"></script>
 <script defer="defer" src="../_static/theme.js?v=e82a16a3"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
