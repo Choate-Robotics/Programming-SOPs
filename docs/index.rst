@@ -19,6 +19,7 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
 
    Introduction <introduction/index>
 
+   reStructuredText (rst) Cheatsheet <introduction/rst-cheatsheet>
 
 .. toctree::
    :maxdepth: 3
@@ -56,6 +57,8 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Driver station <hardware/driverstation>
 
    Git and Github <git/index>
+
+   Code Style <code/code_style>
 
    Poetry <poetry/index>
 
