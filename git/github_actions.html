@@ -7,9 +7,9 @@
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Making a Project | Programming Standard Operating Procedure  documentation</title>
-<meta content="Making a Project | Programming Standard Operating Procedure  documentation" property="og:title"/>
-<meta content="Making a Project | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
+<title>Setting Up GitHub Actions for Testing | Programming Standard Operating Procedure  documentation</title>
+<meta content="Setting Up GitHub Actions for Testing | Programming Standard Operating Procedure  documentation" property="og:title"/>
+<meta content="Setting Up GitHub Actions for Testing | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=e72c8e07" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
 <link href="../_static/graphviz.css?v=eafc0fe6" rel="stylesheet" type="text/css"/>
@@ -18,8 +18,8 @@
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
-<link href="grab_existing_project.html" rel="next" title="grabbing a Project from the server"/>
-<link href="../initial%20setup/index.html" rel="prev" title="Initial Setup"/>
+<link href="../code/documentation.html" rel="next" title="Code Documentation"/>
+<link href="../code/deploying_code.html" rel="prev" title="Deploying Code"/>
 <script>
     <!-- Prevent Flash of wrong theme -->
       const userPreference = localStorage.getItem('darkMode');
@@ -79,18 +79,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../initial%20setup/index.html">Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating a Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creating_a_new_project.html">Creating a Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="grab_existing_project.html">grab an existing project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="github_actions.html">Github Actions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Github Actions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/documentation.html">Documentation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting to Know:</span></p>
@@ -130,29 +130,243 @@
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
 </a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Making a Project</span>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Setting Up GitHub Actions for Testing</span>
 </nav>
 <div id="content" role="main">
-<section id="making-a-project">
-<h1>Making a Project<a class="headerlink" href="#making-a-project" title="Permalink to this heading"><span>#</span></a></h1>
-<p>If you are looking to make a new project, follow these steps to get started:</p>
+<section id="setting-up-github-actions-for-testing">
+<span id="github-actions-setup"></span><h1>Setting Up GitHub Actions for Testing<a class="headerlink" href="#setting-up-github-actions-for-testing" title="Permalink to this heading"><span>#</span></a></h1>
+<p>This guide will walk you through setting up GitHub Actions for your FRC robotics programming team to automate code testing.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#overview'"><span>#</span></a></h2>
+<p>GitHub Actions allows you to define workflows that run automated processes, such as testing your code, whenever certain events occur in your repository. By setting up a workflow file, you can ensure your team’s code is tested automatically with every push or pull request.</p>
+</section>
+<section id="example-code-from-2025">
+<h2>Example code from 2025<a class="headerlink" href="#example-code-from-2025" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#example-code-from-2025'"><span>#</span></a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tests</span>
+</span></code></pre></div>
+</div>
+<dl>
+<dt>on:</dt><dd><p>push:
+pull_request:</p>
+<blockquote>
+<div><p>branches: [master]</p>
+</div></blockquote>
+</dd>
+<dt>jobs:</dt><dd><dl>
+<dt>test:</dt><dd><p>timeout-minutes: 5
+runs-on: ubuntu-latest
+steps:</p>
+<blockquote>
+<div><ul>
+<li><p>uses: <a class="reference external" href="mailto:actions/checkout%40v1">actions/checkout<span>@</span>v1</a>
+with:</p>
+<blockquote>
+<div><p>fetch-depth: 1</p>
+</div></blockquote>
+</li>
+<li><p>name: Set up Python 3.12
+uses: <a class="reference external" href="mailto:actions/setup-python%40v1">actions/setup-python<span>@</span>v1</a>
+with:</p>
+<blockquote>
+<div><p>python-version: 3.12</p>
+</div></blockquote>
+</li>
+<li><p>name: Install dependencies
+run: |</p>
+<blockquote>
+<div><p>python -m pip install –upgrade pip
+python3 -m pip install robotpy==2025.2.1.0
+python3 -m robotpy sync</p>
+</div></blockquote>
+</li>
+<li><p>name: Run robotpy Tests
+run: |</p>
+<blockquote>
+<div><p>python3 -m robotpy test</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="explanation-of-workflow">
+<h2>Explanation of Workflow<a class="headerlink" href="#explanation-of-workflow" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#explanation-of-workflow'"><span>#</span></a></h2>
+<p>Below is an explanation of each line in your current test YAML file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tests</span>
+</span></code></pre></div>
+</div>
+<p><strong>Explanation:</strong> Sets the name of the workflow as “Tests.” This will appear in the Actions tab on GitHub.</p>
+<blockquote>
+<div><dl>
+<dt>on:</dt><dd><p>push:
+pull_request:</p>
+<blockquote>
+<div><p>branches: [master]</p>
+</div></blockquote>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>Explanation:</strong> Specifies the events that trigger this workflow. It runs on every push and pull request to the <cite>master</cite> branch.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>jobs:</dt><dd><dl class="simple">
+<dt>test:</dt><dd><p>timeout-minutes: 5
+runs-on: ubuntu-latest</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>Explanation:</strong>
+- <cite>jobs:</cite> Defines a job named <cite>test</cite>.
+- <cite>timeout-minutes: 5</cite> Limits the job’s execution time to 5 minutes to prevent long-running tests.
+- <cite>runs-on: ubuntu-latest</cite> Specifies that the job will run on the latest Ubuntu runner provided by GitHub.</p>
+<blockquote>
+<div><dl>
+<dt>steps:</dt><dd><ul>
+<li><p>uses: <a class="reference external" href="mailto:actions/checkout%40v1">actions/checkout<span>@</span>v1</a>
+with:</p>
+<blockquote>
+<div><p>fetch-depth: 1</p>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p><strong>Explanation:</strong>
+- <cite>uses: actions/checkout@v1</cite>: Utilizes the <cite>checkout</cite> action to clone the repository into the runner.
+- <cite>with:</cite> Provides configuration options for the <cite>checkout</cite> action.
+- <cite>fetch-depth: 1</cite>: Specifies to fetch only the latest commit, reducing the amount of data transferred.</p>
+<blockquote>
+<div><ul>
+<li><p>name: Set up Python 3.12
+uses: <a class="reference external" href="mailto:actions/setup-python%40v1">actions/setup-python<span>@</span>v1</a>
+with:</p>
+<blockquote>
+<div><p>python-version: 3.12</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>Explanation:</strong>
+- <cite>name: Set up Python 3.12</cite>: Names the step for clarity.
+- <cite>uses: actions/setup-python@v1</cite>: Utilizes the <cite>setup-python</cite> action to install and configure Python.
+- <cite>with:</cite> Provides options for this action.
+- <cite>python-version: 3.12</cite>: Specifies Python version 3.12 to be set up in the environment.</p>
+<blockquote>
+<div><ul>
+<li><p>name: Install dependencies
+run: |</p>
+<blockquote>
+<div><p>python -m pip install –upgrade pip
+python3 -m pip install robotpy==2025.2.1.0
+python3 -m robotpy sync</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>Explanation:</strong>
+- <cite>name: Install dependencies</cite>: Names the step for clarity.
+- <cite>run:</cite> Executes the following commands in the runner’s shell:</p>
+<blockquote>
+<div><ul>
+<li><p><cite>python -m pip install –upgrade pip</cite>: Updates pip to the latest version.</p></li>
+<li><p><cite>python3 -m pip install robotpy==2025.2.1.0</cite>: Installs a specific version of the <cite>robotpy</cite> library.</p></li>
+<li><p><cite>python3 -m robotpy sync</cite>: Synchronizes dependencies for the <cite>robotpy</cite> library.</p>
+<blockquote>
+<div><ul>
+<li><p>name:Run robotpy Tests
+run: |</p>
+<blockquote>
+<div><p>python3 -m robotpy test</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><strong>Explanation:</strong>
+- <cite>name:</cite>: The name is <cite>Run robotpy Tests</cite> which indicates this is where the robotpy code is tested.
+- <cite>run: python3 -m robotpy test</cite>: Runs the test suite for <cite>robotpy</cite> using Python 3.</p>
+</section>
+<section id="steps-to-set-up-github-actions">
+<h2>Steps to Set Up GitHub Actions<a class="headerlink" href="#steps-to-set-up-github-actions" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#steps-to-set-up-github-actions'"><span>#</span></a></h2>
 <ol class="arabic">
-<li><p>Visit our [Github Organization](<a class="reference external" href="https://github.com/Choate-Robotics">https://github.com/Choate-Robotics</a>) and click the green “New” button in the top right corner.</p></li>
-<li><p>Under the tab ‘Repository Template’, select ‘Choate-Robotics/DriveCode-Template’. This will use the template repository as a base for your new project, and contains all the necessary files and test automation to get started.</p></li>
-<li><p>Make sure to include all branches from the template repository. This will ensure that you have all the necessary repository rules.</p></li>
-<li><p>Name your repository. This should be the name of your project, and should be descriptive. For example, if you are making a robot that shoots balls, you might name it “Ball-Shooter”.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>If you are making a robot for a competition, you should name it after the competition.</p>
-<p>EX: “7407-DriveCode-RapidReact”</p>
+<li><p><strong>Create a Workflow Directory</strong></p>
+<p>In your repository, create a directory named <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> if it doesn’t already exist.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">mkdir<span class="w"> </span>-p<span class="w"> </span>.github/workflows
+</span></code></pre></div>
 </div>
 </li>
-<li><p>Make sure the repository is public, and click “Create Repository”.</p></li>
+<li><p><strong>Create a Workflow File</strong></p>
+<p>Inside the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> directory, create a YAML file. For example, <code class="docutils literal notranslate"><span class="pre">test.yml</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">touch<span class="w"> </span>.github/workflows/test.yml
+</span></code></pre></div>
+</div>
+</li>
+<li><p><strong>Define the Workflow</strong></p>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">test.yml</span></code> file in your editor and define the workflow based on the explained YAML file above.</p>
+</li>
+<li><p><strong>Commit the Workflow File</strong></p>
+<p>Add the workflow file to your repository and commit the changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">git<span class="w"> </span>add<span class="w"> </span>.github/workflows/test.yml
+</span><span id="line-2">git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Add GitHub Actions workflow for testing"</span>
+</span><span id="line-3">git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</span></code></pre></div>
+</div>
+</li>
+<li><p><strong>Verify the Workflow</strong></p>
+<p>Push a change to your repository or open a pull request. Navigate to the <strong>Actions</strong> tab in your GitHub repository to see the workflow running. Ensure all tests pass successfully.</p>
+</li>
 </ol>
-<p>You’re all set, and in a few moments you should be able to see your new repository!</p>
-<p>To see how to get the repository onto your computer, see <a class="reference external" href="./grab_existing_project.html">grabbing an existing project</a></p>
 </section>
-</div></div>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#troubleshooting'"><span>#</span></a></h2>
+<ul class="simple">
+<li><p><strong>Dependency Issues</strong>: Check your <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file to ensure all necessary dependencies are listed.</p></li>
+<li><p><strong>Failed Tests</strong>: Review the output in the Actions tab to identify which tests failed and why.</p></li>
+<li><p><strong>Workflow Errors</strong>: Validate your YAML file using an online tool like <a class="reference external" href="https://www.yamllint.com/">YAML Lint</a>.</p></li>
+</ul>
+</section>
+<section id="advanced-topics">
+<h2>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#advanced-topics'"><span>#</span></a></h2>
+<ul>
+<li><p><strong>Matrix Testing</strong>: Run tests across multiple Python versions or environments by using a matrix strategy.</p></li>
+<li><p><strong>Cache Dependencies</strong>: Use caching to speed up subsequent runs.</p>
+<blockquote>
+<div><p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache pip</span>
+</span><span id="line-2"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
+</span><span id="line-3"><span class="w">  </span><span class="nt">with</span><span class="p">:</span>
+</span><span id="line-4"><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.cache/pip</span>
+</span><span id="line-5"><span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}</span>
+</span><span id="line-6"><span class="w">    </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+</span><span id="line-7"><span class="w">      </span><span class="no">${{ runner.os }}-pip</span>
+</span></code></pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>By following these steps, your FRC robotics programming team can ensure a smooth and automated process for testing code changes. This will help maintain code quality and streamline development workflows.</p>
+</section>
+</section>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#overview'" class="reference internal" href="#overview">Overview</a></li>
+<li><a :data-current="activeSection === '#example-code-from-2025'" class="reference internal" href="#example-code-from-2025">Example code from 2025</a></li>
+<li><a :data-current="activeSection === '#explanation-of-workflow'" class="reference internal" href="#explanation-of-workflow">Explanation of Workflow</a></li>
+<li><a :data-current="activeSection === '#steps-to-set-up-github-actions'" class="reference internal" href="#steps-to-set-up-github-actions">Steps to Set Up GitHub Actions</a></li>
+<li><a :data-current="activeSection === '#troubleshooting'" class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a :data-current="activeSection === '#advanced-topics'" class="reference internal" href="#advanced-topics">Advanced Topics</a></li>
+</ul>
+</div>
+</aside>
 </main>
 </div>
 </div><footer class="py-6 border-t border-border md:py-0">
