@@ -11,10 +11,10 @@
 <meta content="Profiled PID Control | Programming Standard Operating Procedure  documentation" property="og:title"/>
 <meta content="Profiled PID Control | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=8958d2b4" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
-<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -33,7 +33,7 @@
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
 </head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
 <div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
@@ -142,48 +142,48 @@
 <p>The profiled PID is implemented as a subclass of the regular PID class. The profiled PID class overrides the <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.calculate()</span></code> method to add the acceleration and velocity constraints.</p>
 <p>The profiled PID class also adds two new methods, <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.setAccelerationLimits()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">PIDController.setVelocityLimits()</span></code>, which set the acceleration and velocity limits, respectively.</p>
 <p>You can create a profiled PID controller using the <code class="xref py py-class docutils literal notranslate"><span class="pre">ProfiledPIDController</span></code> class.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">ProfiledPIDController</span>
-<span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">TrapezoidProfile</span>
-
-<span class="n">constraints</span> <span class="o">=</span> <span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">Constraints</span><span class="p">(</span><span class="n">max_velocity</span><span class="o">=</span><span class="mf">1.7</span><span class="p">,</span> <span class="n">max_acceleration</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">controller</span> <span class="o">=</span> <span class="n">ProfiledPIDController</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)</span>
-
-<span class="c1"># Set the goal state</span>
-
-<span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">State</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-
-<span class="c1"># Calculate the feedforward and feedback terms</span>
-
-<span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
-
-<span class="c1"># Use the output to control the mechanism</span>
-
-<span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">ProfiledPIDController</span>
+</span><span id="line-2"><span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">TrapezoidProfile</span>
+</span><span id="line-3">
+</span><span id="line-4"><span class="n">constraints</span> <span class="o">=</span> <span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">Constraints</span><span class="p">(</span><span class="n">max_velocity</span><span class="o">=</span><span class="mf">1.7</span><span class="p">,</span> <span class="n">max_acceleration</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="line-5">
+</span><span id="line-6"><span class="n">controller</span> <span class="o">=</span> <span class="n">ProfiledPIDController</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraints</span><span class="p">)</span>
+</span><span id="line-7">
+</span><span id="line-8"><span class="c1"># Set the goal state</span>
+</span><span id="line-9">
+</span><span id="line-10"><span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">TrapezoidProfile</span><span class="o">.</span><span class="n">State</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</span><span id="line-11">
+</span><span id="line-12"><span class="c1"># Calculate the feedforward and feedback terms</span>
+</span><span id="line-13">
+</span><span id="line-14"><span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
+</span><span id="line-15">
+</span><span id="line-16"><span class="c1"># Use the output to control the mechanism</span>
+</span><span id="line-17">
+</span><span id="line-18"><span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">ProfiledPIDController</span></code> class is a subclass of the <code class="xref py py-class docutils literal notranslate"><span class="pre">PIDController</span></code> class. This means that you can use a profiled PID controller anywhere you would use a regular PID controller. For example, you can use a profiled PID controller in the <code class="xref py py-class docutils literal notranslate"><span class="pre">wpilib.controller.RamseteController</span></code> class.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">RamseteController</span>
-<span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">Trajectory</span>
-
-<span class="n">trajectory</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">()</span>
-
-<span class="n">controller</span> <span class="o">=</span> <span class="n">RamseteController</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
-
-<span class="c1"># Set the goal state</span>
-
-<span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">trajectory</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-
-<span class="c1"># Calculate the feedforward and feedback terms</span>
-
-<span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
-
-<span class="c1"># Use the output to control the mechanism</span>
-
-<span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">from</span> <span class="nn">wpilib.controller</span> <span class="kn">import</span> <span class="n">RamseteController</span>
+</span><span id="line-2"><span class="kn">from</span> <span class="nn">wpilib.trajectory</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+</span><span id="line-3">
+</span><span id="line-4"><span class="n">trajectory</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">()</span>
+</span><span id="line-5">
+</span><span id="line-6"><span class="n">controller</span> <span class="o">=</span> <span class="n">RamseteController</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+</span><span id="line-7">
+</span><span id="line-8"><span class="c1"># Set the goal state</span>
+</span><span id="line-9">
+</span><span id="line-10"><span class="n">controller</span><span class="o">.</span><span class="n">setGoal</span><span class="p">(</span><span class="n">trajectory</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</span><span id="line-11">
+</span><span id="line-12"><span class="c1"># Calculate the feedforward and feedback terms</span>
+</span><span id="line-13">
+</span><span id="line-14"><span class="n">output</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">current_pose</span><span class="p">,</span> <span class="n">current_velocity</span><span class="p">)</span>
+</span><span id="line-15">
+</span><span id="line-16"><span class="c1"># Use the output to control the mechanism</span>
+</span><span id="line-17">
+</span><span id="line-18"><span class="n">mechanism</span><span class="o">.</span><span class="n">setVoltage</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
 </div>
 </div>
 </section>
@@ -193,15 +193,15 @@
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 8.1.3</a></p>
 </div>
 </div>
 </footer>
 </div>
 <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=8dc3ddfe"></script>
+<script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
 </html>

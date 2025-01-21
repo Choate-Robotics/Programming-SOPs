@@ -11,10 +11,10 @@
 <meta content="Git and Github | Programming Standard Operating Procedure  documentation" property="og:title"/>
 <meta content="Git and Github | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=8958d2b4" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
-<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -33,7 +33,7 @@
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
 </head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
 <div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
@@ -207,11 +207,7 @@ CLI</label><div class="sd-tab-content docutils">
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Basic Commands for Navigation and File Management<div class="sd-summary-down docutils">
-<svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-down" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-up" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Basic Commands for Navigation and File Management</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-right" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directory</p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cd..</span></code> - go up one directory</p></li>
@@ -222,36 +218,36 @@ Basic Commands for Navigation and File Management<div class="sd-summary-down doc
 </ul>
 </div>
 </details><p>Here are some basic commands to get you started:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># clone a repository to the current directory</span>
-git<span class="w"> </span>clone<span class="w"> </span><span class="c1">#repository_url</span>
-
-<span class="c1"># check the status of your repository</span>
-git<span class="w"> </span>status
-
-<span class="c1"># add a file to the staging area</span>
-git<span class="w"> </span>add<span class="w"> </span><span class="c1">#file_name</span>
-
-<span class="c1"># commit your changes</span>
-git<span class="w"> </span>commit
-
-<span class="c1"># push your changes to the server</span>
-git<span class="w"> </span>push
-
-<span class="c1"># pull changes from the server</span>
-git<span class="w"> </span>pull
-
-<span class="c1"># create a new branch</span>
-git<span class="w"> </span>branch
-
-<span class="c1"># switch to a different branch</span>
-git<span class="w"> </span>checkout<span class="w"> </span><span class="c1">#branch_name</span>
-
-<span class="c1"># merge a branch into the current branch</span>
-git<span class="w"> </span>merge<span class="w"> </span><span class="c1">#branch_name</span>
-
-<span class="c1"># delete a branch</span>
-git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span><span class="c1">#branch_name</span>
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="c1"># clone a repository to the current directory</span>
+</span><span id="line-2">git<span class="w"> </span>clone<span class="w"> </span><span class="c1">#repository_url</span>
+</span><span id="line-3">
+</span><span id="line-4"><span class="c1"># check the status of your repository</span>
+</span><span id="line-5">git<span class="w"> </span>status
+</span><span id="line-6">
+</span><span id="line-7"><span class="c1"># add a file to the staging area</span>
+</span><span id="line-8">git<span class="w"> </span>add<span class="w"> </span><span class="c1">#file_name</span>
+</span><span id="line-9">
+</span><span id="line-10"><span class="c1"># commit your changes</span>
+</span><span id="line-11">git<span class="w"> </span>commit
+</span><span id="line-12">
+</span><span id="line-13"><span class="c1"># push your changes to the server</span>
+</span><span id="line-14">git<span class="w"> </span>push
+</span><span id="line-15">
+</span><span id="line-16"><span class="c1"># pull changes from the server</span>
+</span><span id="line-17">git<span class="w"> </span>pull
+</span><span id="line-18">
+</span><span id="line-19"><span class="c1"># create a new branch</span>
+</span><span id="line-20">git<span class="w"> </span>branch
+</span><span id="line-21">
+</span><span id="line-22"><span class="c1"># switch to a different branch</span>
+</span><span id="line-23">git<span class="w"> </span>checkout<span class="w"> </span><span class="c1">#branch_name</span>
+</span><span id="line-24">
+</span><span id="line-25"><span class="c1"># merge a branch into the current branch</span>
+</span><span id="line-26">git<span class="w"> </span>merge<span class="w"> </span><span class="c1">#branch_name</span>
+</span><span id="line-27">
+</span><span id="line-28"><span class="c1"># delete a branch</span>
+</span><span id="line-29">git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span><span class="c1">#branch_name</span>
+</span></code></pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -275,15 +271,15 @@ git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </sp
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 8.1.3</a></p>
 </div>
 </div>
 </footer>
 </div>
 <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=8dc3ddfe"></script>
+<script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
 </html>

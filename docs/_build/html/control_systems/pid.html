@@ -11,10 +11,10 @@
 <meta content="PID Control | Programming Standard Operating Procedure  documentation" property="og:title"/>
 <meta content="PID Control | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=8958d2b4" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
-<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -33,7 +33,7 @@
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
 </head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
 <div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
@@ -202,30 +202,30 @@ Finally, it needs to be within the systems’ physical limits. For example, if t
 <section id="use-the-pid-controller-class-from-the-wpilib-library">
 <h3>Use the PID controller class from the wpilib library<a class="headerlink" href="#use-the-pid-controller-class-from-the-wpilib-library" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#use-the-pid-controller-class-from-the-wpilib-library'"><span>#</span></a></h3>
 <p>Here is the class and helpful methods that can be used to create a PID controller in Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wpilib</span> <span class="kn">import</span> <span class="n">PIDController</span>
-
-<span class="n">pid</span> <span class="o">=</span> <span class="n">PIDController</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span> <span class="c1"># WPIlib PID Controller Class - Takes in P, I, and D values</span>
-
-<span class="n">pid</span><span class="o">.</span><span class="n">setSetpoint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Set the desired setpoint</span>
-
-<span class="n">pid</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span> <span class="c1"># Enable the PID controller</span>
-
-<span class="n">pid</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span> <span class="c1"># Disable the PID controller</span>
-
-<span class="n">pid</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Reset the PID controller to its initial state - Very important to call this before restarting a Command, otherwise the PID controller will continue from the previous Command</span>
-
-<span class="n">pid</span><span class="o">.</span><span class="n">getSetpoint</span><span class="p">()</span> <span class="c1"># Get the current setpoint</span>
-</pre></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">from</span> <span class="nn">wpilib</span> <span class="kn">import</span> <span class="n">PIDController</span>
+</span><span id="line-2">
+</span><span id="line-3"><span class="n">pid</span> <span class="o">=</span> <span class="n">PIDController</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">)</span> <span class="c1"># WPIlib PID Controller Class - Takes in P, I, and D values</span>
+</span><span id="line-4">
+</span><span id="line-5"><span class="n">pid</span><span class="o">.</span><span class="n">setSetpoint</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Set the desired setpoint</span>
+</span><span id="line-6">
+</span><span id="line-7"><span class="n">pid</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span> <span class="c1"># Enable the PID controller</span>
+</span><span id="line-8">
+</span><span id="line-9"><span class="n">pid</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span> <span class="c1"># Disable the PID controller</span>
+</span><span id="line-10">
+</span><span id="line-11"><span class="n">pid</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Reset the PID controller to its initial state - Very important to call this before restarting a Command, otherwise the PID controller will continue from the previous Command</span>
+</span><span id="line-12">
+</span><span id="line-13"><span class="n">pid</span><span class="o">.</span><span class="n">getSetpoint</span><span class="p">()</span> <span class="c1"># Get the current setpoint</span>
+</span></code></pre></div>
 </div>
 </section>
 <section id="calculate-the-error-and-set-the-output">
 <h3>Calculate the error and set the output<a class="headerlink" href="#calculate-the-error-and-set-the-output" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#calculate-the-error-and-set-the-output'"><span>#</span></a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">setpoint</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Set the desired setpoint</span>
-
-<span class="n">output</span> <span class="o">=</span> <span class="n">pid</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">setpoint</span><span class="p">)</span> <span class="c1"># Calculate the PID output based on the current sensor value</span>
-
-<span class="n">motor</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="c1"># Set the motor output to the PID output</span>
-</pre></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">setpoint</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Set the desired setpoint</span>
+</span><span id="line-2">
+</span><span id="line-3"><span class="n">output</span> <span class="o">=</span> <span class="n">pid</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">sensor</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">setpoint</span><span class="p">)</span> <span class="c1"># Calculate the PID output based on the current sensor value</span>
+</span><span id="line-4">
+</span><span id="line-5"><span class="n">motor</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="c1"># Set the motor output to the PID output</span>
+</span></code></pre></div>
 </div>
 <p>Repeat the above step in a loop to continuously calculate the PID output and set the motor output.</p>
 </section>
@@ -244,8 +244,8 @@ In FIRST Robotics, it is rare to use the integral gain, as it can cause the syst
 <li><p>Identify whether the system is affected by a constant external force, like gravity or friction. If so, add a feed-forward term to the PID controller to compensate for the external force.
 This value should be a number that is right before the system starts moving. For example, if the system starts moving at 0.1 volts, the feed-forward term should be 0.1 volts.
 .. important:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">If</span> <span class="n">your</span> <span class="n">external</span> <span class="n">force</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">like</span> <span class="n">gravity</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">use</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">feed</span><span class="o">-</span><span class="n">forward</span> <span class="n">term</span> <span class="n">to</span> <span class="n">compensate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">force</span> <span class="n">when</span> <span class="n">traveling</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">opposite</span> <span class="n">direction</span><span class="o">.</span>
-</pre></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">If</span> <span class="n">your</span> <span class="n">external</span> <span class="n">force</span> <span class="ow">is</span> <span class="n">something</span> <span class="n">like</span> <span class="n">gravity</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">use</span> <span class="n">a</span> <span class="n">negative</span> <span class="n">feed</span><span class="o">-</span><span class="n">forward</span> <span class="n">term</span> <span class="n">to</span> <span class="n">compensate</span> <span class="k">for</span> <span class="n">the</span> <span class="n">force</span> <span class="n">when</span> <span class="n">traveling</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">opposite</span> <span class="n">direction</span><span class="o">.</span>
+</span></code></pre></div>
 </div>
 </li>
 <li><p>Set the integral gain to 0 and the derivative gain to 0. This will make the PID controller act like a proportional controller, which is the simplest type of controller.</p></li>
@@ -307,15 +307,15 @@ This value should be a number that is right before the system starts moving. For
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 8.1.3</a></p>
 </div>
 </div>
 </footer>
 </div>
 <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=8dc3ddfe"></script>
+<script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
 </html>

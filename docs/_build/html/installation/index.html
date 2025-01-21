@@ -11,10 +11,10 @@
 <meta content="Installation | Programming Standard Operating Procedure  documentation" property="og:title"/>
 <meta content="Installation | Programming Standard Operating Procedure  documentation" name="twitter:title"/>
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=8958d2b4" rel="stylesheet" type="text/css"/>
-<link href="../_static/graphviz.css?v=fd3f3429" rel="stylesheet" type="text/css"/>
-<link href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" rel="stylesheet" type="text/css"/>
-<link href="../_static/awesome-sphinx-design.css?v=a54cf077" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
+<link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -33,7 +33,7 @@
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
 </head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false }">
+<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
 <div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
@@ -159,7 +159,7 @@
 <p>Follow these steps to install necessary software to run code from this organization on your computer</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio"/>
-<label class="sd-tab-label" data-sync-id="Win" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="Win" for="sd-tab-item-0">
 Windows</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Install Python (<a class="reference external" href="http://www.python.org/download/">http://www.python.org/download/</a>)</p>
@@ -177,8 +177,8 @@ Windows</label><div class="sd-tab-content docutils">
 <ol class="arabic simple" start="2">
 <li><p>Verify Python is installed by opening a command prompt and typing</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
-</pre></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">python</span>
+</span></code></pre></div>
 </div>
 <ol class="arabic" start="3">
 <li><p>Install Poetry by opening a powershell prompt and typing</p>
@@ -189,24 +189,24 @@ Windows</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">install</span><span class="p">.</span><span class="n">python-poetry</span><span class="p">.</span><span class="n">org</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span> <span class="p">|</span> <span class="n">py</span> <span class="p">-</span>
-</pre></div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="p">(</span><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">install</span><span class="p">.</span><span class="n">python-poetry</span><span class="p">.</span><span class="n">org</span> <span class="n">-UseBasicParsing</span><span class="p">).</span><span class="n">Content</span> <span class="p">|</span> <span class="n">py</span> <span class="p">-</span>
+</span></code></pre></div>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>Verify Poetry is installed by opening a powershell prompt and typing</p></li>
 </ol>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span>
-</pre></div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">poetry</span>
+</span></code></pre></div>
 </div>
 <ol class="arabic simple" start="5">
 <li><p>Install our library (robotpy-toolkit-7407) by opening a powershell prompt and typing</p></li>
 </ol>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">robotpy-toolkit</span><span class="p">-</span><span class="n">7407</span>
-</pre></div>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">pip</span> <span class="n">install</span> <span class="n">robotpy-toolkit</span><span class="p">-</span><span class="n">7407</span>
+</span></code></pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio"/>
-<label class="sd-tab-label" data-sync-id="Mac" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="Mac" for="sd-tab-item-1">
 Mac</label><div class="sd-tab-content docutils">
 <ol class="arabic simple">
 <li><p>Install Rosetta 2 by opening a terminal and typing</p></li>
@@ -215,8 +215,8 @@ Mac</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p>Rosetta 2 is a program that allows you to run programs that are not native to the M1 chip</p>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>softwareupdate<span class="w"> </span>--install-rosetta
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">softwareupdate<span class="w"> </span>--install-rosetta
+</span></code></pre></div>
 </div>
 <ol class="arabic" start="2">
 <li><p>Install Homebrew by opening a terminal and typing</p>
@@ -227,8 +227,8 @@ Mac</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">"</span>
+</span></code></pre></div>
 </div>
 <ol class="arabic" start="3">
 <li><p>Install Python by opening a terminal and typing</p>
@@ -239,14 +239,14 @@ Mac</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>python
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">brew<span class="w"> </span>install<span class="w"> </span>python
+</span></code></pre></div>
 </div>
 <ol class="arabic simple" start="4">
 <li><p>Verify Python is installed by closing and opening the terminal and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">python
+</span></code></pre></div>
 </div>
 <ol class="arabic" start="5">
 <li><p>Install Poetry by opening a terminal and typing</p>
@@ -258,8 +258,8 @@ Mac</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+</span></code></pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -268,18 +268,18 @@ Mac</label><div class="sd-tab-content docutils">
 <ol class="arabic simple">
 <li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">poetry
+</span></code></pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407
+</span></code></pre></div>
 </div>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio"/>
-<label class="sd-tab-label" data-sync-id="Linux" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="Linux" for="sd-tab-item-2">
 Linux</label><div class="sd-tab-content docutils">
 <ol class="arabic">
 <li><p>Install Python by opening a terminal and typing</p>
@@ -290,14 +290,14 @@ Linux</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3.9
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3.9
+</span></code></pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Verify Python is installed by closing and opening the terminal and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">python
+</span></code></pre></div>
 </div>
 <ol class="arabic">
 <li><p>Install Poetry by opening a terminal and typing</p>
@@ -308,20 +308,20 @@ Linux</label><div class="sd-tab-content docutils">
 </div></blockquote>
 </li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>-
+</span></code></pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Verify Poetry is installed by closing and opening the terminal and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">poetry
+</span></code></pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Install our library (robotpy-toolkit-7407) by opening command prompt and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">pip<span class="w"> </span>install<span class="w"> </span>robotpy-toolkit-7407
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -387,8 +387,8 @@ Linux</label><div class="sd-tab-content docutils">
 <li><p>Run the installer</p></li>
 <li><p>Verify Git is installed by opening a command prompt and typing</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git
-</pre></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">git
+</span></code></pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -494,15 +494,15 @@ Linux</label><div class="sd-tab-content docutils">
 </div><footer class="py-6 border-t border-border md:py-0">
 <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
 <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 7.3.7</a></p>
+<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2023, Sebastian Plunkett Built with <a class="font-medium underline underline-offset-4" href="https://www.sphinx-doc.org" rel="noreferrer">Sphinx 8.1.3</a></p>
 </div>
 </div>
 </footer>
 </div>
 <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9a2dae69"></script>
+<script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=8dc3ddfe"></script>
+<script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
 <script src="../_static/design-tabs.js?v=36754332"></script>
 </body>
 </html>

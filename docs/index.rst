@@ -41,6 +41,10 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Writing a Subsystem <code/subsystems>
 
    Writing a Command <code/commands>
+   
+   Complex Commands <code/complex_commands>
+
+   OI & Keymap <code/oi_keymap>
 
    Testing Code <code/testing_code>
 
