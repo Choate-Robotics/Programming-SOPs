@@ -1,12 +1,13 @@
 Swerve Drive:
 =============
 
-Swerve drive is a type of drive train that allows a robot to move in any direction without turning. This is accomplished by having each wheel be able to rotate independently of the others. This allows the robot to move in any direction by rotating the wheels to the desired angle and driving them at the desired speed. Swerve drive is a very versatile drive train that is used in many different types of robots, including FRC robots.
+Swerve drive is a type of drivetrain that allows a robot to move in any direction without turning. Each wheel operates independently, with the ability to rotate to a specific angle and drive at a specific speed, which allows the robot to move in any direction. This type of drivetrain is widely used in various robotics applications, including FIRST Robotics Competition (FRC) robots, due to its flexibility and enhanced maneuverability.
 
-There are many advantages to using a swerve drive train. One of the main advantages is that it allows the robot to move in any direction without turning. This can be very useful in games where the robot needs to move quickly and accurately. Another advantage is that it allows the robot to strafe, or move sideways, which can be very useful for avoiding obstacles or getting into position. Swerve drive also allows the robot to turn in place, which can be useful for lining up shots or navigating tight spaces. It
-increases maneuverability and allows for more precise control of the robot. Swerve is also very effective if your robot
-needs to aim a shooter or other mechanism while moving. You will be able to rotate in the robot while also moving
-toward the target.
+One of the main advantages is that it allows the robot to move in any direction without turning, which can be very useful in FRC games where the robot needs to cycle quickly across the field. Another advantage is that the robot can strafe or move sideways, which helps avoid defense bots or obstacles. Robots can also turn in place, which is useful for lining up shots or navigating tight spaces. It increases maneuverability and allows for more precise control of the robot. Swerve is also very effective if your robot needs to aim a shooter or other mechanism while moving. You can rotate in the robot while also moving toward the target.
+
+.. figure:: https://i.ibb.co/2qLNCnP/9hhpas.gif
+   :alt: PID Control
+   :align: center
 
 Swerve drives are made up of some number of, usually four, modules. These modules are made up of a wheel and a motor
 that can rotate the wheel. The wheel is mounted on a turntable that can rotate the wheel to any angle. One motor is
