@@ -243,3 +243,21 @@ Updated flow
         "config.py" -> "Sensor";
         "config.py" -> "Util";
     }
+
+robot_systems.py
+~~~~~~~~~~~~~~~~
+
+It differs from robot.py in that it is only used to initialize the subsystems and sensors, and not to run the robot. It only runs once: when the robot is initialized.
+The robot_systems file contains the initialization of the subsystems, sensors, pneumatics, LEDs, and field interactions.
+
+* ``class Robot`` - creates containers for the mechanical subsystems of the robot
+
+* ``class Pneumatics`` - for managing pneumatic systems
+
+* ``class Sensor`` - initializes sensors
+
+* ``class LEDs`` - initializes LEDs
+
+* ``class PowerDistribution`` - manages the power distribution panel
+
+* ``class Field`` - manages field operations like odometry or autonomous trajectory calculations
