@@ -46,6 +46,8 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
 
    Deploying Code <code/deploying_code>
 
+   Github Actions <git/github_actions>
+
    Documentation <code/documentation>
 
 
