@@ -1,4 +1,4 @@
-Swerve Drive:
+Swerve Drive
 =============
 
 Swerve drive is a type of drivetrain that allows a robot to move in any direction without turning. Each wheel operates independently, with the ability to rotate to a specific angle and drive at a specific speed, which allows the robot to move in any direction. This type of drivetrain is widely used in various robotics applications, including FIRST Robotics Competition (FRC) robots, due to its flexibility and enhanced maneuverability.
