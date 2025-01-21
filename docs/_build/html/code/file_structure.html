@@ -13,12 +13,12 @@
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
 <link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
 <link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
-<link href="testing_code.html" rel="next" title="Testing Code"/>
+<link href="complex_commands.html" rel="next" title="Complex Commands Overview"/>
 <link href="../git/grab_existing_project.html" rel="prev" title="grabbing a Project from the server"/>
 <script>
     <!-- Prevent Flash of wrong theme -->
@@ -87,6 +87,8 @@
 <p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="complex_commands.html">Complex Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oi_keymap.html">OI &amp; Keymap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing_code.html">Testing Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deploying_code.html">Deploying Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
@@ -172,7 +174,7 @@
 <div class="line">└── robot.py</div>
 </div>
 <p>Here is the flow:</p>
-<div class="graphviz"><img alt='digraph {
+digraph {
     "Subsystem" -&gt; "Command";
     "Sensor" -&gt; "Command";
     "Util" -&gt; "Command";
@@ -190,8 +192,7 @@
     "OI" -&gt; "Robot";
     "robot_systems.py" -&gt; "Robot";
 
-}' class="graphviz" src="../_images/graphviz-ee374700654a74f020030a1ee42869aa93b2f5c4.png"/></div>
-<p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
+}<p>…yeah, that’s a lot of stuff. Let’s break it down.</p>
 <section id="core-folders">
 <h2>Core Folders<a class="headerlink" href="#core-folders" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#core-folders'"><span>#</span></a></h2>
 <section id="subsystems">
@@ -319,7 +320,7 @@ under the CAN network. This method should be used to initialize encoders, motors
 </section>
 <section id="updated-flow">
 <h3>Updated flow<a class="headerlink" href="#updated-flow" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#updated-flow'"><span>#</span></a></h3>
-<div class="graphviz"><img alt='digraph {
+digraph {
     "Subsystem" -&gt; "Command";
     "Sensor" -&gt; "Command";
     "Util" -&gt; "Command";
@@ -329,8 +330,7 @@ under the CAN network. This method should be used to initialize encoders, motors
     "config.py" -&gt; "Subsystem";
     "config.py" -&gt; "Sensor";
     "config.py" -&gt; "Util";
-}' class="graphviz" src="../_images/graphviz-fb06c715d1e66f104acb9c43b402bd50e68bd30e.png"/></div>
-</section>
+}</section>
 </section>
 </section>
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
@@ -367,6 +367,6 @@ under the CAN network. This method should be used to initialize encoders, motors
 <script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
 <script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
-<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="../_static/design-tabs.js?v=f930bc37"></script>
 </body>
 </html>

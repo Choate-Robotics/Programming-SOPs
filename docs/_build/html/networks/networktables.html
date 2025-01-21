@@ -13,7 +13,7 @@
 <link href="../_static/pygments.css?v=8d216cef" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
 <link href="../_static/graphviz.css?v=4ae1632d" rel="stylesheet" type="text/css"/>
-<link href="../_static/sphinx-design.min.css?v=87e54e7c" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
 <link href="../_static/awesome-sphinx-design.css?v=15e0fffa" rel="stylesheet" type="text/css"/>
 <link href="../_static/7407logo.jfif" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
@@ -87,6 +87,8 @@
 <p class="caption" role="heading"><span class="caption-text">Writing and Deploying Code:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../code/file_structure.html">File Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/complex_commands.html">Complex Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../code/oi_keymap.html">OI &amp; Keymap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/testing_code.html">Testing Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/deploying_code.html">Deploying Code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../code/documentation.html">Documentation</a></li>
@@ -139,13 +141,12 @@
 <li><p>Networktables is a Pub/Sub system, meaning that devices can automatically recieve data from other devices without having to request it.</p></li>
 <li><p>[Networktables Documentation](<a class="reference external" href="http://robotpy.readthedocs.io/en/stable/guide/nt.html">http://robotpy.readthedocs.io/en/stable/guide/nt.html</a>)</p></li>
 </ul>
-<div class="graphviz"><img alt='digraph{
+digraph{
     "Networktables" -&gt; "Raspberry Pi";
     "Networktables" -&gt; "RoboRIO";
     "Networktables" -&gt; "Driver Station";
     "Networktables" -&gt; "Limelight";
-}' class="graphviz" src="../_images/graphviz-d26e19683a016610b65e2752e1b3aafc43c539b8.png"/></div>
-<section id="communicating-from-the-roborio">
+}<section id="communicating-from-the-roborio">
 <h2>Communicating from the RoboRIO:<a class="headerlink" href="#communicating-from-the-roborio" title="Link to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#communicating-from-the-roborio'"><span>#</span></a></h2>
 <p>To communicate with the networktable system, you must first instance the networktable object. This is done by using the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="kn">import</span> <span class="nn">ntcore</span>
@@ -202,6 +203,6 @@
 <script src="../_static/doctools.js?v=9bcbadda"></script>
 <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
 <script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
-<script src="../_static/design-tabs.js?v=36754332"></script>
+<script src="../_static/design-tabs.js?v=f930bc37"></script>
 </body>
 </html>
