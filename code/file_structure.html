@@ -329,6 +329,19 @@ under the CAN network. This method should be used to initialize encoders, motors
     "config.py" -&gt; "Util";
 }' class="graphviz" src="../_images/graphviz-fb06c715d1e66f104acb9c43b402bd50e68bd30e.png"/></div>
 </section>
+<section id="robot-systems-py">
+<h3>robot_systems.py<a class="headerlink" href="#robot-systems-py" title="Permalink to this heading" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#robot-systems-py'"><span>#</span></a></h3>
+<p>It differs from robot.py in that it is only used to initialize the subsystems and sensors, and not to run the robot. It only runs once: when the robot is initialized.
+The robot_systems file contains the initialization of the subsystems, sensors, pneumatics, LEDs, and field interactions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Robot</span></code> - creates containers for the mechanical subsystems of the robot</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Pneumatics</span></code> - for managing pneumatic systems</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Sensor</span></code> - initializes sensors</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">LEDs</span></code> - initializes LEDs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">PowerDistribution</span></code> - manages the power distribution panel</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Field</span></code> - manages field operations like odometry or autonomous trajectory calculations</p></li>
+</ul>
+</section>
 </section>
 </section>
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
@@ -346,6 +359,7 @@ under the CAN network. This method should be used to initialize encoders, motors
 <li><a :data-current="activeSection === '#constants-py'" class="reference internal" href="#constants-py">constants.py</a></li>
 <li><a :data-current="activeSection === '#config-py'" class="reference internal" href="#config-py">config.py</a></li>
 <li><a :data-current="activeSection === '#updated-flow'" class="reference internal" href="#updated-flow">Updated flow</a></li>
+<li><a :data-current="activeSection === '#robot-systems-py'" class="reference internal" href="#robot-systems-py">robot_systems.py</a></li>
 </ul>
 </li>
 </ul>
