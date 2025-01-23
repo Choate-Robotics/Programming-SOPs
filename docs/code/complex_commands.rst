@@ -2,7 +2,7 @@
 Complex Commands Overview
 =========================
 
-The `controller.py` module in the `7407-DriveCode-Reefscape` repository provides a framework for managing complex commands in robotic control systems. It offers structured classes to handle various command types, ensuring efficient execution and management.
+The `controller.py` module in our repository provides a framework for managing complex commands in robotic control systems. It offers structured classes to handle various command types, ensuring efficient execution and management. It merges all commands together to create a "master command" where all subsystems can be called.
 
 Key Components
 ==============
@@ -11,12 +11,15 @@ Command Base Class
 ------------------
 The base class for all commands, defining essential methods:
 
-- `initialize`: Preparation steps before execution.
-- `execute`: The main logic of the command.
-- `end`: Cleanup after execution.
-- `isFinished`: Determines if the command has completed.
+- `initialize`: Preparation steps before execution. Add new variables, methods, etc.
+- `execute`: The main logic of the command. Runs the method in subsystem you call, catches any errors.
+- `end`: Cleanup after execution. Makes sure all subsystems are in a safe state.
+- `isFinished`: Determines if the command has completed. If interrupted, you can handle an error. Takes in `interrupted` as a parameter "bool"
 
-This structure ensures a consistent interface for all commands.
+This structure ensures a consistent interface for all commands. 
+
+Types of Commands
+=================
 
 SequentialCommandGroup
 ----------------------
@@ -29,23 +32,3 @@ Runs multiple commands simultaneously, allowing for concurrent operations. Benef
 ConditionalCommand
 ------------------
 Chooses between two commands based on a runtime-evaluated condition, enabling dynamic decision-making within the command structure.
-
-Usage Example (From `7407-DriveCode-Crescendo`)
-=============
-
-To create a complex command sequence that first raises an arm and then drives forward while spinning a mechanism:
-
-.. code-block:: python
-
-   raise_arm = RaiseArmCommand()
-   drive_forward = DriveForwardCommand()
-   spin_mechanism = SpinMechanismCommand()
-
-   complex_command = SequentialCommandGroup([
-       raise_arm,
-       ParallelCommandGroup([drive_forward, spin_mechanism])
-   ])
-
-This structure ensures that the arm is raised before the robot drives forward and spins the mechanism concurrently.
-
-By utilizing the constructs provided in `controller.py`, developers can build intricate command sequences that manage robot behaviors effectively, promoting modularity and reusability in code design.
