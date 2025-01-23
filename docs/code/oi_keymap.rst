@@ -2,7 +2,7 @@
 Operator Interface (OI)
 =========================
 
-The `OI.py` and `keymap.py` files in our repository collaboratively manage the operator interface, facilitating the mapping of controller inputs to specific robot commands. This structured approach ensures intuitive and efficient control during robot operation.
+The `OI.py` and `keymap.py` files in our repository collaboratively manage the operator interface, facilitating the mapping of controller inputs to specific robot commands. During a given season, keymap will be used to map certain controller inputs with commands, and OI will be used to determine which buttons were triggered.
 
 Keymap Module
 =============
