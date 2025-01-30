@@ -109,6 +109,17 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Arm Mechanisms <code/arm>
 
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Autonomous:
+
+   Python Auto's <code/autopy>
+
+   Java Auto's <code/autojava>
+
+   C++ Auto's <code/autocpp>
+
+
 
 
 
