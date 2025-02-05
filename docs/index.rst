@@ -113,7 +113,7 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    :maxdepth: 2
    :caption: Autonomous:
 
-   Python Auto's <code/autopy>
+   Python Auto's <code/autopython>
 
    Java Auto's <code/autojava>
 
