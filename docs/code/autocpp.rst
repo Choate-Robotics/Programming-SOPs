@@ -9,6 +9,7 @@ to similar ones in your codebase.
 This sample was influenced by Team 1771's 2022 codebase.
 
 .. code-block:: cpp
+    :linenos:
 
     #include "Auton.hpp"
     #include "DriveTrain.hpp"
