@@ -6,8 +6,7 @@ Here is a code sample with how to make a basic auto in Java. This is for a tank 
 
 .. code-block:: console
     :linenos:
-    
-    // robot.java
+   
     package frc.robot;
 
     import edu.wpi.first.wpilibj.TimedRobot;
