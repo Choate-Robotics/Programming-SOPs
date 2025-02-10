@@ -49,6 +49,7 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Github Actions <git/github_actions>
 
    Logging <logging/index>
+
    Documentation <code/documentation>
 
 
