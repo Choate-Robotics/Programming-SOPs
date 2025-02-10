@@ -41,6 +41,10 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Writing a Subsystem <code/subsystems>
 
    Writing a Command <code/commands>
+   
+   Complex Commands <code/complex_commands>
+
+   OI & Keymap <code/oi_keymap>
 
    Testing Code <code/testing_code>
 
@@ -105,6 +109,17 @@ These are the Standard Operating Procedures for the Choate Robotics Programming 
    Trajectory Generation <code/trajectory>
 
    Arm Mechanisms <code/arm>
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Autonomous:
+
+   Python Auto's <code/autopython>
+
+   Java Auto's <code/autojava>
+
+   C++ Auto's <code/autocpp>
 
 
 
