@@ -65,7 +65,6 @@ up in smaller, more understandable sections.
             AutoBuilder.followPath(paths[8]),
             Target(config.target_positions["STATION_INTAKING"], Robot.wrist, Robot.elevator),
         ),
-        
         IntakeCoral(Robot.intake, Robot.wrist),
         AutoBuilder.followPath(paths[9]),
         ParallelCommandGroup(
@@ -128,4 +127,93 @@ The Actual Auto
 
     auto = SequentialCommandGroup(...)
 
+This is where we actually create our auto. 
+Since we want our commands to run in order, we set it equal to a sequential command group. All this does is run the 
+commands in the order they are typed, starting the next command only when the previous one has finished. 
 
+.. note:: 
+    Remember to separate each command with a comma! You'll see this later on...
+
+Instant Commands
+==================
+
+.. code-block:: python
+    :linenos:
+
+    auto = SequentialCommandGroup(
+        InstantCommand(lambda: Robot.drivetrain.reset_odometry_auto(starting_pose)),
+        InstantCommand(lambda: Robot.wrist.set_coral(True)),
+        ...)
+
+Autos can consist of any commands, and they will vary based on the auto you are writing. In this auto, we start with 
+two instant commands: one that resets the odometry of the drivetrain to the starting pose, and one that sets the 
+boolean for coral in the wrist as true*. Instant commands do whatever is inside the parenthesis *instantaneously*.
+
+* We already have a coral preloaded in our reset before the match.
+
+The Rest of the Auto
+======================
+
+.. code-block:: python
+    :linenos:
+
+    auto = SequentialCommandGroup(
+        InstantCommand(lambda: Robot.drivetrain.reset_odometry_auto(starting_pose)),
+        InstantCommand(lambda: Robot.wrist.set_coral(True)),
+        ParallelCommandGroup(
+            Target(config.target_positions["IDLE"], Robot.wrist, Robot.elevator),
+            AutoBuilder.followPath(paths[0]),
+        ),
+        ParallelCommandGroup(
+            Target(config.target_positions["L3"], Robot.wrist, Robot.elevator),
+            AutoBuilder.followPath(paths[1]),
+        ),
+        FeedOut(Robot.wrist).withTimeout(.2),
+        ParallelCommandGroup( 
+            Target(config.target_positions["STATION_INTAKING"], Robot.wrist, Robot.elevator),
+            AutoBuilder.followPath(paths[2]),
+        ),
+        IntakeCoral(Robot.intake, Robot.wrist),
+        AutoBuilder.followPath(paths[3]),
+        ParallelCommandGroup(
+            Target(config.target_positions["L3"]),
+            AutoBuilder.followPath(paths[4]),
+        ),
+        FeedOut(Robot.wrist).withTimeout(.2),
+        ParallelCommandGroup(
+            AutoBuilder.followPath(paths[5]), 
+            Target(config.target_positions["STATION_INTAKING"], Robot.wrist, Robot.elevator),
+        ),
+        IntakeCoral(Robot.intake, Robot.wrist),
+        AutoBuilder.followPath(paths[6]),
+        ParallelCommandGroup(
+            AutoBuilder.followPath(paths[7]),
+            Target(config.target_positions["L3"]),
+        ),
+        FeedOut(Robot.wrist).withTimeout(.2),
+        ParallelCommandGroup(
+            AutoBuilder.followPath(paths[8]),
+            Target(config.target_positions["STATION_INTAKING"], Robot.wrist, Robot.elevator),
+        ),
+        IntakeCoral(Robot.intake, Robot.wrist),
+        AutoBuilder.followPath(paths[9]),
+        ParallelCommandGroup(
+            AutoBuilder.followPath(paths[10]),
+            Target(config.target_positions["L3"]),
+        ),
+        FeedOut(Robot.wrist).withTimeout(.2),
+    )
+
+This part gets a little repetitive, but here's the gist: 
+- AutoBuilder.followPath(paths[i]) follows path i in our choreo trajectory
+- We utilize the fact that the entire auto is in 
+
+- At certain points between our paths and during our paths we have the robot do things such as raise the elevator, 
+score coral, and intake coral.
+
+
+- Parallel command groups run multiple commands in parallel, and we use them to follow the paths
+in our Choreo trajectory while also moving the robot subsystems.
+- In between our parallel command groups, we intake and score our coral.
+
+Congratulations! You have just learned how to code an auto. 
