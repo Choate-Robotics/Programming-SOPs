@@ -206,14 +206,9 @@ The Rest of the Auto
 
 This part gets a little repetitive, but here's the gist: 
 - AutoBuilder.followPath(paths[i]) follows path i in our choreo trajectory
-- We utilize the fact that the entire auto is in 
-
-- At certain points between our paths and during our paths we have the robot do things such as raise the elevator, 
-score coral, and intake coral.
-
-
-- Parallel command groups run multiple commands in parallel, and we use them to follow the paths
-in our Choreo trajectory while also moving the robot subsystems.
-- In between our parallel command groups, we intake and score our coral.
+- We utilize the fact that the entire auto is in a Sequential Command Group, to run all of the tasks in order: 
+following a path and then doing tasks at the location it ends up at
+- You might notice we also use Parallel Command Groups, which run multiple commands in parallel. We use them to follow 
+the paths in our Choreo trajectory while also moving the robot subsystems.
 
 Congratulations! You have just learned how to code an auto. 
