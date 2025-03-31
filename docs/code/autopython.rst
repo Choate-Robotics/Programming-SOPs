@@ -2,9 +2,9 @@
 Python Auto Example and Instructions
 ==================
 
-Here is a code sample for how to make an auto in Python. Keep in mind, added files and variables such as the drivetrain 
-will need to be imported from your codebase. Also, make sure to change the functions in our example code 
-to similar ones in your codebase.
+Here is a code sample for how to make an auto in Python from the 7407 2025 code database. Keep in mind, added 
+files and variables such as the drivetrain will need to be imported from your codebase. Also, make sure to change 
+the functions in our example code to similar ones in your codebase.
 
 Here is a sample code from our four piece L4 right auto. It might be a lot to take in at once, so we'll split it 
 up in smaller, more understandable sections.
@@ -207,7 +207,7 @@ The Rest of the Auto
 This part gets a little repetitive, but here's the gist: 
 - AutoBuilder.followPath(paths[i]) follows path i in our choreo trajectory
 - We utilize the fact that the entire auto is in a Sequential Command Group, to run all of the tasks in order: 
-following a path and then doing tasks at the location it ends up at
+following a path and then doing tasks at the location it ends up at.
 - You might notice we also use Parallel Command Groups, which run multiple commands in parallel. We use them to follow 
 the paths in our Choreo trajectory while also moving the robot subsystems.
 
