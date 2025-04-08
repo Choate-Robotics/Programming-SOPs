@@ -158,12 +158,13 @@ Creating the subsystem
             ...
 
 We create a new class--Elevator, in this case--that inherits from our Subsystem class that we imported 
-from toolkit. 
+from toolkit. For now, we're putting an ellipsis where most of the actual stuff happens so that
+we can explain subsystem structure.
 
 In our dunder* init method (line 3), we put any properties we will use in our later methods, 
 and create our motors. Also, since we are inheriting from a class, we have a super in there. (line 4)
 
-In our regular init method (line 5), we run methods that initialize our motors, and also any other 
+In our regular init method (line 6), we run methods that initialize our motors, and also any other 
 methods that we want to run when initializating our elevator. (like setting our starting position to 0)
 
 Another key difference between these two methods is that the dunder init method is automatically
@@ -171,3 +172,70 @@ called when a new instance of the class is created, and the init method is calle
 want to run methods to set everything up before running any other methods.
 
 * dunder means double underscore
+
+MOTORS
+========
+
+.. code-block:: python
+    :linenos:
+    class Elevator(Subsystem):
+
+            def __init__(self):
+                super().__init__()
+                self.leader_motor: TalonFX = TalonFX(
+                    config.elevator_lead_id,
+                    config.foc_active,
+                    inverted=False,
+                    config=config.ELEVATOR_CONFIG
+                )
+                self.follower_motor: TalonFX = TalonFX(
+                    config.elevator_follower_id,
+                    config.foc_active,
+                    inverted=False,
+                    config=config.ELEVATOR_CONFIG
+                )
+
+                self.target_height: meters = 0.0 #see note no. 2
+                self.elevator_moving: bool = False # ^^
+
+            def init(self):
+                self.leader_motor.init()
+                self.follower_motor.init()
+                self.follower_motor.follow(self.leader_motor, inverted=True)
+                self.leader_motor.set_sensor_position(0)
+
+Get excited, because now we're going to explain everything you might ever want to know about **motors**!
+
+In general, this is how you would create, for example, a TalonFX motor: (Remember, this is done in __init__())
+
+.. code-block:: python
+    :linenos:
+    self.motor_name: TalonFX = TalonFX(
+        config.motor_id, #this property's value is stored in config
+        config.foc_active, 
+        inverted=False, #not in the reverse direction
+        config=config.ELEVATOR_CONFIG #every other parameter value for the motor 
+        )
+
+Later, in init(), we initialize the motors. This is when we establish our leader and follower motors. (When we created
+them we named them accordingly, for simplicity.) Using a method from the motor libraries, in line 24 we assign the follower_motor
+to follow the leader_motor. Here is the syntax for the method that does this:
+def follow(self, master: TalonFX, inverted: bool = False)
+
+.. note:: 
+    When we create our motors for this subsystem, we chose to use a leader and a follower motor. In case 
+    you weren't already aware:
+    The relationship between a leader and follower motor is exactly as it sounds! Instead of having to apply 
+    methods to each motor individually, you just apply the methods to the leader motor, and the follower motor 
+    will do the same things.
+
+.. note::
+    As seen previously in lines 18-19 of our first code block in the section...
+
+    .. code-block:: python
+        :linenos:
+            self.target_height: meters = 0.0 
+            self.elevator_moving: bool = False
+
+    target_height and elevator_moving are both properties whose values we want to keep track of later
+    on in our code. 
