@@ -239,3 +239,75 @@ def follow(self, master: TalonFX, inverted: bool = False)
 
     target_height and elevator_moving are both properties whose values we want to keep track of later
     on in our code. 
+
+
+Subsystem methods
+========
+
+The methods within each subsystem you create will differ depending on what you want your subsystem 
+to be able to do. In our Elevator subsystem, we have methods for...
+* limit_height: prevents the elevator from extending beyond a certain height to a maximum
+and minimum position at any given time
+* set_position: sets the elevator position
+* stop: stopping the elevator 
+* get_position: getting the elevator's position 
+* set_zero: setting its current position to zero (calibrating zero)
+* is_at_position: checking if its current position is at the position we want it to be at 
+And also a couple for updating NetworkTables periodically. (See next section for more)
+
+.. note::
+    If there is EVER a need to leave a function blank, while writing incomplete code to work on later for example, 
+    use PASS! Here's an example of this in action:
+
+    .. code-block:: python
+            :linenos:
+                def method_name:
+                    # to do
+                    pass
+
+    This way, your incomplete code will not return an error!
+
+
+Network Tables 
+========
+
+.. code-block:: python
+    :linenos:
+        def update_table(self) -> None:
+            table = ntcore.NetworkTableInstance.getDefault().getTable("Elevator")
+
+            table.putNumber("height", self.get_position() * meters_to_inches)
+            table.putNumber("velocity rps", self.leader_motor.get_sensor_velocity())
+            table.putNumber("acceleration rpss", self.leader_motor.get_sensor_acceleration())
+            table.putNumber("target height", self.target_height * meters_to_inches)
+            table.putNumber(
+                "motor lead applied output", self.leader_motor.get_applied_output()
+            )
+            table.putNumber(
+                "motor lead current", self.leader_motor.get_motor_current()
+            )
+            table.putNumber(
+                "motor follow applied output", self.follower_motor.get_applied_output()
+            )
+
+        def periodic(self):
+            if config.NT_ELEVATOR:
+                self.update_table()
+
+Network Tables are tables that can be accessed through Driver Station, and inform the user about the current state of 
+the robot. In our code, we have tables for each of our subsystems respectively, and in these network tables we include
+all the necessary information about the state of the subsystem and it's motors. For example, the following info is contained
+in our Network Tables for the elevator subsystem:
+* height of the elevator
+* velocity of the motors
+* acceleration of the motors
+* target height
+* applied outputs of our motors
+* the current of the motors
+
+So that the information in the tables stays accurate and up-to-date, we use two methods:
+1. update_table: updates tables (stores and tranfers all the recent information into Driver Station)
+2. periodic: This method contains an if statement whose contents will *always execute*, because
+config.NT_ELEVATOR is True. It is run periodically in robot.py, which allows for update_table to be run periodically.
+We use this convention in order to maintain consistency, so that it becomes easier to designate the necessary 
+methods that we want to run periodically in robot.py.
