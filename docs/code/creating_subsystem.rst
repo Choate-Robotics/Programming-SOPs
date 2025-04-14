@@ -306,7 +306,7 @@ in our Network Tables for the elevator subsystem:
 * the current of the motors
 
 So that the information in the tables stays accurate and up-to-date, we use two methods:
-1. update_table: updates tables (stores and tranfers all the recent information into Driver Station)
+1. update_table: updates tables (transfers and stores all the recent information into Driver Station)
 2. periodic: This method contains an if statement whose contents will *always execute*, because
 config.NT_ELEVATOR is True. It is run periodically in robot.py, which allows for update_table to be run periodically.
 We use this convention in order to maintain consistency, so that it becomes easier to designate the necessary 
